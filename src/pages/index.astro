@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<h1>Övör Mongol Atlas</h1>
+		<p>An interactive historical atlas of Inner Mongolia in the early 20th century.</p>
+	</main>
 </Layout>
+
+<style>
+	main {
+		max-width: 60ch;
+		margin: 0 auto;
+		padding: 4rem 1.5rem;
+		font-family: system-ui, sans-serif;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		font-size: 1.1rem;
+		color: #444;
+	}
+</style>
