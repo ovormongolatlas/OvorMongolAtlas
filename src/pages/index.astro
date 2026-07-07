@@ -6,6 +6,10 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<h1>Övör Mongol Atlas</h1>
 		<p>An interactive historical atlas of Inner Mongolia in the early 20th century.</p>
+		<nav>
+			<a href="/entries">Entries</a>
+			<a href="/map">Timeline Map</a>
+		</nav>
 	</main>
 </Layout>
 
@@ -25,5 +29,15 @@ import Layout from '../layouts/Layout.astro';
 	p {
 		font-size: 1.1rem;
 		color: #444;
+	}
+
+	nav {
+		margin-top: 1.5rem;
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	nav a {
+		color: inherit;
 	}
 </style>

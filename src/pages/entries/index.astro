@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const allEntries = await getCollection('entries');
+
+const typeOrder = ['person', 'place', 'group', 'battle', 'state'] as const;
+const typeLabels: Record<(typeof typeOrder)[number], string> = {
+	person: 'People',
+	place: 'Places',
+	group: 'Groups',
+	battle: 'Battles',
+	state: 'States',
+};
+
+const groups = typeOrder
+	.map((type) => ({
+		type,
+		label: typeLabels[type],
+		items: allEntries
+			.filter((entry) => entry.data.type === type)
+			.sort((a, b) => a.data.startYear - b.data.startYear),
+	}))
+	.filter((group) => group.items.length > 0);
+---
+
+<Layout>
+	<main>
+		<p><a href="/">← Home</a></p>
+		<h1>Entries</h1>
+		{groups.map((group) => (
+			<section>
+				<h2>{group.label}</h2>
+				<ul>
+					{group.items.map((entry) => (
+						<li>
+							<a href={`/entry/${entry.id}`}>{entry.data.title}</a>
+							<span class="years"> ({entry.data.startYear}–{entry.data.endYear})</span>
+						</li>
+					))}
+				</ul>
+			</section>
+		))}
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 60ch;
+		margin: 0 auto;
+		padding: 4rem 1.5rem;
+		font-family: system-ui, sans-serif;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+		margin-top: 2rem;
+	}
+
+	ul {
+		padding-left: 1.25rem;
+	}
+
+	.years {
+		color: #777;
+	}
+</style>
