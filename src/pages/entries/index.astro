@@ -28,6 +28,10 @@ const groups = typeOrder
 	<main>
 		<p><a href="/">← Home</a></p>
 		<h1>Entries</h1>
+		<div class="search">
+			<input type="search" id="search-input" placeholder="Search entries by title or summary…" aria-label="Search entries" />
+			<ul id="search-results"></ul>
+		</div>
 		{groups.map((group) => (
 			<section>
 				<h2>{group.label}</h2>
@@ -43,6 +47,51 @@ const groups = typeOrder
 		))}
 	</main>
 </Layout>
+
+<script>
+	import Fuse from 'fuse.js';
+
+	type IndexEntry = { id: string; title: string; type: string; summary: string };
+
+	const input = document.getElementById('search-input') as HTMLInputElement;
+	const results = document.getElementById('search-results') as HTMLUListElement;
+
+	const response = await fetch('/search-index.json');
+	const entries: IndexEntry[] = await response.json();
+
+	const fuse = new Fuse(entries, {
+		keys: ['title', 'summary'],
+		threshold: 0.35,
+	});
+
+	input.addEventListener('input', () => {
+		const query = input.value.trim();
+		results.innerHTML = '';
+
+		if (!query) return;
+
+		const matches = fuse.search(query).slice(0, 8);
+		for (const { item } of matches) {
+			const li = document.createElement('li');
+			const a = document.createElement('a');
+			a.href = `/entry/${item.id}`;
+			a.textContent = item.title;
+			li.appendChild(a);
+			const type = document.createElement('span');
+			type.className = 'years';
+			type.textContent = ` (${item.type})`;
+			li.appendChild(type);
+			results.appendChild(li);
+		}
+
+		if (matches.length === 0) {
+			const li = document.createElement('li');
+			li.textContent = 'No matches.';
+			li.className = 'years';
+			results.appendChild(li);
+		}
+	});
+</script>
 
 <style>
 	main {
@@ -67,5 +116,28 @@ const groups = typeOrder
 
 	.years {
 		color: #777;
+	}
+
+	.search {
+		margin-top: 1.5rem;
+	}
+
+	.search input {
+		width: 100%;
+		padding: 0.6rem 0.8rem;
+		font-size: 1rem;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		box-sizing: border-box;
+	}
+
+	.search ul {
+		padding-left: 0;
+		list-style: none;
+		margin-top: 0.5rem;
+	}
+
+	.search li {
+		padding: 0.25rem 0;
 	}
 </style>

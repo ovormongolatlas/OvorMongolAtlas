@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main>
+		<p><a href="/">← Home</a></p>
+		<h1>Editorial Principles</h1>
+
+		<h2>Conflicting sources are recorded, not harmonized</h2>
+		<p>When two sources disagree — a date, a name, a birthplace, a causal claim — this atlas states both versions and attributes each to its source, rather than quietly choosing one. Where a conflict can't be resolved from the sources at hand, the entry says so plainly instead of picking a side for the sake of a tidier narrative.</p>
+
+		<h2>Primary sources are distinguished from secondary ones</h2>
+		<p>A firsthand account by a participant or contemporary observer is treated differently from a later historian's synthesis. Entries generally note which kind of source is behind a given claim, since a participant's memory and a scholar's later reconstruction can both be right, both be wrong, or disagree with each other for reasons worth knowing.</p>
+
+		<h2>Transliterations are preserved and explained</h2>
+		<p>Mongolian, Chinese, and Japanese names and terms reach English through several different transliteration systems, and the same person or place can appear under noticeably different spellings across sources. Rather than silently standardizing everything to one form, entries note the variant spellings they encountered and which source used which, so a reader cross-checking against the original literature isn't left wondering if two names refer to the same thing.</p>
+
+		<h2>Disputed facts are flagged explicitly</h2>
+		<p>Claims that rest on a single source, that are contradicted elsewhere, or that come from a source with a known reliability problem (a participant's self-serving memoir, a wartime propaganda account, a report filtered through a government press office) are marked as such rather than presented with unearned confidence.</p>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 60ch;
+		margin: 0 auto;
+		padding: 4rem 1.5rem;
+		font-family: system-ui, sans-serif;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+		margin-top: 2rem;
+	}
+
+	p {
+		font-size: 1.1rem;
+		color: #444;
+	}
+</style>
