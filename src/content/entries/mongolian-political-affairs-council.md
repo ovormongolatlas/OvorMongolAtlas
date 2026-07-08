@@ -12,7 +12,10 @@ Prince Yondonwangchug held the nominal chairmanship, but [Demchugdongrub](/entry
 
 The council's authority eroded as Japanese pressure on the region increased through 1935, and it was effectively superseded by the Japanese-backed [Mongolian Military Government](/entry/mongolian-military-government), formally established in May 1936.
 
+Writing contemporaneously in 1935, the American Sinologist Owen Lattimore offered an outside analytical view of why the movement culminating in this council arose when it did: he argued it was, in substance, a direct consequence of Japan's 1932 establishment of Manchukuo next door, which forced Mongol leaders to seek some form of self-rule quickly, before Tokyo or Nanjing settled Inner Mongolia's status without them (Lattimore, "Wickedness"). This is a claim about timing and motive rather than about who controlled the movement — it sits alongside, rather than against, [Jagchid's and Zorigt's](/entry/demchugdongrub) framing of the movement as Mongol-led.
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid."
 - D. Zorigt, "The Self-Rule Movement Led by De Wang Unfolds in Inner Mongolia" (Олон Улс Судлал journal) — cited above as "Zorigt, 'Self-Rule Movement.'"
+- Owen Lattimore, "On the Wickedness of Being Nomads," *T'ien Hsia Monthly* 1, no. 1 (August 1935): 47–62 (repr. *China Heritage Quarterly*, no. 19, September 2009) — cited above as "Lattimore, 'Wickedness.'"
