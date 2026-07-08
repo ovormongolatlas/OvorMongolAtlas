@@ -20,6 +20,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# raw research sources and working files (never committed; see PROJECT_NOTES.md)
+research/
+
 # jetbrains setting folder
 .idea/
 
