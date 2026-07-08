@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main>
+		<p><a href="/">← Home</a></p>
+		<h1>Page not found</h1>
+		<p>There's nothing at this address. If you followed a link from within the atlas, it likely points to an entry that hasn't been written yet.</p>
+		<p><a href="/entries">Browse all entries</a></p>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 60ch;
+		margin: 0 auto;
+		padding: 4rem 1.5rem;
+		font-family: system-ui, sans-serif;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+</style>
