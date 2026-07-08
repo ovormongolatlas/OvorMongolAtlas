@@ -51,6 +51,7 @@ An interactive historical atlas of Inner Mongolia (Övör Mongol), late Qing to 
 - Zorigt (Mongolian articles): family-fate account; names wife Renchintsoo. Family/partisan perspective.
 - sonin.mn memorial (2018): a family memorial (öchil) by a descendant, addressed to the eldest son Dugarsüren. Partisan.
 - Fan family-tree chart ("The Royal Family of Mengjiang"): uncited enthusiast compilation with colorized/possibly AI portraits. Research lead only; everything from it is Tier 3.
+- David Ambaras and Kate McDonald, *Bodies and Structures 2.0: Deep-Mapping Modern East Asian History* (Scalar, NEH-funded): scholarly born-digital project. Used for two pages so far — "New Nomads of the Sky" (1935 Manchuria Aviation Company courtship of Demchugdongrub, relaying the company's own magazine *ManAir*) and "The View from Above" (1940 Japanese aerial-photography feature on Mengjiang, citing *Chiri kyōiku*). High reliability; treat its own citations to primary Japanese-era magazines as secondhand until checked directly.
 
 ## Structural decisions
 - Entry types: person, place, group, battle, state (a dedicated "lineage" type is optional).
@@ -61,7 +62,7 @@ An interactive historical atlas of Inner Mongolia (Övör Mongol), late Qing to 
 
 ## Image rights buckets
 - Safe now: images I made myself (colorized image, the Mengjiang seal), and genuine public domain (pre-1930).
-- Check license first: institutional archives (Uppsala Jarring Collection, Sweden's Alvin Portal, National Museum of Denmark, Wikimedia Commons).
+- Check license first: institutional archives (Uppsala Jarring Collection, Sweden's Alvin Portal, National Museum of Denmark, Wikimedia Commons). New lead: a photo of Demchugdongrub with Li Shouxin and Tanaka Ryūkichi, c. 1936, seen via Wikimedia Commons on the Ambaras/McDonald "Bodies and Structures" site — check its actual Commons license before use.
 - Hold, keep out of the public repo until cleared: eBay/auction photos, Chinese aggregator images, the fan chart, the Bilibili video, in-copyright scanned books.
 
 ## Leads to consult (not yet used)
