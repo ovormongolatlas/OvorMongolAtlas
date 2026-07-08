@@ -1,0 +1,35 @@
+---
+title: "Li Shouxin"
+type: person
+summary: "Mongol general (1892–1970) from Zhaosuotu League who served as the military backbone of Demchugdongrub's successive governments from 1933 onward, then spent 1945–1949 trying and failing to rebuild an army in eastern Inner Mongolia before following Demchugdongrub into exile and, ultimately, imprisonment."
+startYear: 1892
+endYear: 1970
+---
+
+Li Shouxin was born July 11, 1892, a Mongol from the Tümed Right Banner of Zhaosuotu League (present-day Chaoyang, Liaoning), originally named Nasun Bayar; he adopted the name Li Shouxin after joining a Rehe guerrilla cavalry unit (Narangerel). He rose through the Northeastern Army under Zhang Xueliang as a cavalry brigade commander before allying with Japan in 1933, after which he held a series of military and administrative posts in Japanese-sponsored eastern Chahar (Narangerel). From 1936 he held continuous senior military and political office within [Demchugdongrub](/entry/demchugdongrub)'s governments — a modern academic source on his life describes his forces as the military backbone of the regime, and Jagchid records him as military commander of the [Mongolian Allied League Autonomous Government](/entry/mongolian-allied-league-autonomous-government) and, per Lückenhaus's 1943 account, supreme commander of the [Mengjiang](/entry/mengjiang) army under the name "Li Shou-hsin" (Narangerel; Jagchid; Lückenhaus).
+
+## The 1945 collapse and flight from Kalgan
+
+When Japan's surrender became known in [Kalgan](/entry/kalgan) on August 15, 1945, Li Shouxin was with Demchugdongrub at the Mengjiang government's seat. According to his own later account, he tried to concentrate his scattered forces at Hohhot through his subordinate Bao Guiting, but lost contact with him before the troops arrived — Bao's men were absorbed instead by the Chinese warlord Fu Zuoyi (Narangerel). Offered a Communist surrender demand relayed by Chen Yi, Li forwarded it to Japanese military headquarters for guidance rather than deciding himself; the Japanese reply, as he recorded it, was that they would surrender only to the United States and Chiang Kai-shek, never to Soviet or Communist forces, and urged the Mongols to hand Kalgan to the Nationalists (Narangerel). Soviet aircraft dropped leaflets over the city denouncing Demchugdongrub as a traitor, and Soviet-Mongolian forces attacked; Li and Demchugdongrub fled Kalgan by train under Japanese protection on August 19. At Xuanhua the next day, Chiang Kai-shek's government reorganized the Mongol Army as the Nationalist "10th Route Army" and named Li its commander — but his once roughly 20,000-strong force had by then largely dissolved under pressure from Fu Zuoyi and other Chinese warlords, leaving him, in the source's phrase, "a commander without troops" (Narangerel).
+
+## Rebuilding and defeat in eastern Inner Mongolia, 1945–1947
+
+Over the following two years Li Shouxin tried repeatedly to rebuild a fighting force in eastern Inner Mongolia and southern Manchuria, under continuous pressure from Nationalist secret police to keep fighting the Communists on their behalf while being denied real support or a return to his old territory (Narangerel). He absorbed defecting Mongol cavalry units through 1946, at times commanding several thousand men, and attempted — unsuccessfully — to subvert Communist-aligned Mongol cavalry commander Qing Zhuolik tu (和子章). His campaign ended in decisive defeat at Kailu on February 25–26, 1947, when Communist-aligned Mongol cavalry under General Asigen stormed the city after roughly ten hours of fighting; Asigen is very likely the same "Ashkan" described elsewhere in this atlas as [Khafungga](/entry/khafungga)'s brother-in-law and close political partner — meaning Li Shouxin's decisive defeat came at the hands of a rival Mongol nationalist network, not only Chinese Communist forces (Narangerel).
+
+## Decline, Taiwan, and return to Demchugdongrub's side
+
+His remaining forces were folded into a Nationalist cavalry corps in 1947 and steadily downsized; by late that year Li held only a nominal advisory rank and lived under Nationalist surveillance in Beiping. As the civil war turned against the Nationalists he moved to Shanghai, then Nanjing, where on January 1, 1949 he and Demchugdongrub were received by Chiang Kai-shek and directed to organize a Mongol autonomy movement at Dingyuanying in Alashan (Narangerel). Li instead returned to Shanghai and, as that city's situation deteriorated, flew to Taipei with his family in April 1949. At Demchugdongrub's invitation he traveled to Guangzhou that June, and on July 28, 1949 the two men left together for Alashan by way of Chongqing, Hanzhong, Lanzhou, and Yinchuan (Narangerel) — joining what would become Demchugdongrub's final government, the [Mongolian Autonomous Government](/entry/mongolian-autonomous-government-alashan).
+
+## Arrest, imprisonment, and death
+
+After that government's collapse, Li Shouxin followed Demchugdongrub into the Mongolian People's Republic, where he was arrested and extradited back to China, spending nearly fifteen years in custody (Narangerel). He was granted amnesty and released on December 28, 1964, at age seventy-three, and died in Hohhot in May 1970 (Narangerel).
+
+## A note on sources
+
+The main source for this entry, a 2016 Chinese-language academic article by Narangerel of Inner Mongolia University, opens by noting that despite having been what it calls the "number two" figure in Demchugdongrub's regime, Li Shouxin has never been the subject of a dedicated scholarly monograph — this entry follows that same underlying source material (principally Li's own prison-era memoir, "Li Shouxin's Self-Narrative," compiled in *Inner Mongolia Historical Materials*, and a companion volume of "puppet Mongol Army historical materials") rather than independent verification.
+
+### Sources
+
+- Narangerel (娜仁格日勒), "Li Shouxin after the Defeat of Japan: On the Use of Japanese Materials" [日本战败后的李守信], *Inner Mongolia University* (2016) — cited above as "Narangerel."
+- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid."
+- Alfred Lückenhaus, "Mengchiang: A Country in the Making," *The XXth Century* (Shanghai), 1943 — cited above as "Lückenhaus." A pro-Axis wartime propaganda source; see the [Mengjiang](/entry/mengjiang) entry for the caution this atlas applies to it.
