@@ -4,6 +4,8 @@ type: state
 summary: "The final and best-known iteration of Mengjiang, inaugurated at Kalgan in August 1941 under Demchugdongrub and dissolved with Japan's defeat in August 1945."
 startYear: 1941
 endYear: 1945
+yearType: existed
+partOf: mengjiang
 ---
 
 The Mongolian Autonomous State (Mongolian: Monggol-un Obesuben Jasakhu Ulus) was the final and internationally best-known form of the [Mengjiang](/entry/mengjiang) territory, succeeding the [Mongolian Allied Autonomous Government](/entry/mongolian-allied-autonomous-government). It was inaugurated on August 4, 1941 in [Kalgan](/entry/kalgan), with [Demchugdongrub](/entry/demchugdongrub) continuing as chairman, following his second visit to Japan (Jagchid).

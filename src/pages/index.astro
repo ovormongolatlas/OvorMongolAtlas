@@ -5,13 +5,10 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 	<main>
 		<h1>Övör Mongol Atlas</h1>
-		<p>An interactive historical atlas of Inner Mongolia in the early 20th century.</p>
-		<nav>
-			<a href="/entries">Entries</a>
-			<a href="/map">Timeline Map</a>
-			<a href="/about">About</a>
-			<a href="/editorial-principles">Editorial Principles</a>
-		</nav>
+		<p class="tagline">An interactive historical atlas of Inner Mongolia (Övör Mongol), from the late Qing dynasty through the early People's Republic of China.</p>
+		<p>
+			Entries center on the Inner Mongolian autonomy movement of the 1930s and the Japanese-sponsored Mengjiang regime, and are built from scholarly and archival sources — academic monographs, journal articles, contemporary press, and firsthand accounts. Where sources disagree, this atlas records the disagreement rather than picking a side. Start with the <a href="/entries">Entries</a> index, or explore the <a href="/map">Timeline Map</a>.
+		</p>
 	</main>
 </Layout>
 
@@ -33,13 +30,8 @@ import Layout from '../layouts/Layout.astro';
 		color: #444;
 	}
 
-	nav {
-		margin-top: 1.5rem;
-		display: flex;
-		gap: 1.5rem;
-	}
-
-	nav a {
-		color: inherit;
+	.tagline {
+		font-size: 1.2rem;
+		color: #222;
 	}
 </style>

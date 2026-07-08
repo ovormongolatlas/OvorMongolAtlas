@@ -4,6 +4,7 @@ type: state
 summary: "Short-lived Mongol autonomous government proclaimed at Dingyuanying in Alashan in August 1949, Demchugdongrub's final government, dissolved within two months as Communist forces advanced."
 startYear: 1949
 endYear: 1949
+yearType: existed
 ---
 
 The Mongolian Autonomous Government was [Demchugdongrub](/entry/demchugdongrub)'s last attempt at Mongol self-rule, proclaimed at Dingyuanying (present-day Bayanhot) in the Alashan Banner in August 1949 — four years after the collapse of [Mengjiang](/entry/mengjiang) and his subsequent house arrest in Beijing until 1949, when the Nationalist government's weakening position led it to court Mongol leaders again (Dudin). It is also referred to in later scholarship as the Alashan Republic or, after a September 1949 rename by the faction that stayed behind, the Western Mongolian Autonomous Government (Jagchid; Dudin).

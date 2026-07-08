@@ -4,6 +4,7 @@ type: person
 summary: "Josotu League Mongol politician who rose as spokesman of the 1920s Mongol Delegation in Beiping, became a recurring rival and sometime ally of Demchugdongrub, and held senior office through most of Mengjiang's successive governments."
 startYear: 1928
 endYear: 1949
+yearType: active
 ---
 
 Wu Heling was the Josotu League's delegate to a Mongol Delegation formed in Beiping in the late 1920s during the Kuomintang's Northern Expedition period; Jagchid, then a junior high school student whose father was politically active in the same circles, describes the delegation choosing Wu as its spokesman after Prince Sodnamrabdan of Shilingol League threw his support behind him (Jagchid). The years given here bracket the period of his activity documented in the sources used for this entry, not birth and death dates, which are not established by those sources.

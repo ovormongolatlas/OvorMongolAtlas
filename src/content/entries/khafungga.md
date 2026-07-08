@@ -4,6 +4,7 @@ type: person
 summary: "Eastern Inner Mongolian nationalist and later Communist-aligned political figure (1908–1978), a contemporary of Demchugdongrub who organized covert resistance to Japan from within Manchukuo before helping found the Communist-aligned autonomy movement in the east."
 startYear: 1908
 endYear: 1978
+yearType: life
 ---
 
 ## Identification: two names for one man

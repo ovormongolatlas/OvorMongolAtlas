@@ -4,6 +4,7 @@ type: person
 summary: "Dahur Mongol nationalist intellectual (Chinese name Guo Daofu) who founded the Normal Academy of the Northeast Mongolian Banners in 1929; his fate after 1932 is unconfirmed."
 startYear: 1925
 endYear: 1932
+yearType: active
 ---
 
 Merse — also known by his Chinese name, Guo Daofu (rendered elsewhere in Jagchid's book as Guo Taofu) — was a Dahur Mongol intellectual from eastern Inner Mongolia's Hulunbuir region, and one of the most influential nationalist organizers of his generation among the eastern Mongols (Jagchid). The start and end years given here mark the span of his political activity documented in the sources used for this entry, not birth and death dates, which are not established by those sources.

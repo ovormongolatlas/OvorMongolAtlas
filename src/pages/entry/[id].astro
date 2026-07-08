@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { formatYearRange } from '../../lib/dates';
 
 export async function getStaticPaths() {
 	const entries = await getCollection('entries');
@@ -18,7 +19,7 @@ const { Content } = await render(entry);
 	<main>
 		<p><a href="/entries">← All entries</a></p>
 		<h1>{entry.data.title}</h1>
-		<p class="meta">{entry.data.type} · {entry.data.startYear}–{entry.data.endYear}</p>
+		<p class="meta"><span class="entry-type">{entry.data.type}</span> · {formatYearRange(entry.data.startYear, entry.data.endYear, entry.data.yearType)}</p>
 		<p class="summary">{entry.data.summary}</p>
 		<Content />
 	</main>
@@ -38,9 +39,12 @@ const { Content } = await render(entry);
 	}
 
 	.meta {
-		text-transform: capitalize;
 		color: #777;
 		margin-top: 0;
+	}
+
+	.entry-type {
+		text-transform: capitalize;
 	}
 
 	.summary {

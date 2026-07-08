@@ -4,6 +4,7 @@ type: group
 summary: "Hereditary Chinggisid princely line that governed West Sünit (Sönöd/Sunid) Banner in the Qing-era Shilingol League banner system; its best-known head, Demchugdongrub, later led the Mengjiang regime."
 startYear: 1642
 endYear: 1949
+yearType: existed
 ---
 
 ## The banner and its ruling line

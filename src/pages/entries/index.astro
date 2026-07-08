@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { formatYearRange } from '../../lib/dates';
 
 const allEntries = await getCollection('entries');
 
@@ -13,12 +14,22 @@ const typeLabels: Record<(typeof typeOrder)[number], string> = {
 	state: 'States',
 };
 
+type Entry = (typeof allEntries)[number];
+
+function childrenOf(entry: Entry): Entry[] {
+	return allEntries
+		.filter((e) => e.data.partOf === entry.id)
+		.sort((a, b) => a.data.startYear - b.data.startYear);
+}
+
 const groups = typeOrder
 	.map((type) => ({
 		type,
 		label: typeLabels[type],
+		// Entries that are a partOf another entry (e.g. Mengjiang's successive
+		// governments) are nested under their parent below, not listed as flat peers.
 		items: allEntries
-			.filter((entry) => entry.data.type === type)
+			.filter((entry) => entry.data.type === type && !entry.data.partOf)
 			.sort((a, b) => a.data.startYear - b.data.startYear),
 	}))
 	.filter((group) => group.items.length > 0);
@@ -26,7 +37,6 @@ const groups = typeOrder
 
 <Layout>
 	<main>
-		<p><a href="/">← Home</a></p>
 		<h1>Entries</h1>
 		<div class="search">
 			<input type="search" id="search-input" placeholder="Search entries by title or summary…" aria-label="Search entries" />
@@ -36,12 +46,28 @@ const groups = typeOrder
 			<section>
 				<h2>{group.label}</h2>
 				<ul>
-					{group.items.map((entry) => (
-						<li>
-							<a href={`/entry/${entry.id}`}>{entry.data.title}</a>
-							<span class="years"> ({entry.data.startYear}–{entry.data.endYear})</span>
-						</li>
-					))}
+					{group.items.map((entry) => {
+						const children = childrenOf(entry);
+						return (
+							<li>
+								<a href={`/entry/${entry.id}`}>{entry.data.title}</a>
+								<span class="years"> ({formatYearRange(entry.data.startYear, entry.data.endYear, entry.data.yearType)})</span>
+								{children.length > 0 && (
+									<>
+										<p class="substages-note">Successive stages of {entry.data.title}:</p>
+										<ul class="substages">
+											{children.map((child) => (
+												<li>
+													<a href={`/entry/${child.id}`}>{child.data.title}</a>
+													<span class="years"> ({formatYearRange(child.data.startYear, child.data.endYear, child.data.yearType)})</span>
+												</li>
+											))}
+										</ul>
+									</>
+								)}
+							</li>
+						);
+					})}
 				</ul>
 			</section>
 		))}
@@ -55,6 +81,10 @@ const groups = typeOrder
 
 	const input = document.getElementById('search-input') as HTMLInputElement;
 	const results = document.getElementById('search-results') as HTMLUListElement;
+
+	if (location.hash === '#search-input') {
+		input.focus();
+	}
 
 	const response = await fetch('/search-index.json');
 	const entries: IndexEntry[] = await response.json();
@@ -116,6 +146,17 @@ const groups = typeOrder
 
 	.years {
 		color: #777;
+	}
+
+	.substages-note {
+		margin: 0.4rem 0 0.2rem;
+		font-size: 0.9rem;
+		color: #777;
+	}
+
+	.substages {
+		padding-left: 1.25rem;
+		margin-top: 0;
 	}
 
 	.search {

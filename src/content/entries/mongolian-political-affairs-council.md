@@ -4,6 +4,7 @@ type: state
 summary: "Autonomous Mongol administrative council formed at Bat-khaalag in 1934 under a nominal Nationalist Chinese mandate, the first political body Demchugdongrub effectively led."
 startYear: 1934
 endYear: 1936
+yearType: existed
 ---
 
 The Mongolian Political Affairs Council (Монголын засгийн явдлын зөвлөл) grew directly out of the 1933 Inner Mongolian autonomy movement. After two rounds of talks at Bat-khaalag (Beile-yin sume) — a first meeting on July 26, 1933 and a larger second one on October 9, 1933 — and months of negotiation with envoys sent from Nanjing (Huang Shaohong and Zhao Piyan), a compromise body was inaugurated at Bat-khaalag on April 23, 1934 (Jagchid; Zorigt, "Self-Rule Movement"). It governed under Nationalist Chinese sanction rather than as a fully independent state.

@@ -4,6 +4,7 @@ type: person
 summary: "Inner Mongolian historian and participant-witness to the events he later chronicled; grew up in Demchugdongrub's political circle, served in several Mengjiang-era governments, and later wrote the fullest biography of Demchugdongrub used in this atlas."
 startYear: 1914
 endYear: 1999
+yearType: documented
 ---
 
 Sechin Jagchid was born in 1914 in Inner Mongolia, into one of the region's old aristocratic Mongol families; his own father was a "loyal ally" of [Demchugdongrub](/entry/demchugdongrub), and Jagchid grew up within the political circle around the prince's movement for Mongol autonomy (Jagchid). The end year given here reflects the most recent point documented by the source used for this entry — his own book, published in 1999, which describes him as then retired and living in California — rather than a date of death, which is not established by the sources used for this atlas.

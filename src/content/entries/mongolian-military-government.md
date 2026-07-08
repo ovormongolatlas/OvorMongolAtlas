@@ -4,6 +4,8 @@ type: state
 summary: "First explicitly Japanese-sponsored Mongol government, established at Dehua in May 1936 under Demchugdongrub after two years of Kwantung Army courtship."
 startYear: 1936
 endYear: 1937
+yearType: existed
+partOf: mengjiang
 ---
 
 The Mongolian Military Government (Монголын цэргийн засгийн газар) was the first Mongol governing body formed with direct Japanese sponsorship, replacing the weaker [Mongolian Political Affairs Council](/entry/mongolian-political-affairs-council). It followed two years in which Kwantung Army intelligence officers — including Doihara Kenji (November 1934) and Itagaki Seishiro (September 1935), both later convicted as Class A war criminals — had courted [Demchugdongrub](/entry/demchugdongrub) directly (Zorigt, "Cooperation with the Japanese").

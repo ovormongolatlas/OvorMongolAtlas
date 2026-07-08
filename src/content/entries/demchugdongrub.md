@@ -4,6 +4,7 @@ type: person
 summary: "Chinggisid prince (1902-1966) who led the Inner Mongolian autonomy movement of the 1930s, then headed the Japanese-sponsored Mengjiang regime, and ended his life a prisoner of the Chinese Communist government."
 startYear: 1902
 endYear: 1966
+yearType: life
 ---
 
 ## Name and early life

@@ -4,6 +4,8 @@ type: state
 summary: "Japanese-sponsored Mongol government formed in Hohhot in late 1937, during which the name 'Mengjiang' came into common use for the region."
 startYear: 1937
 endYear: 1939
+yearType: existed
+partOf: mengjiang
 ---
 
 The Mongolian Allied League Autonomous Government succeeded the [Mongolian Military Government](/entry/mongolian-military-government) after a second Mongolian Congress met at Guisui ([Hohhot](/entry/hohhot)) on October 27, 1937, following [Demchugdongrub](/entry/demchugdongrub)'s forces taking the city that month. It was formally inaugurated in Hohhot on December 1, 1937, headquartered in the former Suiyuan provincial government compound. The elderly Prince Yondonwangchug held the nominal chairmanship while Demchugdongrub, as vice chairman, headed its Department of Administration; Li Shouxin, more closely aligned with the Japanese military, served as commander in chief of the Mongolian Army (Jagchid; Zorigt, "Cooperation with the Japanese").

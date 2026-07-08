@@ -4,6 +4,8 @@ type: state
 summary: "Reorganized Japanese-sponsored Mongol government of September 1939 to August 1941, the penultimate stage before the Mongolian Autonomous State."
 startYear: 1939
 endYear: 1941
+yearType: existed
+partOf: mengjiang
 ---
 
 The Mongolian Allied Autonomous Government succeeded the [Mongolian Allied League Autonomous Government](/entry/mongolian-allied-league-autonomous-government) in September 1939 and continued under [Demchugdongrub](/entry/demchugdongrub)'s chairmanship until August 1941, when it was reorganized into the [Mongolian Autonomous State](/entry/mongolian-autonomous-state) (Jagchid).

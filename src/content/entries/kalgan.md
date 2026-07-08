@@ -4,6 +4,7 @@ type: place
 summary: "Fortified trade city on the border of Inner Mongolia and Hebei, a key political and commercial hub in the early 20th century, and later the administrative center of Demchugdongrub's Mengjiang governments."
 startYear: 1900
 endYear: 1945
+yearType: documented
 ---
 
 Kalgan (present-day Zhangjiakou) sat astride the historic caravan routes linking China proper to Mongolia and Russia. Through the early 20th century it served as a major wool and tea trading post and, at various points, as an administrative center for competing Chinese, Mongol, and Japanese-aligned authorities — including several of [Demchugdongrub](/entry/demchugdongrub)'s successive [Mengjiang](/entry/mengjiang) governments, which were headquartered there rather than at [Hohhot](/entry/hohhot) for much of their existence.
