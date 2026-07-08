@@ -12,7 +12,7 @@ West Sünit — also transliterated Sönöd or Sunid — was one of the banners 
 
 The end date given here (1949) marks the founding of the People's Republic of China and the broader collapse of hereditary banner rule across Inner Mongolia under the new government. The exact point at which hereditary authority formally ended in West Sünit specifically is not established by the sources used for this entry.
 
-The title and seat of this line are independently corroborated by a contemporary outside observer: the Swedish explorer Sven Hedin, who passed through the banner in 1929, refers to its ruler as the Wang of Barun Sünit (West Sünit), sovereign of the Sünid Mongols, based at a palace called Wangin Ortu ("the King's Camp") with a Chinese-style residence and a private temple (Hedin).
+The title and seat of this line are independently corroborated by a contemporary outside observer: the Swedish explorer Sven Hedin, who passed through the banner in 1929. Hedin does not use a personal name, referring only to "Sunit Wang," the Wang (king) of Barun Sünit (West Sünit) and sovereign of the Sünid Mongols, based at a palace called Wangin Ortu ("the King's Camp") with a Chinese-style residence and a private temple (Hedin). Hedin also records that the Panchen (Tashi) Lama, on his 1929 tour of Inner Mongolia, stayed at Wangin Ortu itself for about a month, with roughly 10,000 pilgrims camped around the palace, and that some 2,000 pilgrims from Barun Sünit had earlier attended a separate June gathering elsewhere that drew an estimated 30,000 Mongols in total (Hedin).
 
 ## Demchugdongrub, its most prominent head
 
