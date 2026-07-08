@@ -1,0 +1,46 @@
+---
+title: "Inner Mongolian Army"
+type: group
+summary: "The Mongol Army (蒙古軍) built by Demchugdongrub from his own banner militia, formalized in 1936 as the military arm of his autonomy movement and then of Mengjiang, commanded through most of its existence by Li Shouxin."
+startYear: 1936
+endYear: 1945
+yearType: existed
+---
+
+This entry covers the Mongol Army (蒙古軍, Menggu Jun) that [Demchugdongrub](/entry/demchugdongrub) built up from his own banner's militia and that became, from 1936, the formal military arm of his autonomy movement and then of the Japanese-sponsored [Mengjiang](/entry/mengjiang) regime, commanded through most of its existence by [Li Shouxin](/entry/li-shouxin). A separate, unrelated force went by a similar English name: the Inner Mongolia Autonomous Army, formed by eastern Mongol groups after the 1931 Mukden Incident and later folded into Communist-aligned resistance under [Khafungga](/entry/khafungga) and Asigen. This entry does not cover that army, and no source used in this atlas connects the two.
+
+## Origins in banner militia, before 1936
+
+Before any formal Japanese-sponsored military body existed, Demchugdongrub had already built an armed following within his own banner. Through the late 1920s he assembled a personal guard force that had grown past a thousand men by 1926, alongside schools, a clinic, a small textile mill, and even a workshop producing small arms and ammunition (Zorigt, "Self-Rule Movement"). Visiting in 1929, Sven Hedin recorded the banner's army at about a thousand men (Hedin). Demchugdongrub also courted outside patrons for weapons and training: he met the warlord Zhang Xueliang in Mukden in 1929 to source arms, and Chiang Kai-shek in Wuhan in 1932 to discuss forming a Mongol cavalry division (Zorigt, "Self-Rule Movement").
+
+Japanese interest followed a similar timeline. Kwantung Army intelligence officers courted Demchugdongrub directly over 1934–35 — Doihara Kenji in November 1934, and Itagaki Seishiro (together with Prince Sodnamrabdan) in September 1935 — specifically to discuss Kwantung Army backing for a Mongol state (Zorigt, "Cooperation with the Japanese").
+
+## Formal establishment, 1936
+
+A "Mongolian Army General Headquarters" was inaugurated at Demchugdongrub's own palace on February 12, 1936, using the Chinggis Khan calendar and a new blue banner in place of Republic of China symbols (Zorigt, "Cooperation with the Japanese"). After a first Mongolian Congress at Ujumuchin that April debated a larger pan-Mongol state, the more modest [Mongolian Military Government](/entry/mongolian-military-government) — 蒙古軍政府, a name that identifies it first and foremost as a military government, also based at a place recorded as Jabsar — was formally established at Dehua on May 12, 1936, with Demchugdongrub at its head (Zorigt, "Cooperation with the Japanese"; Jagchid; Moll-Murata, citing Jagchid). That November, Mongol forces attempted to seize Suiyuan from Chinese forces and were defeated at Bat-khaalag itself (Zorigt, "Cooperation with the Japanese").
+
+## Under Li Shouxin, through Mengjiang's successive governments
+
+Li Shouxin — a Mongol from the Tümed Right Banner who had risen through Zhang Xueliang's Northeastern Army before allying with Japan in 1933 — became the army's dominant military figure from 1936 onward. Jagchid records him as commander in chief of the Mongolian Army under the [Mongolian Allied League Autonomous Government](/entry/mongolian-allied-league-autonomous-government) from December 1937, serving under Demchugdongrub's civil leadership (Jagchid; Zorigt, "Cooperation with the Japanese"). A modern academic biography of Li describes his forces as the military backbone of the regime across its successive governments (Narangerel), and Alfred Lückenhaus's 1943 propaganda account names him, as "Li Shou-hsin," supreme commander of the Mengjiang army (Lückenhaus).
+
+Real financial, police, and transport power in Mengjiang more broadly remained largely in Japanese hands throughout, administered through a rotating cast of Japanese "supreme advisors" (Jagchid). The army itself had its own named Japanese military advisor: in December 1941, Matsuzaki Yō (松崎陽, 1899–1981) is recorded as "military advisor to the Mongol army [of Mengjiang]," issuing a set of guidelines for developing Mongolia's industry that December (Moll-Murata, citing Ganbagana). A modern Mongolian-language academic account of Demchugdongrub's regime is said to emphasize "the importance accorded to the military and to education" as defining features of his rule, and separately records the establishment of military schools alongside general and elementary schools under Mengjiang (Moll-Murata, citing Ganbagana) — this atlas has not reviewed that source directly and relies here on Moll-Murata's summary of it.
+
+## Collapse, August 1945
+
+When Japan's surrender became known in Kalgan on August 15, 1945, Li Shouxin was with Demchugdongrub at the Mengjiang government's seat. He tried to concentrate his scattered forces at Hohhot through a subordinate, but lost contact before the troops arrived, and they were absorbed instead by the Chinese warlord Fu Zuoyi (Narangerel). Offered a Communist surrender demand, Li forwarded it to Japanese military headquarters rather than deciding himself; the Japanese reply was that they would surrender only to the United States and Chiang Kai-shek, never to Soviet or Communist forces (Narangerel). Soviet aircraft dropped leaflets denouncing Demchugdongrub as a traitor, and Soviet-Mongolian forces attacked; Li and Demchugdongrub fled Kalgan by train under Japanese protection on August 19 (Narangerel). At Xuanhua the next day, the Nationalist government reorganized the Mongol Army as its "10th Route Army" and named Li its commander — but the force, once some 20,000 strong, had by then largely dissolved under pressure from Fu Zuoyi and other Chinese warlords, leaving Li, in the source's own phrase, "a commander without troops" (Narangerel).
+
+## Postwar remnants, 1945–1949
+
+Over the following two years Li Shouxin tried repeatedly to rebuild a fighting force in eastern Inner Mongolia and southern Manchuria, at times commanding several thousand men, under continuous pressure from Nationalist secret police to keep fighting the Communists while being denied real support (Narangerel). This effort ended in decisive defeat at Kailu on February 25–26, 1947, when Communist-aligned Mongol cavalry under General Asigen stormed the city — Asigen very likely being the same "Ashkan" described elsewhere in this atlas as Khafungga's brother-in-law and close political partner, meaning Li's defeat came at the hands of a rival Mongol nationalist network, not only Chinese Communist forces (Narangerel). What remained of his command was folded into a Nationalist cavalry corps later that year and steadily downsized (Narangerel).
+
+A last echo of the institution appeared in 1949: when Demchugdongrub and Li joined the final [Mongolian Autonomous Government](/entry/mongolian-autonomous-government-alashan) at Dingyuanying in Alashan, its cabinet included a Peace Preservation Committee under Prince Damzana with Li Shouxin and Bai Haifeng as deputies (Jagchid) — a much-reduced remnant of the military structure Li had once commanded across Mengjiang's governments.
+
+### Sources
+
+- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid."
+- D. Zorigt, "The Self-Rule Movement Led by De Wang Unfolds in Inner Mongolia" (Олон Улс Судлал journal) — cited above as "Zorigt, 'Self-Rule Movement.'"
+- D. Zorigt, "De Wang Begins Cooperating with the Japanese" (Олон Улс Судлал journal) — cited above as "Zorigt, 'Cooperation with the Japanese.'"
+- Sven Hedin, *Riddles of the Gobi Desert* (1933) — cited above as "Hedin." The copy consulted for this atlas is an OCR scan, so claims from it are paraphrased above rather than quoted directly.
+- Alfred Lückenhaus, "Mengchiang: A Country in the Making," *The XXth Century* (Shanghai), 1943 — cited above as "Lückenhaus." A pro-Axis wartime propaganda source; see the [Mengjiang](/entry/mengjiang) entry for the caution this atlas applies to it.
+- Narangerel (娜仁格日勒), "Li Shouxin after the Defeat of Japan: On the Use of Japanese Materials" [日本战败后的李守信], *Inner Mongolia University* (2016) — cited above as "Narangerel."
+- Christine Moll-Murata, "The Industrialization of Inner Mongolia in the Mengjiang Phase (1937–45): Diverging Japanese Accounts from Tumultuous Years," in Christine Moll-Murata (ed.), *Northeast Asia in Focus: Life, Work and Industry between the Steppe and the Metropoles, 1900–2020* (Working Papers on East Asian Studies, No. 131, University of Duisburg-Essen, Institute of East Asian Studies, 2022) — cited above as "Moll-Murata." Moll-Murata in turn cites Ganbagana ガンバガナ, *Nihon no tai Uchi Mongoru seisaku no kenkyū* [Japan's Policy toward Inner Mongolia] (Sagamihara: Seizansha, 2016) for the Matsuzaki Yō and "military and education" claims attributed to her above; this atlas has not reviewed Ganbagana's book directly.
