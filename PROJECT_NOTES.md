@@ -36,9 +36,10 @@ An interactive historical atlas of Inner Mongolia (Övör Mongol), late Qing to 
 - Unnamed younger brother in the Joel Eriksson photo (c. 1930–1938): identity unknown; caption as unidentified.
 - Other children's identities and exact dates: only from the uncited fan chart and the family memorial. Tier 3.
 - Founding dates vary slightly across sources (e.g., 27 vs 28 October 1937). Record, do not harmonize.
+- Li Shouxin's origins conflict: Narangerel has him rise through Zhang Xueliang's Northeastern Army; Jagchid tells a monastery-boy → Chinese-bandit-chief ("Big Xin") → Japanese-promoted-in-1933 story, and disputes the name origin too. Recorded in his entry as two accounts, not harmonized.
 
 ## Source reliability (per source)
-- Jagchid, The Last Mongol Prince (1999): scholarly, high reliability. Wife as Sebjidma (p. 447); flag symbolism (p. 219).
+- Jagchid, The Last Mongol Prince (1999): scholarly, high reliability. Wife as Sebjidma (p. 447); flag symbolism (p. 219). OPEN ACCESS — published free/open by Western Washington University's Western CEDAR (East Asian Studies Press), so it is quotable and safe to use, not an in-copyright scanned book. A full searchable text has been read; page numbers can be cited. Caveat: Jagchid is a participant-partisan (father was Lubsangchoijur, a Gungsangnorbu man and Wu Heling backer; Jagchid was related to Wu by marriage, later Wu's secretary and rival, then secretary to Prince Sungjingwangchug in the 1939–41 Allied Autonomous Government). Weight his eyewitness detail highly but treat his character judgments (e.g. of Li Shouxin) as attributed opinion.
 - Tuo Jianing, Literature and Modern China 1/1 (2019), DOI 10.54591/CQUN2903: scholarly, critical, high reliability. Founding chronology, demographics. Open access.
 - Isabelle Charleux, Mongolica Pragensia '17, 10/1 (2020), HAL halshs-02984229: scholarly. Hohhot. Open access.
 - Owen Lattimore, "On the Wickedness of Being Nomads" (T'ien Hsia Monthly, Aug 1935) and "The Geographical Factor in Mongol History" (Geographical Journal, Jan 1938): named contemporary scholar. Source of the "Inner Mongolian Roosevelt" characterization (1935) and, from a 1936 lecture, "tied hand and foot and thrown to the Japanese." In-copyright/access-restricted.
