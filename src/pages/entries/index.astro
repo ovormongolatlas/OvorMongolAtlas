@@ -5,21 +5,26 @@ import { formatYearRange } from '../../lib/dates';
 
 const allEntries = await getCollection('entries');
 
-const typeOrder = ['person', 'place', 'group', 'battle', 'state'] as const;
+const typeOrder = ['person', 'place', 'group', 'battle', 'state', 'theme'] as const;
 const typeLabels: Record<(typeof typeOrder)[number], string> = {
 	person: 'People',
 	place: 'Places',
 	group: 'Groups',
 	battle: 'Battles',
 	state: 'States',
+	theme: 'Themes',
 };
 
 type Entry = (typeof allEntries)[number];
 
+// Theme entries have no startYear, so this falls back to 0 for them; harmless
+// since it only affects ordering within a group, and themes sort together.
+function byStartYear(a: Entry, b: Entry): number {
+	return (a.data.startYear ?? 0) - (b.data.startYear ?? 0);
+}
+
 function childrenOf(entry: Entry): Entry[] {
-	return allEntries
-		.filter((e) => e.data.partOf === entry.id)
-		.sort((a, b) => a.data.startYear - b.data.startYear);
+	return allEntries.filter((e) => e.data.partOf === entry.id).sort(byStartYear);
 }
 
 const groups = typeOrder
@@ -28,9 +33,7 @@ const groups = typeOrder
 		label: typeLabels[type],
 		// Entries that are a partOf another entry (e.g. Mengjiang's successive
 		// governments) are nested under their parent below, not listed as flat peers.
-		items: allEntries
-			.filter((entry) => entry.data.type === type && !entry.data.partOf)
-			.sort((a, b) => a.data.startYear - b.data.startYear),
+		items: allEntries.filter((entry) => entry.data.type === type && !entry.data.partOf).sort(byStartYear),
 	}))
 	.filter((group) => group.items.length > 0);
 ---
@@ -48,20 +51,24 @@ const groups = typeOrder
 				<ul>
 					{group.items.map((entry) => {
 						const children = childrenOf(entry);
+						const years = formatYearRange(entry.data.startYear, entry.data.endYear, entry.data.yearType);
 						return (
 							<li>
 								<a href={`/entry/${entry.id}`}>{entry.data.title}</a>
-								<span class="years"> ({formatYearRange(entry.data.startYear, entry.data.endYear, entry.data.yearType)})</span>
+								{years && <span class="years"> ({years})</span>}
 								{children.length > 0 && (
 									<>
 										<p class="substages-note">Successive stages of {entry.data.title}:</p>
 										<ul class="substages">
-											{children.map((child) => (
-												<li>
-													<a href={`/entry/${child.id}`}>{child.data.title}</a>
-													<span class="years"> ({formatYearRange(child.data.startYear, child.data.endYear, child.data.yearType)})</span>
-												</li>
-											))}
+											{children.map((child) => {
+												const childYears = formatYearRange(child.data.startYear, child.data.endYear, child.data.yearType);
+												return (
+													<li>
+														<a href={`/entry/${child.id}`}>{child.data.title}</a>
+														{childYears && <span class="years"> ({childYears})</span>}
+													</li>
+												);
+											})}
 										</ul>
 									</>
 								)}
