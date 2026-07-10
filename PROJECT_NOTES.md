@@ -101,7 +101,7 @@ Apply this in every phase; append new names as they appear. "[prov]" = provision
 | Wangyehmiao | Wangye Temple (Ulanhot) | established (Khafungga entry); capital of the *Eastern* Mongolian Autonomous Government |
 | Yun Tse | Ulanhu | established (Alashan entry) |
 | Prince Ta / Darijap / Dalijaya / Dali Zhai | Damzana | established; Damzana = Darijaya = Dali Zhai/Dalizhaya = "Prince Ta of Alashan" are ONE person — state the equivalence at first appearance in every entry |
-| Ukudui / Wu Ku-ting | Ukudui | [prov]. FLAG: "Wu Ku-ting" is phonetically "Wu Guting" — possibly the atlas's existing **Wu Guting** (Mongol Army chief of staff, per Jagchid). No source in this pass equates them; keep separate per merge-caution, flag for maintainer |
+| Ukudui / Wu Ku-ting (CIA) | Wu Guting (Mongol: Ogodei) | One person: "Wu Ku-ting" = pinyin **Wu Guting** (Chinese name); **Ogodei** is his Mongol name; the CIA "Ukudui" is a transliteration of that Mongol name. Maintainer confirmed the identification and supplied the Mongol name Ogodei (the earlier "do not merge / flag for maintainer" note is withdrawn). Render house-style — Chinese Wu Guting, Mongol Ogodei — never as a separate person from "Ukudui" |
 | Dagwaoser / Dagwaooser | Dagwasüren | [prov] |
 | Uljiochir / Wulji Ochar / Wuiji Ochar | Wulji Ochar | [prov] (Phase 8 only) |
 | Pai Hai-feng / Pai Hai-fang | Bai Haifeng | established |
