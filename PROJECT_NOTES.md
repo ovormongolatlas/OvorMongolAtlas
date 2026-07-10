@@ -37,6 +37,8 @@ An interactive historical atlas of Inner Mongolia (Övör Mongol), late Qing to 
 - Other children's identities and exact dates: only from the uncited fan chart and the family memorial. Tier 3.
 - Founding dates vary slightly across sources (e.g., 27 vs 28 October 1937). Record, do not harmonize.
 - Li Shouxin's origins conflict: Narangerel has him rise through Zhang Xueliang's Northeastern Army; Jagchid tells a monastery-boy → Chinese-bandit-chief ("Big Xin") → Japanese-promoted-in-1933 story, and disputes the name origin too. Recorded in his entry as two accounts, not harmonized.
+- Demchugdongrub's 1949–52 whereabouts: Zorigt's archival dating (MPR crossing end-1949, arrest Feb 1950) vs a run of CIA field reports placing him free and militarily active in the Northwest into 1951–52. Unresolved — see the "CIA CREST postwar reporting" section for the full reusable block.
+- Eldest son held in the MPR: three CIA reports (F, T) independently place Demchugdongrub's eldest son ("Te Hua"/"Yugar-Jap") a prisoner in Ulan Bator in 1945–47, corroborating the underlying fact behind Jagchid's unnamed "eldest son whose fate was unknown to him." The name Dugarsuren/Dugursulong remains the maintainer's cross-source attribution, asserted by no single source.
 
 ## Source reliability (per source)
 - Jagchid, The Last Mongol Prince (1999): scholarly, high reliability. Wife as Sebjidma (p. 447); flag symbolism (p. 219). OPEN ACCESS — published free/open by Western Washington University's Western CEDAR (East Asian Studies Press), so it is quotable and safe to use, not an in-copyright scanned book. A full searchable text has been read; page numbers can be cited. Caveat: Jagchid is a participant-partisan (father was Lubsangchoijur, a Gungsangnorbu man and Wu Heling backer; Jagchid was related to Wu by marriage, later Wu's secretary and rival, then secretary to Prince Sungjingwangchug in the 1939–41 Allied Autonomous Government). Weight his eyewitness detail highly but treat his character judgments (e.g. of Li Shouxin) as attributed opinion.
@@ -53,6 +55,113 @@ An interactive historical atlas of Inner Mongolia (Övör Mongol), late Qing to 
 - sonin.mn memorial (2018): a family memorial (öchil) by a descendant, addressed to the eldest son Dugarsüren. Partisan.
 - Fan family-tree chart ("The Royal Family of Mengjiang"): uncited enthusiast compilation with colorized/possibly AI portraits. Research lead only; everything from it is Tier 3.
 - David Ambaras and Kate McDonald, *Bodies and Structures 2.0: Deep-Mapping Modern East Asian History* (Scalar, NEH-funded): scholarly born-digital project. Used for two pages so far — "New Nomads of the Sky" (1935 Manchuria Aviation Company courtship of Demchugdongrub, relaying the company's own magazine *ManAir*) and "The View from Above" (1940 Japanese aerial-photography feature on Mengjiang, citing *Chiri kyōiku*). High reliability; treat its own citations to primary Japanese-era magazines as secondhand until checked directly.
+
+## CIA CREST postwar reporting (1945–1952)
+
+### Source-tier standing note (state once per entry that uses these)
+CIA CREST field reports, 1945–1952, are contemporaneous and often granular but "unevaluated": informant-sourced, frequently relayed from KMT-aligned Hong Kong/Taiwan press, and anti-Communist in orientation (they report largely on anti-Communist Mongol resistance, sometimes with incentive to overstate its vigor and numbers). Troop-strength figures are unreliable informant estimates, not counts (one report even calls the high figures "unduly high"). Several documents self-flag partisan sourcing. Weigh below the atlas's scholarly/memoir tier; corroborate where possible; always preserve the informant-chain attribution. The digests worked from are cleaned; the underlying OCR is badly garbled, so verify any quoted wording makes sense before using it. All are US-government (public domain), so quotation is legally unrestricted, but follow the atlas's paraphrase-first style anyway.
+
+### Romanization / name mapping (CIA CREST Wade-Giles & OCR → house spelling)
+Apply this in every phase; append new names as they appear. "[prov]" = provisional house-consistent spelling with no atlas precedent.
+
+| CIA / Wade-Giles / OCR | House spelling | Notes |
+|---|---|---|
+| Prince Te / Te Wang / Teh | Demchugdongrub | established |
+| Li Shou-hsin | Li Shouxin | established |
+| Wu Ho-ling / VU Ho-ling | Wu Heling | established |
+| Hafongga / Hafungga | Khafungga | established |
+| Kuo Tao-fu | Merse (Ch. Guo Daofu) | established |
+| Fu Tso-yi / Fu Tso-i | Fu Zuoyi | established |
+| Ma Hung-kuei | Ma Hongkui | pinyin |
+| Hu Tsung-nan | Hu Zongnan | pinyin |
+| Lin Piao | Lin Biao | pinyin |
+| Nieh Jung-chen | Nie Rongzhen | pinyin |
+| Lo Lung-chi | Luo Longji | pinyin |
+| Li Tsung-jen | Li Zongren | established (Alashan entry) |
+| Wang Shih-chieh | Wang Shijie | pinyin |
+| Sun Fo | Sun Fo | as-is |
+| Fan Han-chieh | Fan Hanjie | pinyin |
+| Chen Yi | Chen Yi | established (Li Shouxin entry) |
+| Tung Chi-wu | Dong Qiwu | [prov] |
+| Ho Chao-lin | He Zhaolin | established (Alashan entry) |
+| Han Feng-lin | Han Fenglin | [prov] |
+| Kueisui | Guisui (gloss Hohhot) | established |
+| Paotou | Baotou | established |
+| Ninghsia | Ningxia | established |
+| Lanchou | Lanzhou | established |
+| Chinchou | Jinzhou | pinyin |
+| Tingyuanying | Dingyuanying | established |
+| Alagshan / Alashan | Alashan | established |
+| Patanchijung | Bayanchagan | [prov]; Aug-1949 emergency capital in N. Alashan range |
+| Sanhsingkung | Sanxinggong | [prov] (Source B meeting site) |
+| Silingol | Shilingol League | established |
+| Ulanjap | Ulanchab League | established |
+| Pailingmiao / Bailingmiao | Bat-khaalag (= Pailingmiao / Bailingmiao / Beile-yin sume) | CONFIRMED same site (PROJECT_NOTES "settled facts"); the CIA "Bailingmiao-era regime" = the [Mongolian Political Affairs Council](/entry/mongolian-political-affairs-council) of 1934. Use "Bat-khaalag" in 1930s narrative, gloss the Chinese name |
+| Yehejo / Ikeohou League | Yekejuu League | established (variant Ikejuu noted) |
+| Wangyehmiao | Wangye Temple (Ulanhot) | established (Khafungga entry); capital of the *Eastern* Mongolian Autonomous Government |
+| Yun Tse | Ulanhu | established (Alashan entry) |
+| Prince Ta / Darijap / Dalijaya / Dali Zhai | Damzana | established; Damzana = Darijaya = Dali Zhai/Dalizhaya = "Prince Ta of Alashan" are ONE person — state the equivalence at first appearance in every entry |
+| Ukudui / Wu Ku-ting | Ukudui | [prov]. FLAG: "Wu Ku-ting" is phonetically "Wu Guting" — possibly the atlas's existing **Wu Guting** (Mongol Army chief of staff, per Jagchid). No source in this pass equates them; keep separate per merge-caution, flag for maintainer |
+| Dagwaoser / Dagwaooser | Dagwasüren | [prov] |
+| Uljiochir / Wulji Ochar / Wuiji Ochar | Wulji Ochar | [prov] (Phase 8 only) |
+| Pai Hai-feng / Pai Hai-fang | Bai Haifeng | established |
+| Pai Yun-ti | Bai Yunti | established (Merse entry) |
+| Li Yung-hsin | Li Yongxin | [prov pinyin] |
+| Hsiung No | Hsiung No | [prov]; possibly related to Alashan finance min. Shongnodongdob (Prince Hsiung) — not established |
+| Pa Wen-chun | Bayankhan (Ba Wenjun) | established (Alashan entry); Wade-Giles Pa Wen-chun = pinyin Ba Wenjun = same man, Tumet Special Banner |
+| Chi Chih-hsiang | Jirgalang (Chi Chih-hsiang) | = Jirgalang (a) below |
+| Erdenipatu | Erdenipatu | [prov] |
+| Rinchinsengge (Prince Lin) | Rinchinsengge | established (Autonomous State entry) |
+| Uljiboyan | Uljiboyan | [prov] |
+| Shongnodongdob (Prince Hsiung) | Shongnodongdob | [prov] |
+| Suhbaatar | Sühbaatar | [prov] |
+| Hotoringga | Hotoringga | [prov] |
+| Chang Chi-hsiang | Zhang Jixiang | [prov pinyin] (relay in Source Z) |
+| Jung Chi-chen | Rong Chichen | keep this house form (per 0.5); NOT a Jirgalang |
+| Buin-Dalai | Buyandalai | house romanization; head of 1945 Provisional Govt (CIA "Buin-Dalai") |
+| Zodba-Jap | Jodbajab | matches atlas romanization of the name |
+| Damurun | Damurun | [prov] |
+| Mugdenbo | Mugdenbu | [prov]; Jagchid variants Mugdenbuu / Mogdengbu |
+| Jagchitsechin | Jagchitsechin | [prov]. FLAG: phonetically ≈ "Jagchid Sechin" — possibly **Sechin Jagchid** himself (the atlas's author-source, Jaγčid Sečen), an MRA founder in 1949. Not established by the source; flag for maintainer, do not merge |
+| Urgunbo | Urgunbo | [prov] |
+| Te Hua / Yugar-Jap | (Demchugdongrub's eldest son) | maintainer identifies him as Dugarsuren / Dugursulong; NO CIA doc states that name — see open questions |
+
+### Multiple Jirgalangs — do not merge
+The sources use "Jirgalang" (var. Chargeelao, Kaerhkohao) for at least three or four distinct men and explicitly warn the name is common and easily confused. Keep distinct unless a source equates them: (a) **Jirgalang / Chi Chih-hsiang** — of Powang (Horchin Left Flank Rear) Banner, Jirum League; served under Demchugdongrub's government (Yekejuu civil affairs, later deputy chief of Ulanchab), fled Mukden→Peiping→Ningxia, seated in the Aug-1949 Dingyuanying government (Vice-Secretary); (b) a second **"Jirgalang (Te Ku-la)"** listed separately alongside (a) in that same 1949 Presidium roster; (c) **Jirgalang (Chargeelao)** — a Finance-Department member of the 1945 Provisional Government whose postwar whereabouts the source cannot fix; (d) the Legislative-Yuan **"Jirgalang"** among the MRA founders (possibly = (a), not established). Do NOT collapse these. Separately, **Rong Chichen (Jung Chi-chen)** — a Whampoa-1933 ex-brigadier under Demchugdongrub who organized Mongols around Kalgan after its fall — is a distinct person, not a Jirgalang; do not fold him in.
+
+### Chronology conflict: Demchugdongrub's whereabouts, 1949–1952 (reuse this wording, lightly adapted)
+The atlas currently follows Zorigt: Demchugdongrub crossed into the Mongolian People's Republic at the end of December 1949, was arrested there on 27 February 1950, and was extradited to Beijing by September 1950. A run of CIA field reports flatly contradicts this, placing him free and militarily active in the Ningxia–Suiyuan–Alashan borderlands from 1949 well into 1951–52 (raiding, negotiating, commanding forces variously estimated at several thousand to 20,000). Record this as an explicit, unresolved conflict between Zorigt's archival dating and the CIA field reporting; do not pick a side. The one partial bridge — a December 1950 report that his forces had fragmented into small scattered units with Demchugdongrub himself "in the desert area" with only a few followers — offers a mechanism by which a rump resistance could operate under his name even as his own position collapsed, but this does not reconcile first-hand 1951–52 sightings of him free and commanding troops with an early-1950 arrest. The troop-strength numbers are wildly varying partisan informant estimates, not counts.
+
+### Master source list (A–AA; full CREST document numbers)
+All CIA CREST / General CIA Records, US-government (public domain). Entry Sources sections cite in house short-form the specific documents they use; this is the complete reference.
+- A — "Relations of Certain Mongol Leaders with the CC Clique," CIA-RDP82-00457R002900400009-1, 7 July 1949 (Confidential). Self-flags partisan sourcing (informants "strongly opposed to the CC Clique").
+- B — "Mongol Activities in the Northwest," CIA-RDP82-00457R002700670009-4, 23 May 1949 (C).
+- C — "Possibility of Continued Warfare Against Chinese Communists in the Northwest," CIA-RDP82-00457R002500680002-2, 6 April 1949.
+- D — "Sentiment Against Yun Tse / Communist Efforts to Win Over Prince Te," CIA-RDP82-00457R005800370004-8, 19 Sept 1950 (Secret).
+- E — "History of the Inner Mongolian Republican Temporary Government," CIA-RDP82-00457R000500670006-1, 6 May 1947 (C).
+- F — "Political Information; Fate of Members of the Inner Mongolian Independent Republic Provisional Government," CIA-RDP82-00457R000200680003-6, 20 Jan 1947 (C).
+- G — "The Mongolian Restoration Association," CIA-RDP82-00457R002700600009-1, 1 July 1949 (S). Translation of the MRA's own internal document.
+- H — "Political Information: Current Activities of Prince Teh," CIA-RDP82-00457R002100480006-4, 6 Dec 1948 (S).
+- I — "Political Information: Prince Teh's Plans to Go to Ninghsia," CIA-RDP82-00457R002200800006-7, 17 Jan 1949 (S).
+- J — "Attempt of Mongol Troops in Suiyuan Province to Join Prince Te's Forces," CIA-RDP82-00457R002800640005-0, 9 June 1949 (S).
+- K — "Prince Te's Failure to Obtain Funds from the Central Government," CIA-RDP82-00457R002800780007-3, 15 June 1949 (S).
+- L — "Guerrilla Activity by Mongols under Prince Te," CIA-RDP82-00457R004500240010-9, 14 March 1950 (S).
+- M — "Negotiations between Prince Te and Chinese Communist Authorities in Ninghsia," CIA-RDP82-00457R004600200009-4, 29 March 1950 (S).
+- N — "Guerrilla Forces under Prince Te," CIA-RDP82-00457R005600710008-8, 25 Aug 1950 (S).
+- O — "Mongol Dissatisfaction with the Chinese Communist Regime / Activities of Prince Te's Group," CIA-RDP82-00457R006400740008-6, 21 Dec 1950 (S).
+- P — "Location and Strength of Prince Te's Forces," CIA-RDP82-00457R008100730002-4, 19 July 1951 (S).
+- Q — "Anti-Communist Mongol Raid, Alagshan Banner," CIA-RDP82-00457R007300410011-8, 16 April 1951 (S).
+- R — "Activities of Prince Te," CIA-RDP82-00457R014000110007-1, 18 Sept 1952 (C).
+- S — "Recent Activities of Racial Mongol Leaders," CIA-RDP82-00457R002400650009-9, 10 March 1949 (S).
+- T — "Military Information: Activities in Inner Mongolia," CIA-RDP82-00457R000300770002-6, 26 Feb 1947 (C).
+- U — "Political Information: Fu Tso-yi's Proposal to Prince Te," CIA-RDP82-00457R000800860003-0, 4 Sept 1947 (C).
+- V — "Liaison between Prince Te and Leftist Organizations," CIA-RDP82-00457R002800350009-8, 31 May 1949 (C).
+- W — "Liaison between Prince Te and Chinese Leftist Organizations," CIA-RDP82-00457R002800680003-8, 10 June 1949 (S).
+- X — "Prince Te and Followers Opposed to Communism," CIA-RDP80-00809A000600320472-2, 29 June 1950 (C). Relays KMT-aligned Hong Kong press.
+- Y — "The Establishment of an Autonomous Mongolian Government under Prince Te," CIA-RDP82-00457R003400440009-1, 27 Oct 1949 (S).
+- Z — "Activities of Mongol Military Leader Li Shou-hsin," CIA-RDP82-00457R002700650009-6, 19 May 1949 (C).
+- AA — "Political Information: Mongols in the Control Yuan," CIA-RDP82-00457R001900270010-5, 30 Sept 1948 (C). (Phase 8 logging only.)
+- Phase-8 logging extras: "Plan for the Establishment of a Mongol Nation," CIA-RDP82-00457R002700210009-4, 6 May 1949 (S) — confirms the two distinct 1945 bodies; "Activities of Wulji Ochar in Inner Mongolia," CIA-RDP82-00457R000900470006-9, 23 Sept 1947 (C); "Saksoga, Mongol Officer under Uljiochir," CIA-RDP82-00457R002700640002-4, 18 May 1949 (C); "Rong Chichen, New Mongol Organizer for the Kalgan Area," CIA-RDP82-00457R002500680003-1, 31 March 1949 (C); "Mongol Activities in Chinese Communist-Controlled Inner Mongolia," CIA-RDP82-00457R002700700004-5, 20 May 1949 (C); "Soviet-Supported Inner Mongolian Independence Move," CIA-RDP82-00457R001900230007-3, 28 Sept 1948 (C).
 
 ## Structural decisions
 - Entry types: person, place, group, battle, state (a dedicated "lineage" type is optional).
