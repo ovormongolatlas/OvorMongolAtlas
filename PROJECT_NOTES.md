@@ -122,7 +122,7 @@ Apply this in every phase; append new names as they appear. "[prov]" = provision
 | Zodba-Jap | Jodbajab | matches atlas romanization of the name |
 | Damurun | Damurun | [prov] |
 | Mugdenbo | Mugdenbu | [prov]; Jagchid variants Mugdenbuu / Mogdengbu |
-| Jagchitsechin | Jagchitsechin | [prov]. FLAG: phonetically ≈ "Jagchid Sechin" — possibly **Sechin Jagchid** himself (the atlas's author-source, Jaγčid Sečen), an MRA founder in 1949. Not established by the source; flag for maintainer, do not merge |
+| Jagchitsechin | Sechin Jagchid | One person: "Jagchitsechin" is **Sechin Jagchid** (the atlas's author-source, Jaγčid Sečen / Jagchid Sečen) in Mongol name-order. Maintainer confirmed the identification: the atlas's most-cited source was himself an MRA founder in March 1949. Render as Sechin Jagchid, cross-link his entry — not a separate person. (Both of this pass's flagged identity questions — this one and Ukudui/Wu Guting/Ogodei above — are now closed.) |
 | Urgunbo | Urgunbo | [prov] |
 | Te Hua / Yugar-Jap | (Demchugdongrub's eldest son) | maintainer identifies him as Dugarsuren / Dugursulong; NO CIA doc states that name — see open questions |
 
