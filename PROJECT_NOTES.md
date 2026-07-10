@@ -56,6 +56,7 @@ An interactive historical atlas of Inner Mongolia (Övör Mongol), late Qing to 
 - Fan family-tree chart ("The Royal Family of Mengjiang"): uncited enthusiast compilation with colorized/possibly AI portraits. Research lead only; everything from it is Tier 3.
 - David Ambaras and Kate McDonald, *Bodies and Structures 2.0: Deep-Mapping Modern East Asian History* (Scalar, NEH-funded): scholarly born-digital project. Used for two pages so far — "New Nomads of the Sky" (1935 Manchuria Aviation Company courtship of Demchugdongrub, relaying the company's own magazine *ManAir*) and "The View from Above" (1940 Japanese aerial-photography feature on Mengjiang, citing *Chiri kyōiku*). High reliability; treat its own citations to primary Japanese-era magazines as secondhand until checked directly.
 - Christopher P. Atwood, "A Romantic Vision of National Regeneration: Some Unpublished Works of the Inner Mongolian Poet and Essayist, Saichungga," *Inner Asia* 1, no. 1 (1999): 3–43 (Brill): peer-reviewed, by a leading historian of Inner Mongolia. TOP TIER, comparable to Jagchid (not the CIA-CREST field-report tier). Sole source for the Saichungga entry so far — present as best-available, leave room for corroboration. COPYRIGHT CAVEAT: reproduces Atwood's own English translations of Saichungga's 1945 poems and the essay "A Ghost" — do not reproduce; paraphrase, short (<15-word) attributed quotes only.
+- Konagaya Yuki, "Modern Origins of Chinggis Khan Worship: The Mongolian Response to Japanese Influences" (2012), National Museum of Ethnology (Japan): peer-reviewed, by a senior scholar. TOP TIER by authorship — but logged here from an OCR/translation reading of the Japanese-language original, and the article itself cites a multi-layer chain of Mongolian and Japanese primary sources (diaries, collected-works volumes, field notes, oral informants) that this atlas has not independently checked. Every specific figure, date, and attribution drawn from it is tagged [VERIFY AGAINST ORIGINAL] below and must not be promoted into any live entry as settled fact until checked against Konagaya's original text; where used in an entry (the Saichungga entry's Konagaya-derived paragraph), keep it explicitly attributed and weighted below Atwood, not merged with his findings.
 
 ## CIA CREST postwar reporting (1945–1952)
 
@@ -176,6 +177,27 @@ Figures and bodies that recur in the postwar reports but were out of scope for t
 - **Mongols in the Control Yuan** — profiled in Source AA ("Political Information: Mongols in the Control Yuan," 30 Sept 1948).
 - Running-theme thread (Genghis-Khan mythology as legitimation): the Chinese Communists organized a large Genghis Khan memorial ceremony in the Yekejuu League (Ikh Juu / Yeke Juu) in May 1950 (Source X) — the same symbolic tool the Japanese had used (cf. the Mengjiang Chinggis-calendar material). Worth a line in a future thematic entry.
 
+## Konagaya 2012 — sourced but unverified notes (verify before use in entries)
+Source: Konagaya Yuki, "Modern Origins of Chinggis Khan Worship: The Mongolian Response to Japanese Influences" (2012). See the source-reliability entry above for the standing caveat on this source (OCR/translation reading, multi-layer citation chains, not yet checked against the original). Every item below is tagged [VERIFY AGAINST ORIGINAL] and citation chains are preserved in full rather than collapsed.
+
+### (1) Saichungga thread (feeds the Saichungga entry)
+- Saichungga's collection *The Heart's Companion* contains a poem "Chinggis's Descendants" (チンギスの子孫), thought to date to ~1940 [VERIFY AGAINST ORIGINAL]. Possible date discrepancy: Konagaya appears to associate this collection with 1942, whereas Atwood 1999 gives *The Heart's Companion* as mimeographed in Tokyo in 1939 and published in 1941. Recorded as an unresolved minor discrepancy; do not reconcile.
+- Saichungga studied Chinggis Khan during his time in Japan [VERIFY AGAINST ORIGINAL].
+- Per Prof. Choiraljav (Inner Mongolia University), Saichungga's diary entry of 22 August 1940 records him humming the "Chinggis Khan military song" (成吉思汗軍歌), citing Na. Sainčoγtu-yin Büren Zohkiol (1999), p. 202 [VERIFY AGAINST ORIGINAL]. Full chain: Konagaya 2012 → Prof. Choiraljav (Inner Mongolia University) → Na. Sainčoγtu-yin Büren Zohkiol (1999), p. 202 → Saichungga's diary entry of 22 August 1940. Preserve this chain intact wherever cited; do not collapse to "per Konagaya."
+
+### (2) Chinggis Khan song thread (feeds the maintainer's separate Ulaan Tug / song-survival essay work — log for retrieval, not for an entry)
+- A "Chinggis Khan Expedition Song" (成吉思汗出征の歌), reconstructed from multiple informants, with a musical score at Konagaya's fig. 9 [VERIFY AGAINST ORIGINAL].
+- Provenance chain (preserve in full, do not collapse): transmitted via the Kalgan association head Kitagawa Akira, who recorded himself singing it from memory → ultimate source cited as Nakazawa Kōhei, *Asia Folk Song Collection* (Mongolian folk-song section), with Kimura Hisao named as provider → the same lyrics appear hand-written in romanization on pp. 17–19 of Umesao Tadao's "field-note zero" (Umesao worked at the Northwest Institute in Kalgan, 1944–45) [VERIFY AGAINST ORIGINAL, each link separately].
+- Hypothesis that the song was created under Japanese direction at the founding of the [Mongolian Military Government](/entry/mongolian-military-government) at Dehua in 1936 [VERIFY AGAINST ORIGINAL]; but Okada Hidehiro reported hearing it from a Khorchin Mongol, indicating wide diffusion across the Manchu-Mongol region [VERIFY AGAINST ORIGINAL].
+- Konagaya's note that the melody, originally melancholy, "has changed to something bright" [VERIFY AGAINST ORIGINAL] — logged explicitly, since it instances the maintainer's tune-survives-words-shift through-line.
+- Overlaps a source the atlas already holds: Haslund-Christensen, *The Music of the Mongols* (1943). Note the overlap; not yet cross-checked.
+
+### (3) Chinggis Khan mythology / portrait-propagation thread (feeds the atlas's running mythology theme; candidate detail for the Demchugdongrub, West Sünit, and/or a future thematic note — not yet applied to any entry)
+- Japanese-sponsored schooling propagated Chinggis Khan portraits in 1940s Inner Mongolia [VERIFY AGAINST ORIGINAL].
+- Per an architectural floor-plan in Naitō 1943, the 1941 West Sünit girls' home-economics school (the school Atwood credits to Saichungga) had an altar in the northwest khoimor of the ger marked "Chinggis Khan portrait," paired with a "portrait of Prince De's son (banner head)" [VERIFY AGAINST ORIGINAL]. The De-son-portrait-beside-Chinggis-portrait pairing recurs elsewhere (a Manshū photo volume) [VERIFY AGAINST ORIGINAL]. Flagged as a concrete candidate link between Demchugdongrub's self-legitimation and Chinggisid imagery — not yet applied to the Demchugdongrub or West Sünit entries.
+- Empirical corrective worth preserving: a 1936 survey of 176 (or 140 — [VERIFY AGAINST ORIGINAL] the figures) Wangyehmiao military-academy students found only ~10 naming Chinggis Khan, in a religious world dominated by Tibetan Buddhism — i.e. Chinggis-worship had to be actively manufactured against a Buddhist baseline, not simply inherited [VERIFY AGAINST ORIGINAL].
+- Framing concept: Konagaya builds on Uradyn Bulag, *Collaborative Nationalism* (2010), arguing that modern popular Chinggis Khan worship in Inner Mongolia had a collaborative origin (Japanese actors and Mongol nationalists jointly promoting it) [VERIFY AGAINST ORIGINAL]. The atlas already cites Bulag's *The Mongols at China's Edge*; this is a compatible framing to weave into a future mythology thread once verified, not yet applied anywhere.
+
 ## Structural decisions
 - Entry types: person, place, group, battle, state (a dedicated "lineage" type is optional).
 - The West Sünit lineage page is titled "The ruling house of West Sünit Banner." It is NOT a "dynasty" and NOT "the royal house of Mengjiang." Structure it from solid core to tentative genealogy.
@@ -190,7 +212,8 @@ Figures and bodies that recur in the postwar reports but were out of scope for t
 
 ## Leads to consult (not yet used)
 - Demchugdongrub's own memoir, "Demchugdongrub in His Own Words," Nei Menggu wenshi ziliao, vol. 13 (1984). Primary autobiography.
-- Uradyn E. Bulag, Collaborative Nationalism (2010).
+- Uradyn E. Bulag, Collaborative Nationalism (2010). To acquire — cited by Konagaya 2012 as a framing source for the Chinggis Khan mythology thread; see that section above.
+- Isabelle Charleux (2009) — companion piece to the Charleux Hohhot article already cited in this atlas. To acquire.
 - Ochirbat memoir (Admon, 2014). Print-only, Mongolian.
 - Map data: CHGIS (1911 baseline); MCGD / ENP-China (Republican provincial boundaries 1912–1949) for GeoJSON.
 
