@@ -25,7 +25,7 @@ Atwood catalogues a compact but varied body of published work:
 - *Notes on Home Improvement* — October 1942, addressed to Mongolian women, on households, education, science, and hygiene, in the stated service of building "a new Mongolia" (Atwood).
 - *The Rising Song of Our Mongolia* — essays, April 1944.
 
-Much of his work appeared in *Manduqu Mongghol* ("Mongolia Rising"), the Autonomous State's principal journal of opinion and literature, published from Kalgan and edited by Gombojab Hangin; its planned second volume was stillborn, killed by the August 1945 Soviet-Mongolian invasion (Atwood). It is from the surviving printer's sheets of that unpublished volume that Atwood recovered and first published the 1945 works — an essay and eight poems — on which much of his analysis turns.
+Much of his work appeared in *Manduqu Mongghol* ("Mongolia Rising"), the Autonomous State's principal journal of opinion and literature, published from Kalgan and edited by [Gombojab Hangin](/entry/gombojab-hangin) — per a community-memorial source used in Hangin's own entry, Hangin was in fact Saichungga's brother, though that source and this one disagree on which Chakhar banner the family belonged to, a discrepancy recorded in Hangin's entry rather than resolved here; its planned second volume was stillborn, killed by the August 1945 Soviet-Mongolian invasion (Atwood). It is from the surviving printer's sheets of that unpublished volume that Atwood recovered and first published the 1945 works — an essay and eight poems — on which much of his analysis turns.
 
 ## Chinggis Khan as a nationalist symbol
 
