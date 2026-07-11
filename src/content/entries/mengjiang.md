@@ -14,7 +14,7 @@ yearType: existed
 - [Mongolian Allied Autonomous Government](/entry/mongolian-allied-autonomous-government) (1939–1941)
 - [Mongolian Autonomous State](/entry/mongolian-autonomous-state) (1941–1945), the final and internationally best-known iteration
 
-Jagchid dates the name's emergence specifically to November 22, 1937, when a Japanese-run "Joint Committee of Mongolian Territories" unified Demchugdongrub's government with separate Japanese puppet regimes in Southern Chahar and Northern Shanxi (Jagchid). The term is also used more loosely for the whole run of governments back to 1936, since that first government was already Japanese-sponsored — hence the approximate startYear given here.
+[Sechin Jagchid](/entry/sechin-jagchid) dates the name's emergence specifically to November 22, 1937, when a Japanese-run "Joint Committee of Mongolian Territories" unified Demchugdongrub's government with separate Japanese puppet regimes in Southern Chahar and Northern Shanxi (Jagchid). The term is also used more loosely for the whole run of governments back to 1936, since that first government was already Japanese-sponsored — hence the approximate startYear given here.
 
 ## Population
 
@@ -26,7 +26,7 @@ Tuo dates the sequence in granular steps, though exact dates vary slightly acros
 
 ## Administration
 
-At the start of 1943 the North Shansi and South Chahar governments were abolished and converted into ordinary provinces; Kalgan was thereafter administratively "regarded as the capital," though League affairs reportedly continued to be directed mostly from Hohhot (called Houho in wartime sources), which Mongol leaders hoped would eventually become the real capital (Lückenhaus). The [army](/entry/inner-mongolian-army) was under the supreme command of Li Shouxin, and the regime's calendar was dated from Chinggis Khan (Lückenhaus; Jagchid).
+At the start of 1943 the North Shansi and South Chahar governments were abolished and converted into ordinary provinces; Kalgan was thereafter administratively "regarded as the capital," though League affairs reportedly continued to be directed mostly from Hohhot (called Houho in wartime sources), which Mongol leaders hoped would eventually become the real capital (Lückenhaus). The [army](/entry/inner-mongolian-army) was under the supreme command of [Li Shouxin](/entry/li-shouxin), and the regime's calendar was dated from Chinggis Khan (Lückenhaus; Jagchid).
 
 **The flag.** Mengjiang's flag visually encoded this same ethnic hierarchy. Jagchid describes it as seven horizontal stripes: a broad red band in the center for the Japanese, two narrow white stripes for Muslims, two slightly wider blue stripes for Mongols, and yellow bands top and bottom, equal in width to the blue, for "the Chinese and other nationalities" — the whole design meant to symbolize Japan as the country toward which the other nationalities of East Asia should "incline," unifying under the new regime (Jagchid, p. 219). Jagchid also records that the flag was imposed over Demchugdongrub's own objections: he initially refused it, preferring the earlier Mongolian Military Government's flag, and only relented under direct pressure from Japanese officials (Jagchid).
 
@@ -51,7 +51,7 @@ Not yet consulted for this atlas; listed here as candidates for future expansion
 
 ### Sources
 
-- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid."
-- Alfred Lückenhaus, "Mengchiang: A Country in the Making," *The XXth Century* (Shanghai), 1943 — cited above as "Lückenhaus." A pro-Axis wartime propaganda source: Lückenhaus wrote for the German state news agency DNB, and *The XXth Century* was a German-run, pro-Axis magazine published in Japanese-occupied Shanghai. Used here only with explicit attribution for each claim, never as neutral fact.
+- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.
+- Alfred Lückenhaus, "Mengchiang: A Country in the Making," *The XXth Century* (Shanghai), 1943 — cited above as "Lückenhaus." A pro-Axis wartime propaganda source: Lückenhaus wrote for the German state news agency DNB, and *The XXth Century* was a German-run, pro-Axis magazine published in Japanese-occupied Shanghai. Used here only with explicit attribution for each claim, never as neutral fact. In-copyright, paraphrased.
 - Tuo Jianing, "The Ambivalent Choices of Hui Muslim Intellectuals under the Mengjiang Regime: A Focus on Wu Yaocheng," *Literature and Modern China* 1, no. 1 (2019). DOI: 10.54591/CQUN2903 — cited above as "Tuo." Open-access scholarly article; the critical counterweight to Lückenhaus's propaganda account.
 - David Ambaras and Kate McDonald, "The View from Above," in *Bodies and Structures 2.0: Deep-Mapping Modern East Asian History* (Scalar, last updated September 28, 2021) — cited above as "Ambaras and McDonald, 'The View from Above.'" A born-digital scholarly project (NEH-funded), citing the Japanese magazine *Chiri kyōiku* 32, no. 2 (May 1940), held at the National Diet Library, Tokyo.

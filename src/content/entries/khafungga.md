@@ -9,7 +9,7 @@ yearType: life
 
 ## Identification: two names for one man
 
-Jagchid's biography of Demchugdongrub mentions "Khafungga" only briefly, as one of the "most influential initiators" of an early-1930s eastern Mongol nationalist movement (Jagchid). A much longer biographical account, published on the Chinese platform meipian.cn and evidently compiled by descendants, covers the same period under the name "Hafeng'a" (哈丰阿) — a different transliteration of the same Mongolian name. The identification rests on more than similar sounds: both sources independently describe the same formative detail, study under the Daur Mongol educator and political activist [Merse](/entry/merse) (Chinese name Guo Daofu) at the Northeast Mongolian Banner Normal School he founded in Shenyang in 1929 (Jagchid; "Hafon A" biography). This entry treats Jagchid's "Khafungga" and the biography's "Hafeng'a" as the same person.
+[Sechin Jagchid](/entry/sechin-jagchid)'s biography of Demchugdongrub mentions "Khafungga" only briefly, as one of the "most influential initiators" of an early-1930s eastern Mongol nationalist movement (Jagchid). A much longer biographical account, published on the Chinese platform meipian.cn and evidently compiled by descendants, covers the same period under the name "Hafeng'a" (哈丰阿) — a different transliteration of the same Mongolian name. The identification rests on more than similar sounds: both sources independently describe the same formative detail, study under the Daur Mongol educator and political activist [Merse](/entry/merse) (Chinese name Guo Daofu) at the Northeast Mongolian Banner Normal School he founded in Shenyang in 1929 (Jagchid; "Hafon A" biography). This entry treats Jagchid's "Khafungga" and the biography's "Hafeng'a" as the same person.
 
 The two sources disagree on his home banner: Jagchid gives "Bingtu Banner," while the biography states he was born in Kezuo Zhong Qi (Horqin Left Middle Banner) of the Zhelimu (Jerim) League. Both place him in the same eastern Mongol milieu, but this atlas does not attempt to reconcile the specific banner name.
 
@@ -29,7 +29,7 @@ After Japan's surrender, Khafungga and Asigen were central to organizing an arme
 
 ## Later life and death
 
-Jagchid, writing decades later from outside China, states only that Khafungga — grouped with "most of his other compatriots who had struggled for Mongolian nationalistic aspirations" — did not escape persecution during the Cultural Revolution (Jagchid). The biography corroborates this in general terms, stating he suffered persecution as an intellectual during that period, without detailing its severity ("Hafon A" biography). He is reported to have died in Hohhot in July 1978.
+Jagchid, writing decades later from outside China, states only that Khafungga — grouped with "most of his other compatriots who had struggled for Mongolian nationalistic aspirations" — did not escape persecution during the Cultural Revolution (Jagchid). The biography corroborates this in general terms, stating he suffered persecution as an intellectual during that period, without detailing its severity ("Hafon A" biography). He is reported to have died in [Hohhot](/entry/hohhot) in July 1978.
 
 ### A note on sources
 
@@ -37,5 +37,5 @@ The "Hafon A" biography is not an academic or peer-reviewed source: it is a leng
 
 ### Sources
 
-- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid."
+- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.
 - "A Brief Biography of Hafon A (Part 1)," published at meipian.cn — cited above as "'Hafon A' biography." A personal or family-authored account, not an academic source; used here with caution and only where independently corroborated or clearly attributed.

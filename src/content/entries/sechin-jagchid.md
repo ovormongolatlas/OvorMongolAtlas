@@ -23,7 +23,7 @@ After the Chinese Communist conquest ended any prospect of an autonomous Inner M
 
 ## As a source for this atlas
 
-Jagchid's 1999 book, *The Last Mongol Prince*, is the single most extensively used source in this atlas, cited in nearly every entry connected to Demchugdongrub and Mengjiang. Because Jagchid was personally close to his subject and a participant in many of the events he describes, his account carries the strengths and the limitations of firsthand testimony: unusually detailed, often corrected against or corroborated by other sources in this atlas, but also — by his own admission — reliant on memory decades after the fact, and occasionally openly argumentative on points where he disputes other accounts (such as the reliability of Demchugdongrub's Chinese-published "Personal Narrative," which Jagchid argues was edited to put words in the prince's mouth).
+Jagchid's 1999 book, *The Last Mongol Prince*, is the single most extensively used source in this atlas, cited in nearly every entry connected to Demchugdongrub and [Mengjiang](/entry/mengjiang). Because Jagchid was personally close to his subject and a participant in many of the events he describes, his account carries the strengths and the limitations of firsthand testimony: unusually detailed, often corrected against or corroborated by other sources in this atlas, but also — by his own admission — reliant on memory decades after the fact, and occasionally openly argumentative on points where he disputes other accounts (such as the reliability of Demchugdongrub's Chinese-published "Personal Narrative," which Jagchid argues was edited to put words in the prince's mouth).
 
 ### Sources
 

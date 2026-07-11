@@ -18,6 +18,6 @@ A Mongol attempt to seize Suiyuan from Chinese forces that November ended in def
 
 ### Sources
 
-- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid."
-- D. Zorigt, "De Wang Begins Cooperating with the Japanese" (Олон Улс Судлал journal) — cited above as "Zorigt, 'Cooperation with the Japanese.'"
+- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.
+- D. Zorigt, "De Wang Begins Cooperating with the Japanese" (Олон Улс Судлал journal) — cited above as "Zorigt, 'Cooperation with the Japanese.'" Full publication year, volume, and issue are not established; see this atlas's project notes for the consolidated citation-completeness flag.
 - "Inner Mongolia Wavers," *New York Times*, May 1, 1936, p. 13 — cited above as "'Inner Mongolia Wavers.'" A contemporary press report; paraphrased, not quoted, per this atlas's handling of in-copyright material.
