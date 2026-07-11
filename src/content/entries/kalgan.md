@@ -19,7 +19,9 @@ Jagchid describes the practical effect in blunt terms: after the Japanese-run Jo
 
 ## A Mongol print-culture hub
 
-Kalgan was also where Mengjiang's main Mongol-language literary press operated. As this atlas's [Saichungga](/entry/saichungga) entry records (following Atwood), the poet's work appeared chiefly in *Manduqu Mongγol* ("Mongolia Rising"), the [Mongolian Autonomous State](/entry/mongolian-autonomous-state)'s principal journal of opinion and literature, published from Kalgan and edited by Gombojab Hangin — a detail this entry relays from that source rather than re-deriving from Atwood's article directly.
+Kalgan was also where Mengjiang's main Mongol-language literary press operated. As this atlas's [Saichungga](/entry/saichungga) entry records (following Atwood), the poet's work appeared chiefly in *Manduqu Mongγol* ("Mongolia Rising"), the [Mongolian Autonomous State](/entry/mongolian-autonomous-state)'s principal journal of opinion and literature, published from Kalgan and edited by [Gombojab Hangin](/entry/gombojab-hangin) — a detail this entry relays from that source rather than re-deriving from Atwood's article directly.
+
+A second Mengjiang-era Mongol periodical is recorded here with more caution: a journal this atlas renders *Temür kerem* ("Iron Wall"), whose inaugural-issue cover survives as an image from a Chinese-language source. That romanization is read off an OCR'd Chinese caption rather than confirmed against a second, independent source, and is flagged accordingly — it should be treated as provisional until verified. If accurate, it places a second Mongol-language periodical in the same Kalgan print milieu as *Manduqu Mongγol*, part of the same wartime Mongol print culture the Mongolian Autonomous State fostered in the city.
 
 ## Regional context: the Chahar frontier (Lattimore)
 
