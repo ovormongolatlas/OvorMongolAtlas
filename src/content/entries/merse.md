@@ -7,7 +7,7 @@ endYear: 1932
 yearType: active
 ---
 
-Merse — also known by his Chinese name, Guo Daofu (rendered elsewhere in Jagchid's book as Guo Taofu) — was a Dahur Mongol intellectual from eastern Inner Mongolia's Hulunbuir region, and one of the most influential nationalist organizers of his generation among the eastern Mongols (Jagchid). The start and end years given here mark the span of his political activity documented in the sources used for this entry, not birth and death dates, which are not established by those sources.
+Merse — also known by his Chinese name, Guo Daofu (rendered elsewhere in [Sechin Jagchid](/entry/sechin-jagchid)'s book as Guo Taofu) — was a Dahur Mongol intellectual from eastern Inner Mongolia's Hulunbuir region, and one of the most influential nationalist organizers of his generation among the eastern Mongols (Jagchid). The start and end years given here mark the span of his political activity documented in the sources used for this entry, not birth and death dates, which are not established by those sources. This entry rests entirely on Jagchid's biography of Demchugdongrub; no independent or corroborating source has been consulted for Merse specifically, so his career here should be read as Jagchid's account of him rather than as independently verified. Christopher Atwood's 1999 study of Saichungga, used elsewhere in this atlas, is a plausible candidate for corroboration if it discusses the "Young Mongols" movement Merse helped found, but this atlas has not had that article in hand for this pass and does not assert what it says; this is flagged as a suggested future check, not a claim.
 
 ## From student radical to Hulunbuir politics
 
@@ -25,4 +25,4 @@ The Japanese seizure of Mukden during the Manchurian Incident of September 1931 
 
 ### Sources
 
-- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid."
+- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999) — cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.
