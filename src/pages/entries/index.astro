@@ -51,7 +51,13 @@ const groups = typeOrder
 				<ul>
 					{group.items.map((entry) => {
 						const children = childrenOf(entry);
-						const years = formatYearRange(entry.data.startYear, entry.data.endYear, entry.data.yearType);
+						const years = formatYearRange(
+							entry.data.startYear,
+							entry.data.endYear,
+							entry.data.yearType,
+							entry.data.altStartYear,
+							entry.data.altEndYear,
+						);
 						return (
 							<li>
 								<a href={`/entry/${entry.id}`}>{entry.data.title}</a>
@@ -61,7 +67,13 @@ const groups = typeOrder
 										<p class="substages-note">Successive stages of {entry.data.title}:</p>
 										<ul class="substages">
 											{children.map((child) => {
-												const childYears = formatYearRange(child.data.startYear, child.data.endYear, child.data.yearType);
+												const childYears = formatYearRange(
+													child.data.startYear,
+													child.data.endYear,
+													child.data.yearType,
+													child.data.altStartYear,
+													child.data.altEndYear,
+												);
 												return (
 													<li>
 														<a href={`/entry/${child.id}`}>{child.data.title}</a>

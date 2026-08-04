@@ -13,7 +13,13 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const years = formatYearRange(entry.data.startYear, entry.data.endYear, entry.data.yearType);
+const years = formatYearRange(
+	entry.data.startYear,
+	entry.data.endYear,
+	entry.data.yearType,
+	entry.data.altStartYear,
+	entry.data.altEndYear,
+);
 ---
 
 <Layout>

@@ -16,13 +16,19 @@ const entries = defineCollection({
 		endYear: z.number().optional(),
 		// What startYear/endYear represent, since the same two numbers mean very
 		// different things across entries and must not all render as birth-death dates:
-		// life = birth-death; active = span of documented activity, not birth/death;
-		// existed = an institution's founding-dissolution span; documented = earliest
-		// to latest point documented in the cited sources (neither birth/death nor a
-		// clean founding/dissolution, e.g. a still-standing city or a source's own
-		// "as of" date). Themes omit startYear/endYear entirely rather than using a
-		// yearType value, since no date range applies.
-		yearType: z.enum(['life', 'active', 'existed', 'documented']).default('life'),
+		// life = birth-death; existed = an institution's founding-dissolution span;
+		// documented = earliest to latest point documented in the cited sources
+		// (neither birth/death nor a clean founding/dissolution, e.g. a still-standing
+		// city, a span of documented activity, or a source's own "as of" date);
+		// contested = sources disagree on one or both endpoints, and altStartYear/
+		// altEndYear hold the alternate attested value(s) so the header can display
+		// the conflict instead of silently picking one. Themes omit startYear/endYear
+		// entirely rather than using a yearType value, since no date range applies.
+		yearType: z.enum(['life', 'documented', 'existed', 'contested']).default('life'),
+		// Only meaningful when yearType is 'contested'; the alternate attested value
+		// for startYear/endYear respectively. Leave unset if that endpoint isn't disputed.
+		altStartYear: z.number().optional(),
+		altEndYear: z.number().optional(),
 		// Entry id of the parent this entry is a successive stage of (e.g. the four
 		// Mengjiang-era governments each set partOf: "mengjiang"), used to nest related
 		// states in the entries index instead of listing them as flat overlapping peers.
