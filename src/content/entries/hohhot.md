@@ -5,6 +5,11 @@ summary: "Old Mongol trading town (Kökeqota) paired with the Qing garrison city
 startYear: 1900
 endYear: 1945
 yearType: documented
+location:
+  lat: 40.84
+  lon: 111.75
+  precision: approximate
+  source: "Modern city coordinates, not yet checked against a source. In this period the town was two walled settlements (Kökeqota/Guihua and the Qing garrison city of Suiyuan), so a single point is a simplification."
 ---
 
 Hohhot, known to Mongols as Kökeqota ("blue city") and to Chinese as Guihuacheng, was through the nineteenth and early twentieth centuries a cosmopolitan Mongol trading and religious center rather than simply a Chinese administrative town (Charleux). It grew up as a paired, or "twin," city: the old Mongol town (the "Old City") sat beside the separate Qing dynasty garrison of Suiyuan (the "New City"), built under the Qianlong Emperor in the 1730s, and the two retained distinct identities for generations even though they stood only a few kilometers apart (Charleux). In 1913 the new Republic of China government administratively unified Guihua and Suiyuan into a single city, Guisui (Charleux). This entry rests substantially on a single specialist source, Charleux's study of Western travelers' accounts of the city, and inherits that source's framing: it sees Hohhot largely through outside visitors' eyes rather than through Mongol- or Chinese-language administrative records.

@@ -1,37 +1,172 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import MiniMap from '../components/MiniMap.astro';
+import { buildMiniMap } from '../lib/minimap';
+
+const entries = await getCollection('entries');
+const TYPES = [
+	{ type: 'person', label: 'People' },
+	{ type: 'place', label: 'Places' },
+	{ type: 'state', label: 'States' },
+	{ type: 'group', label: 'Groups' },
+	{ type: 'battle', label: 'Battles' },
+	{ type: 'theme', label: 'Themes' },
+].map((t) => ({ ...t, count: entries.filter((e) => e.data.type === t.type).length })).filter((t) => t.count > 0);
+
+const YEAR = 1938;
+const map = buildMiniMap({
+	id: '__home',
+	type: 'theme',
+	title: '',
+	startYear: YEAR,
+	endYear: YEAR,
+	displayWidth: 560,
+	linked: entries
+		.filter((e) => (e.data.type === 'place' || e.data.type === 'battle') && e.data.location)
+		.map((e) => ({ id: e.id, name: e.data.title, lon: e.data.location!.lon, lat: e.data.location!.lat, kind: 'linked' as const, type: e.data.type })),
+});
 ---
 
 <Layout>
-	<main>
-		<h1>Övör Mongol Atlas</h1>
-		<p class="tagline">An interactive historical atlas of Inner Mongolia (Övör Mongol), from the late Qing dynasty through the early People's Republic of China.</p>
-		<p>
-			Entries center on the Inner Mongolian autonomy movement of the 1930s and the Japanese-sponsored Mengjiang regime, and are built from scholarly and archival sources — academic monographs, journal articles, contemporary press, and firsthand accounts. Where sources disagree, this atlas records the disagreement rather than picking a side. Start with the <a href="/entries">Entries</a> index, or explore the <a href="/map">Timeline Map</a>.
-		</p>
+	<main class="page home">
+		<section class="card hero">
+			<div class="hero-text">
+				<p class="overline">Inner Mongolia, 1890–1950</p>
+				<h1>Övör Mongol Atlas</h1>
+				<p class="tagline">A historical atlas of Inner Mongolia from the late Qing dynasty to the early People's Republic of China, built entirely from cited sources.</p>
+				<p>Entries center on the Inner Mongolian autonomy movements and the Japanese-sponsored Mengjiang regime. Each one is drawn from scholarly and archival sources: monographs, journal articles, contemporary press and firsthand accounts. Where sources disagree, the atlas keeps both accounts.</p>
+				<div class="actions">
+					<a class="button primary" href="/map">Open the Timeline Map</a>
+					<a class="button" href="/entries">Browse entries</a>
+				</div>
+			</div>
+			{map && (
+				<div class="hero-map">
+					<MiniMap map={map} caption={`Places in the atlas, with borders as they stood on 1 July ${YEAR}.`} />
+				</div>
+			)}
+		</section>
+
+		<section class="types" aria-label="Entries by type">
+			{TYPES.map((t) => (
+				<a class="card type-card" href={`/entries#${t.type}`} style={`--type:var(--type-${t.type})`}>
+					<span class="count">{t.count}</span>
+					<span class="label">{t.label}</span>
+				</a>
+			))}
+		</section>
 	</main>
 </Layout>
 
 <style>
-	main {
-		max-width: 60ch;
-		margin: 0 auto;
-		padding: 4rem 1.5rem;
-		font-family: system-ui, sans-serif;
+	.hero {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+		gap: 2rem;
+		padding: 2rem;
+		align-items: start;
 	}
 
 	h1 {
-		font-size: 2.5rem;
-		margin-bottom: 0.5rem;
-	}
-
-	p {
-		font-size: 1.1rem;
-		color: #444;
+		margin: 0.4rem 0 0.75rem;
+		font-size: 2.6rem;
+		font-weight: 400;
+		line-height: 1.15;
+		color: var(--primary);
 	}
 
 	.tagline {
-		font-size: 1.2rem;
-		color: #222;
+		font-size: 1.25rem;
+		line-height: 1.45;
+		color: var(--text);
+	}
+
+	.hero-text p:not(.overline):not(.tagline) {
+		font-size: 1.02rem;
+		line-height: 1.65;
+		color: #424242;
+	}
+
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.5rem;
+	}
+
+	.button {
+		display: inline-block;
+		padding: 0.65rem 1.1rem;
+		border-radius: 2px;
+		font-size: 0.9rem;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: var(--primary);
+	}
+
+	.button:hover {
+		background: var(--primary-light);
+	}
+
+	.button.primary {
+		background: var(--primary);
+		color: #fff;
+		box-shadow: var(--shadow-1);
+	}
+
+	.button.primary:hover {
+		background: var(--primary-dark);
+		box-shadow: var(--shadow-2);
+	}
+
+	.types {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.type-card {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem 1.1rem;
+		border-top: 3px solid var(--type);
+		text-decoration: none;
+		color: var(--text);
+		transition: box-shadow 0.15s;
+	}
+
+	.type-card:hover {
+		box-shadow: var(--shadow-2);
+		color: var(--text);
+	}
+
+	.count {
+		font-size: 2rem;
+		font-weight: 300;
+		line-height: 1.1;
+		color: var(--type);
+	}
+
+	.label {
+		font-size: 0.8rem;
+		font-weight: 500;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	@media (max-width: 860px) {
+		.hero {
+			grid-template-columns: minmax(0, 1fr);
+			padding: 1.25rem;
+		}
+
+		h1 {
+			font-size: 2.1rem;
+		}
 	}
 </style>

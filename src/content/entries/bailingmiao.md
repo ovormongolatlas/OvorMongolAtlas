@@ -5,6 +5,11 @@ summary: "Monastery and political center in the Mongolian autonomy movement's he
 startYear: 1933
 endYear: 1936
 yearType: documented
+location:
+  lat: 41.7031
+  lon: 110.435
+  precision: approximate
+  source: "Coordinates of the present-day settlement as given by Wikipedia (checked 12 October 2026). Not yet checked against a period source; the monastery's own position is not separately sourced."
 ---
 
 This site carries three overlapping identities in this atlas's sources, and its names track them. Jagchid calls the monastery Beile-yin sume ("the temple of the beile"), colloquially "Beilin-sum," and notes that the Chinese name, Bailingmiao, is "a phonetic approximation of the Mongolian" (Jagchid). Elsewhere he pairs the names directly: "the well-known Beile-yin sume temple (Bailingmiao) was located at Bat-khaalag." This atlas's house spelling for the site is Bat-khaalag, used elsewhere in these entries; Bailingmiao (also romanized Pailingmiao) and Beile-yin sume name the same place. See this atlas's project notes for the full resolution of that naming question.

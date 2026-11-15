@@ -1,7 +1,9 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import MiniMap from '../../components/MiniMap.astro';
 import { formatYearRange } from '../../lib/dates';
+import { AREA_KIND_LABEL, buildMiniMap, darker, ownAreas, ownCampaigns, type MiniPoint } from '../../lib/minimap';
 
 export async function getStaticPaths() {
 	const entries = await getCollection('entries');
@@ -11,105 +13,488 @@ export async function getStaticPaths() {
 	}));
 }
 
+const TYPE_LABEL: Record<string, string> = { person: 'Person', place: 'Place', group: 'Group', battle: 'Battle', state: 'State', theme: 'Theme' };
+const TYPE_PLURAL: Record<string, string> = { person: 'People', place: 'Places', group: 'Groups', battle: 'Battles', state: 'States', theme: 'Themes' };
+const DATE_LABEL: Record<string, string> = { life: 'Lived', existed: 'Existed', documented: 'Documented', contested: 'Dates (sources differ)' };
+
 const { entry } = Astro.props;
+const d = entry.data;
 const { Content } = await render(entry);
-const years = formatYearRange(
-	entry.data.startYear,
-	entry.data.endYear,
-	entry.data.yearType,
-	entry.data.altStartYear,
-	entry.data.altEndYear,
-);
+const all = await getCollection('entries');
+const byId = new Map(all.map((e) => [e.id, e]));
+
+const years = formatYearRange(d.startYear, d.endYear, d.yearType, d.altStartYear, d.altEndYear);
+const rawYears = d.yearType === 'documented' ? formatYearRange(d.startYear, d.endYear, 'existed') : years;
+const parent = d.partOf ? byId.get(d.partOf) : undefined;
+const stages = all.filter((e) => e.data.partOf === entry.id).sort((a, b) => (a.data.startYear ?? 0) - (b.data.startYear ?? 0));
+
+// Links inside the entry's text, in order, and entries that link here.
+const linkIds = (body: string | undefined) => [...new Set([...(body ?? '').matchAll(/\/entry\/([a-z0-9-]+)/g)].map((m) => m[1]))];
+const outgoing = linkIds(entry.body).filter((id) => id !== entry.id && byId.has(id));
+const backlinks = all
+	.filter((e) => e.id !== entry.id && linkIds(e.body).includes(entry.id))
+	.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const linkedPoints: MiniPoint[] = outgoing
+	.map((id) => byId.get(id)!)
+	.filter((e) => (e.data.type === 'place' || e.data.type === 'battle') && e.data.location)
+	.map((e) => ({ id: e.id, name: e.data.title, lon: e.data.location!.lon, lat: e.data.location!.lat, kind: 'linked', type: e.data.type }));
+
+const map = buildMiniMap({
+	id: entry.id,
+	type: d.type,
+	title: d.title,
+	startYear: d.startYear,
+	endYear: d.endYear,
+	altStartYear: d.altStartYear,
+	altEndYear: d.altEndYear,
+	location: d.location,
+	linked: linkedPoints,
+});
+
+const own = ownAreas(entry.id);
+const camps = ownCampaigns(entry.id);
+const linkedOnMap = map ? map.points.filter((p) => p.kind === 'linked').length : 0;
+let caption = '';
+if (map) {
+	const when = map.year ? `on 1 July ${map.year}` : '';
+	if (own.length) caption = `${d.title} as the Timeline Map draws it ${when}.`;
+	else if (camps.length) caption = `The campaign's routes, with borders as they stood ${when}.`;
+	else if (map.selfOnMap) caption = `${d.title}, with borders as they stood ${when}.`;
+	else caption = `${linkedOnMap === 1 ? 'The place' : `The ${linkedOnMap} places`} linked from this entry${map.year ? `, with borders as they stood ${when}` : ''}.`;
+	
+}
+
+const span = (s: number, e: number) => (s === e ? `${s}` : `${s}–${e}`);
+const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)}° ${v >= 0 ? pos : neg}`;
 ---
 
-<Layout>
-	<main>
-		<p><a href="/entries">← All entries</a></p>
-		<h1>{entry.data.title}</h1>
-		<p class="meta"><span class="entry-type">{entry.data.type}</span>{years && <> · {years}</>}</p>
-		<p class="summary">{entry.data.summary}</p>
-		{entry.data.images && entry.data.images.length > 0 && (
-			<div class="images">
-				{entry.data.images.map((image) => (
-					<figure>
-						<img src={image.src} alt={image.alt} loading="lazy" />
-						<figcaption>
-							{image.caption && <><strong>{image.caption}.</strong> </>}
-							{image.photographer && <>Photographer: {image.photographer}. </>}
-							{image.depicted && <>Depicted: {image.depicted}. </>}
-							{image.date && <>Date: {image.date}. </>}
-							{image.venue && <>Venue: {image.venue}. </>}
-							{image.collection && <>Collection: {image.collection}. </>}
-							{image.institution && <>Institution: {image.institution}. </>}
-							{image.shelfmark && <>Shelfmark: {image.shelfmark}. </>}
-							{image.license && (
-								<>
-									License: {image.licenseUrl ? <a href={image.licenseUrl}>{image.license}</a> : image.license}.{' '}
-								</>
-							)}
-							{image.source && <>Source: {image.source}. </>}
-							{image.note && <span class="image-note">{image.note}</span>}
-						</figcaption>
-					</figure>
-				))}
-			</div>
-		)}
-		<Content />
+<Layout title={d.title} description={d.summary}>
+	<main class="page entry-page" style={`--type:var(--type-${d.type})`}>
+		<nav class="crumbs" aria-label="Breadcrumb">
+			<a href="/entries">Entries</a>
+			<span aria-hidden="true">›</span>
+			<a href={`/entries#${d.type}`}>{TYPE_PLURAL[d.type]}</a>
+			{parent && (
+				<>
+					<span aria-hidden="true">›</span>
+					<a href={`/entry/${parent.id}`}>{parent.data.title}</a>
+				</>
+			)}
+		</nav>
+
+		<header class="card entry-head">
+			<p class="overline entry-type">{TYPE_LABEL[d.type]}</p>
+			<h1>{d.title}</h1>
+			{years && <p class="entry-years">{years}</p>}
+			<p class="entry-summary">{d.summary}</p>
+		</header>
+
+		<div class="entry-grid">
+			<article class="card entry-body">
+				{d.images && d.images.length > 0 && (
+					<div class="images">
+						{d.images.map((image) => (
+							<figure>
+								<img src={image.src} alt={image.alt} loading="lazy" />
+								<figcaption>
+									{image.caption && <><strong>{image.caption}.</strong> </>}
+									{image.photographer && <>Photographer: {image.photographer}. </>}
+									{image.depicted && <>Depicted: {image.depicted}. </>}
+									{image.date && <>Date: {image.date}. </>}
+									{image.venue && <>Venue: {image.venue}. </>}
+									{image.collection && <>Collection: {image.collection}. </>}
+									{image.institution && <>Institution: {image.institution}. </>}
+									{image.shelfmark && <>Shelfmark: {image.shelfmark}. </>}
+									{image.license && (
+										<>
+											License: {image.licenseUrl ? <a href={image.licenseUrl}>{image.license}</a> : image.license}.{' '}
+										</>
+									)}
+									{image.source && <>Source: {image.source}. </>}
+									{image.note && <span class="image-note">{image.note}</span>}
+								</figcaption>
+							</figure>
+						))}
+					</div>
+				)}
+				<div class="prose">
+					<Content />
+				</div>
+			</article>
+
+			{map && (
+				<section class="card side-card side-map" aria-labelledby="side-map-title">
+					<h2 class="overline" id="side-map-title">On the map</h2>
+					<MiniMap map={map} caption={caption} />
+					<div class="card-actions">
+						<a class="text-button" href={map.mapHref}>Open Timeline Map{map.year ? ` at ${map.year}` : ''}</a>
+					</div>
+				</section>
+			)}
+
+			<aside class="side">
+				<section class="card side-card" aria-labelledby="facts-title">
+					<h2 class="overline" id="facts-title">At a glance</h2>
+					<dl class="facts">
+						<div><dt>Type</dt><dd>{TYPE_LABEL[d.type]}</dd></div>
+						{rawYears && <div><dt>{DATE_LABEL[d.yearType]}</dt><dd>{rawYears}</dd></div>}
+						{parent && <div><dt>Part of</dt><dd><a href={`/entry/${parent.id}`}>{parent.data.title}</a></dd></div>}
+						{d.location && (
+							<div>
+								<dt>Location</dt>
+								<dd>
+									{coord(d.location.lat, 'N', 'S')}, {coord(d.location.lon, 'E', 'W')}
+									<span class:list={['precision', d.location.precision]}>{d.location.precision}</span>
+									<details>
+										<summary>Where this comes from</summary>
+										<p>{d.location.source}</p>
+									</details>
+								</dd>
+							</div>
+						)}
+					</dl>
+					{d.yearType === 'documented' && <p class="fact-note">The span runs from the earliest to the latest point the cited sources document. It is not a founding or closing date.</p>}
+					{d.yearType === 'contested' && <p class="fact-note">The sources disagree on these dates; the entry sets out each account.</p>}
+				</section>
+
+				{stages.length > 0 && (
+					<section class="card side-card" aria-labelledby="stages-title">
+						<h2 class="overline" id="stages-title">Successive stages</h2>
+						<ul class="link-list">
+							{stages.map((s) => (
+								<li><a href={`/entry/${s.id}`}>{s.data.title}</a> <span class="muted">{formatYearRange(s.data.startYear, s.data.endYear, s.data.yearType, s.data.altStartYear, s.data.altEndYear)}</span></li>
+							))}
+						</ul>
+					</section>
+				)}
+
+				{(own.length > 0 || camps.length > 0) && (
+					<section class="card side-card" aria-labelledby="drawn-title">
+						<h2 class="overline" id="drawn-title">Drawn on the Timeline Map</h2>
+						<ul class="drawn-list">
+							{own.map((a) => (
+								<li>
+									<span class={`key key-${a.kind}`} style={`--c:${a.color};--cd:${darker(a.color)}`} aria-hidden="true"></span>
+									<span>
+										<a href={`/map/?year=${a.start}`}>{span(a.start, a.end)}</a>
+										<span class="muted"> · {AREA_KIND_LABEL[a.kind]}</span>
+										{a.name !== d.title && <span class="drawn-name">{a.name}</span>}
+									</span>
+								</li>
+							))}
+							{camps.map((c) => (
+								<li>
+									<span class="key key-route" aria-hidden="true"></span>
+									<span><a href={`/map/?year=${c.start}`}>{span(c.start, c.end)}</a><span class="muted"> · Campaign routes</span><span class="drawn-name">{c.name}</span></span>
+								</li>
+							))}
+						</ul>
+					</section>
+				)}
+
+				{outgoing.length > 0 && (
+					<section class="card side-card" aria-labelledby="out-title">
+						<h2 class="overline" id="out-title">Mentioned here</h2>
+						<ul class="link-list">
+							{outgoing.map((id) => {
+								const e = byId.get(id)!;
+								return <li><a href={`/entry/${id}`}>{e.data.title}</a> <span class="muted">{TYPE_LABEL[e.data.type].toLowerCase()}</span></li>;
+							})}
+						</ul>
+					</section>
+				)}
+
+				{backlinks.length > 0 && (
+					<section class="card side-card" aria-labelledby="back-title">
+						<h2 class="overline" id="back-title">Linked from</h2>
+						<ul class="link-list">
+							{backlinks.map((e) => (
+								<li><a href={`/entry/${e.id}`}>{e.data.title}</a> <span class="muted">{TYPE_LABEL[e.data.type].toLowerCase()}</span></li>
+							))}
+						</ul>
+					</section>
+				)}
+			</aside>
+		</div>
 	</main>
 </Layout>
 
 <style>
-	main {
-		max-width: 60ch;
-		margin: 0 auto;
-		padding: 4rem 1.5rem;
-		font-family: system-ui, sans-serif;
+	.crumbs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin-bottom: 0.75rem;
+		font-size: 0.85rem;
+		color: var(--muted);
 	}
 
-	h1 {
-		font-size: 2rem;
-		margin-bottom: 0.25rem;
+	.crumbs a {
+		color: inherit;
+		text-decoration: none;
 	}
 
-	.meta {
-		color: #777;
-		margin-top: 0;
+	.crumbs a:hover {
+		color: var(--primary);
+		text-decoration: underline;
+	}
+
+	.entry-head {
+		padding: 1.5rem 2rem 1.6rem;
+		border-top: 4px solid var(--type);
 	}
 
 	.entry-type {
-		text-transform: capitalize;
+		color: var(--type);
 	}
 
-	.summary {
-		font-size: 1.1rem;
-		color: #444;
+	h1 {
+		margin: 0.35rem 0 0.25rem;
+		font-size: 2.25rem;
+		font-weight: 400;
+		line-height: 1.2;
+	}
+
+	.entry-years {
+		margin: 0;
+		font-size: 1.05rem;
+		color: var(--muted);
+	}
+
+	.entry-summary {
+		max-width: 70ch;
+		margin: 0.9rem 0 0;
+		font-size: 1.15rem;
+		line-height: 1.55;
+		color: #424242;
+	}
+
+	.entry-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 340px;
+		grid-template-areas:
+			'body map'
+			'body side';
+		grid-template-rows: auto 1fr;
+		gap: 1rem;
+		margin-top: 1rem;
+		align-items: start;
+	}
+
+	.entry-body {
+		grid-area: body;
+		padding: 1.75rem 2rem 2rem;
+	}
+
+	.entry-body .prose {
+		max-width: 72ch;
+	}
+
+	.side-map {
+		grid-area: map;
+	}
+
+	.side {
+		grid-area: side;
+		display: grid;
+		gap: 1rem;
+	}
+
+	.side-card {
+		padding: 1rem 1.1rem 1.1rem;
+	}
+
+	.side-card .overline {
+		margin-bottom: 0.75rem;
+	}
+
+	.card-actions {
+		margin: 0.75rem -0.5rem -0.5rem;
+		padding-top: 0.25rem;
+		border-top: 1px solid var(--divider);
+	}
+
+	.text-button {
+		display: inline-block;
+		padding: 0.55rem 0.5rem 0.4rem;
+		font-size: 0.85rem;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: var(--primary);
+	}
+
+	.text-button:hover {
+		background: var(--primary-light);
+	}
+
+	.facts {
+		margin: 0;
+		display: grid;
+		gap: 0.6rem;
+		font-size: 0.92rem;
+	}
+
+	.facts div {
+		display: grid;
+		grid-template-columns: 6.5rem minmax(0, 1fr);
+		gap: 0.5rem;
+	}
+
+	.facts dt {
+		color: var(--muted);
+	}
+
+	.facts dd {
+		margin: 0;
+	}
+
+	.precision {
+		display: inline-block;
+		margin-left: 0.4rem;
+		padding: 0 0.4rem;
+		border-radius: 2px;
+		font-size: 0.72rem;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		background: #fff3e0;
+		color: #8d4a00;
+	}
+
+	.precision.confirmed {
+		background: #e8f5e9;
+		color: #1b5e20;
+	}
+
+	details {
+		margin-top: 0.35rem;
+		font-size: 0.85rem;
+		color: var(--muted);
+	}
+
+	summary {
+		cursor: pointer;
+		color: var(--primary);
+	}
+
+	details p {
+		margin: 0.4rem 0 0;
+		line-height: 1.45;
+	}
+
+	.fact-note {
+		margin: 0.75rem 0 0;
+		font-size: 0.82rem;
+		line-height: 1.45;
+		color: var(--muted);
+	}
+
+	.link-list,
+	.drawn-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0.45rem;
+		font-size: 0.92rem;
+		line-height: 1.35;
+	}
+
+	.drawn-list li {
+		display: flex;
+		gap: 0.6rem;
+		align-items: flex-start;
+	}
+
+	.drawn-name {
+		display: block;
+		font-size: 0.82rem;
+		color: var(--muted);
+	}
+
+	.muted {
+		color: var(--muted);
+		font-size: 0.85em;
+	}
+
+	.key {
+		flex: none;
+		width: 16px;
+		height: 12px;
+		margin-top: 0.2rem;
+		border: 1px solid var(--cd);
+		background: var(--c);
+		background: color-mix(in srgb, var(--c) 35%, transparent);
+	}
+
+	.key-claimed,
+	.key-occupied {
+		border-style: dashed;
+		background: repeating-linear-gradient(45deg, var(--c) 0 2px, transparent 2px 5px);
+	}
+
+	.key-occupied {
+		border-style: solid;
+	}
+
+	.key-disputed {
+		border-style: dashed;
+		background: repeating-linear-gradient(-45deg, #8d8d8d 0 1.5px, transparent 1.5px 4px);
+	}
+
+	.key-route {
+		height: 2px;
+		margin-top: 0.55rem;
+		border: 0;
+		border-top: 2px dashed #b71c1c;
+		background: none;
+	}
+
+	/* Sources at the foot of the text: smaller, set off by a rule. */
+	.prose :global(h3#sources) {
+		margin-top: 2.5rem;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--divider);
+		font-size: 0.75rem;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	.prose :global(h3#sources ~ ul) {
+		font-size: 0.88rem;
+		line-height: 1.55;
+		color: #424242;
 	}
 
 	.images {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1.5rem;
-		margin: 1.5rem 0 2rem;
+		gap: 1.25rem;
+		margin: 0 0 1.75rem;
 	}
 
 	.images figure {
 		margin: 0;
-		max-width: 320px;
+		max-width: 340px;
 		flex: 1 1 260px;
 	}
 
 	.images img {
 		display: block;
-		max-width: 100%;
-		height: auto;
-		border: 1px solid #ddd;
+		border-radius: 2px;
+		box-shadow: var(--shadow-1);
 	}
 
 	.images figcaption {
+		margin-top: 0.5rem;
 		font-size: 0.8rem;
-		color: #555;
-		margin-top: 0.4rem;
-		line-height: 1.4;
+		line-height: 1.45;
+		color: var(--muted);
 	}
 
 	.images figcaption a {
@@ -120,5 +505,33 @@ const years = formatYearRange(
 		display: block;
 		margin-top: 0.3rem;
 		font-style: italic;
+	}
+
+	@media (max-width: 960px) {
+		.entry-grid {
+			grid-template-columns: minmax(0, 1fr);
+			grid-template-areas: 'map' 'body' 'side';
+			grid-template-rows: auto;
+		}
+
+		.side-map {
+			max-width: 560px;
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.entry-head,
+		.entry-body {
+			padding: 1.1rem 1.1rem 1.25rem;
+		}
+
+		h1 {
+			font-size: 1.75rem;
+		}
+
+		.entry-summary {
+			font-size: 1.05rem;
+		}
 	}
 </style>

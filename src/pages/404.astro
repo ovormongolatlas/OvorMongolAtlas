@@ -2,23 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
-	<main>
-		<h1>Page not found</h1>
-		<p>There's nothing at this address. If you followed a link from within the atlas, it likely points to an entry that hasn't been written yet.</p>
-		<p><a href="/entries">Browse all entries</a></p>
+<Layout title="Page not found">
+	<main class="page-narrow">
+		<article class="card text-card prose">
+			<p class="overline">Error 404</p>
+			<h1>Page not found</h1>
+			<p>There's nothing at this address. If you followed a link from within the atlas, it likely points to an entry that hasn't been written yet.</p>
+			<p><a href="/entries">Browse all entries</a> or open the <a href="/map">Timeline Map</a>.</p>
+		</article>
 	</main>
 </Layout>
 
 <style>
-	main {
-		max-width: 60ch;
-		margin: 0 auto;
-		padding: 4rem 1.5rem;
-		font-family: system-ui, sans-serif;
+	.text-card {
+		padding: 2rem 2.25rem 2.25rem;
 	}
 
 	h1 {
+		margin: 0.3rem 0 1rem;
 		font-size: 2rem;
+		font-weight: 400;
 	}
 </style>

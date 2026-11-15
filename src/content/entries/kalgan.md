@@ -5,6 +5,11 @@ summary: "Historic caravan and tea-trade town on the Inner Mongolia–Hebei fron
 startYear: 1900
 endYear: 1945
 yearType: documented
+location:
+  lat: 40.81
+  lon: 114.88
+  precision: approximate
+  source: "Modern city coordinates (Zhangjiakou), not yet checked against a source. The modern city extends well beyond the period town."
 ---
 
 Kalgan (present-day Zhangjiakou) anchored one of the two main caravan corridors linking China proper to Mongolia and Russia. Charleux, drawing on Western travelers' accounts, describes a well-frequented trade route, carrying tea in particular, that ran from Beijing through Chahar to Kalgan and on to Urga, Kyakhta, and Siberia. Historical travelers who used it include the Scottish physician and diplomat John Bell and Lorenz Lange, on a Russian embassy from Saint Petersburg to Beijing in 1719–1722, Egor Timkowski's 1820–21 Russian embassy, and Catherine de Bourboulon, the first European woman to cross Mongolia, in 1862 (Charleux). This was a separate route from the Hohhot-centered caravan traffic described in that entry; many travelers used one or the other, not both (Charleux).

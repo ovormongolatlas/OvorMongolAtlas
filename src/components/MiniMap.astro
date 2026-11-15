@@ -1,0 +1,247 @@
+---
+import { BASE_MAP_HEIGHT, BASE_MAP_WIDTH } from '../lib/projection';
+import { AREA_KIND_LABEL, darker, type MiniMapData } from '../lib/minimap';
+import { LAND, solid, waterInner } from '../lib/basemap';
+
+interface Props {
+	map: MiniMapData;
+	caption: string;
+}
+
+const { map, caption } = Astro.props;
+const { view, fontSize: fs } = map;
+const vb = `${view.x.toFixed(1)} ${view.y.toFixed(1)} ${view.w.toFixed(1)} ${view.h.toFixed(1)}`;
+const s = view.w / map.displayWidth; // one CSS pixel, in map units
+const hatch = (c: string) => `mm-hatch-${c.slice(1)}`;
+const cf = (c: string, kind: string) => solid(c, kind === 'context' || kind === 'disputed' ? 0.4 : 0.62);
+---
+
+<figure class="minimap">
+	<a class="minimap-frame" href={map.mapHref} aria-label={`Open the Timeline Map${map.year ? ` at ${map.year}` : ''}`}>
+		<svg viewBox={vb} role="img" aria-label={caption}>
+			<defs>
+				{map.hatchColors.map((c) => (
+					<pattern id={hatch(c)} width={7 * s} height={7 * s} patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+						<rect width={7 * s} height={7 * s} fill={c} fill-opacity="0.08"></rect>
+						<line x1="0" y1="0" x2="0" y2={7 * s} stroke={darker(c)} stroke-opacity="0.5" stroke-width={1.6 * s}></line>
+					</pattern>
+				))}
+				<marker id="mm-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse" markerUnits="strokeWidth">
+					<path d="M0 0L10 5L0 10z" fill="#b71c1c"></path>
+				</marker>
+				<pattern id="mm-hatch-disputed" width={6 * s} height={6 * s} patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+					<line x1="0" y1="0" x2="0" y2={6 * s} stroke="#6d6d6d" stroke-opacity="0.55" stroke-width={1.3 * s}></line>
+				</pattern>
+			</defs>
+			<rect x="0" y="0" width={BASE_MAP_WIDTH} height={BASE_MAP_HEIGHT} fill={LAND}></rect>
+			{map.areas.filter((a) => !a.own).map((a) => (
+				<path d={a.d} class={`mm-area mm-${a.kind}`} style={`--c:${a.color};--cd:${a.dark};--cf:${cf(a.color, a.kind)}`} fill={a.kind === 'claimed' || a.kind === 'occupied' ? `url(#${hatch(a.color)})` : a.kind === 'disputed' ? 'url(#mm-hatch-disputed)' : undefined}><title>{a.name}</title></path>
+			))}
+			{map.areas.filter((a) => a.own).map((a) => (
+				<path d={a.d} class={`mm-area mm-${a.kind} mm-own`} style={`--c:${a.color};--cd:${a.dark};--cf:${cf(a.color, a.kind)}`} fill={a.kind === 'claimed' || a.kind === 'occupied' ? `url(#${hatch(a.color)})` : a.kind === 'disputed' ? 'url(#mm-hatch-disputed)' : undefined}><title>{a.name}</title></path>
+			))}
+			<g class="mm-water" set:html={waterInner}></g>
+			{map.routes.map((d) => <path d={d} class="mm-route" marker-end="url(#mm-arrow)"></path>)}
+			{map.points.filter((p) => p.kind === 'town').map((p) => (
+				<g class="mm-town">
+					<circle cx={p.x} cy={p.y} r={2.2 * s}></circle>
+					{p.label && <text x={p.label.x} y={p.label.y} text-anchor={p.label.anchor} font-size={fs * 0.88} stroke-width={2.6 * s}>{p.name}</text>}
+				</g>
+			))}
+			{map.points.filter((p) => p.kind !== 'town').reverse().map((p) => (
+				<g class={`mm-point mm-${p.kind} mm-type-${p.type ?? 'place'}`}>
+					{p.type === 'battle'
+						? <rect x={p.x - 4.5 * s} y={p.y - 4.5 * s} width={9 * s} height={9 * s} transform={`rotate(45 ${p.x} ${p.y})`} stroke-width={1.6 * s}></rect>
+						: <circle cx={p.x} cy={p.y} r={(p.kind === 'self' ? 6.5 : 4.5) * s} stroke-width={(p.kind === 'self' ? 2 : 1.4) * s}></circle>}
+					{p.label && <text x={p.label.x} y={p.label.y} text-anchor={p.label.anchor} font-size={fs} stroke-width={3 * s}>{p.name}</text>}
+					<title>{p.name}</title>
+				</g>
+			))}
+		</svg>
+		<span class="minimap-badge">{map.year ? `1 July ${map.year}` : 'Places'}</span>
+	</a>
+	<figcaption>
+		<p>{caption}</p>
+		{map.legend.length > 0 && (
+			<ul class="minimap-legend">
+				{map.legend.map((l) => (
+					<li class:list={{ own: l.own }}>
+						<span class={`key key-${l.kind}`} style={`--c:${l.color};--cd:${darker(l.color)};--cf:${cf(l.color, l.kind)}`} aria-hidden="true"></span>
+						<span>{l.name}{l.kind !== 'ruled' && l.kind !== 'context' && !/claim|disput|occup/i.test(l.name) && <span class="kind"> · {AREA_KIND_LABEL[l.kind].toLowerCase()}</span>}</span>
+					</li>
+				))}
+			</ul>
+		)}
+	</figcaption>
+</figure>
+
+<style>
+	.minimap {
+		margin: 0;
+	}
+
+	.minimap-frame {
+		position: relative;
+		display: block;
+		border-radius: 2px;
+		overflow: hidden;
+		background: #e8eef3;
+		outline-offset: 2px;
+	}
+
+	.minimap svg {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4 / 3;
+	}
+
+	.minimap-badge {
+		position: absolute;
+		left: 8px;
+		top: 8px;
+		padding: 2px 8px;
+		border-radius: 2px;
+		background: rgba(29, 63, 115, 0.92);
+		color: #fff;
+		font-size: 0.75rem;
+		font-weight: 500;
+		letter-spacing: 0.04em;
+	}
+
+	.mm-area {
+		fill-rule: evenodd;
+		vector-effect: non-scaling-stroke;
+		stroke-linejoin: round;
+		stroke: var(--cd);
+	}
+
+	.mm-ruled,
+	.mm-context {
+		fill: var(--cf);
+		stroke-width: 1;
+	}
+
+	.mm-claimed {
+		stroke-width: 1;
+		stroke-dasharray: 5 3;
+	}
+
+	.mm-occupied {
+		stroke-width: 1.2;
+	}
+
+	.mm-disputed {
+		stroke-width: 1;
+		stroke-dasharray: 3 3;
+	}
+
+	.mm-own {
+		stroke-width: 2.4;
+	}
+
+	.mm-route {
+		fill: none;
+		stroke: #b71c1c;
+		stroke-width: 2;
+		stroke-dasharray: 6 3;
+		vector-effect: non-scaling-stroke;
+	}
+
+	text {
+		font-family: inherit;
+		paint-order: stroke;
+		stroke: rgba(255, 255, 255, 0.92);
+		stroke-linejoin: round;
+	}
+
+	.mm-town circle {
+		fill: #546e7a;
+	}
+
+	.mm-town text {
+		fill: #37474f;
+	}
+
+	.mm-point circle,
+	.mm-point rect {
+		fill: #c62828;
+		stroke: #fff;
+	}
+
+	.mm-type-battle rect {
+		fill: #6d4c41;
+	}
+
+	.mm-linked circle {
+		fill: #fff;
+		stroke: #c62828;
+	}
+
+	.mm-point text {
+		fill: #212121;
+		font-weight: 600;
+	}
+
+	.mm-linked text {
+		font-weight: 500;
+	}
+
+	figcaption {
+		padding-top: 0.6rem;
+		font-size: 0.82rem;
+		line-height: 1.45;
+		color: var(--muted);
+	}
+
+	figcaption p {
+		margin: 0 0 0.5rem;
+	}
+
+	.minimap-legend {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.3rem;
+	}
+
+	.minimap-legend li {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+
+	.minimap-legend li.own {
+		color: var(--text);
+		font-weight: 500;
+	}
+
+	.kind {
+		font-weight: 400;
+		color: var(--muted);
+	}
+
+	.key {
+		flex: none;
+		width: 14px;
+		height: 10px;
+		border: 1px solid var(--cd);
+		background: var(--cf, var(--c));
+	}
+
+	.key-claimed,
+	.key-occupied {
+		border-style: dashed;
+		background: repeating-linear-gradient(45deg, var(--c) 0 2px, transparent 2px 5px);
+	}
+
+	.key-occupied {
+		border-style: solid;
+	}
+
+	.key-disputed {
+		border-style: dashed;
+		background: repeating-linear-gradient(-45deg, #8d8d8d 0 1.5px, transparent 1.5px 4px);
+	}
+</style>

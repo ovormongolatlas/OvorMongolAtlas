@@ -1,23 +1,1656 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import { formatYearRange } from '../lib/dates';
+import { BASE_MAP_HEIGHT, BASE_MAP_WIDTH, isOnMap, mapPosition } from '../lib/projection';
+import { areaLabels, referenceTowns } from '../data/map-labels';
+import { solid, waterInner } from '../lib/basemap';
+import { areaSources, areas, borders, campaigns, greatWallLines, greatWallSource, type AreaKind } from '../data/map-boundaries';
+
+// The slider's range and starting year. Everything else comes from the entries.
+const YEAR_MIN = 1890;
+const YEAR_MAX = 1950;
+const START_YEAR = 1938;
+
+const entries = await getCollection('entries');
+const titleOf = new Map(entries.map((e) => [e.id, e.data.title]));
+
+// Earliest and latest year an entry could be in force. For contested dates the
+// alternate value widens the span, so the map never hides an entry that one of
+// the sources places in the selected year.
+function span(d: { startYear?: number; endYear?: number; altStartYear?: number; altEndYear?: number }) {
+	if (d.startYear === undefined || d.endYear === undefined) return null;
+	return {
+		start: Math.min(d.startYear, d.altStartYear ?? d.startYear),
+		end: Math.max(d.endYear, d.altEndYear ?? d.endYear),
+	};
+}
+const activeIn = (s: { start: number; end: number }, year: number) => year >= s.start && year <= s.end;
+// Fills are opaque, so context states go underneath and hatched areas on top.
+const KIND_ORDER: Record<string, number> = { context: 0, ruled: 1, occupied: 2, claimed: 3, disputed: 4 };
+const drawOrder = <T extends { kind: string }>(list: T[]) => [...list].sort((a, b) => KIND_ORDER[a.kind] - KIND_ORDER[b.kind]);
+
+// Entry types that can be pinned to a point on the map.
+const POINT_TYPES = { place: 'Place', battle: 'Battle' } as const;
+type PointType = keyof typeof POINT_TYPES;
+const isPointType = (t: string): t is PointType => t in POINT_TYPES;
+
+const pointEntries = entries.filter((e) => isPointType(e.data.type));
+
+const places = pointEntries
+	.filter((e) => e.data.location && isOnMap(e.data.location.lon, e.data.location.lat) && span(e.data))
+	.map((e) => {
+		const loc = e.data.location!;
+		const s = span(e.data)!;
+		return {
+			id: e.id,
+			type: e.data.type as PointType,
+			title: e.data.title,
+			summary: e.data.summary,
+			years: formatYearRange(e.data.startYear, e.data.endYear, e.data.yearType, e.data.altStartYear, e.data.altEndYear),
+			...s,
+			pos: mapPosition(loc.lon, loc.lat),
+			precision: loc.precision,
+			source: loc.source,
+		};
+	})
+	.sort((a, b) => a.title.localeCompare(b.title));
+
+// A battle placed at the same spot as a place (e.g. at the town it was fought for)
+// is drawn just below it, so both markers stay visible and clickable.
+const nudged = new Set(
+	places
+		.filter((b) => b.type === 'battle' && places.some((p) => p.type === 'place' && Math.hypot(p.pos.left - b.pos.left, p.pos.top - b.pos.top) < 1.5))
+		.map((b) => b.id),
+);
+
+const unmappedPlaces = pointEntries
+	.filter((e) => !places.some((p) => p.id === e.id))
+	.sort((a, b) => a.data.type.localeCompare(b.data.type) || a.data.title.localeCompare(b.data.title))
+	.map((e) => `${e.data.title} (${POINT_TYPES[e.data.type as PointType].toLowerCase()})`);
+
+const states = entries
+	.filter((e) => e.data.type === 'state' && span(e.data))
+	.map((e) => ({
+		id: e.id,
+		title: e.data.title,
+		years: formatYearRange(e.data.startYear, e.data.endYear, e.data.yearType, e.data.altStartYear, e.data.altEndYear),
+		parent: e.data.partOf ? titleOf.get(e.data.partOf) : undefined,
+		...span(e.data)!,
+	}))
+	.sort((a, b) => a.start - b.start || a.end - b.end || a.title.localeCompare(b.title));
+
+// Names that changed within the slider's range carry their own years.
+const period = (p: { start?: number; end?: number }) => ({ start: p.start ?? YEAR_MIN, end: p.end ?? YEAR_MAX });
+const towns = referenceTowns.map((t) => ({ ...t, ...period(t), pos: mapPosition(t.lon, t.lat) }));
+const labels = areaLabels.map((l) => ({ ...l, ...period(l), pos: mapPosition(l.lon, l.lat) }));
+const pct = (n: number) => `${n.toFixed(2)}%`;
+
+// Borders are drawn in the base image's own pixel space, so they scale with it.
+const toPath = (coords: [number, number][]) =>
+	coords
+		.map(([lon, lat], i) => {
+			const { left, top } = mapPosition(lon, lat);
+			return `${i ? 'L' : 'M'}${((left / 100) * BASE_MAP_WIDTH).toFixed(1)} ${((top / 100) * BASE_MAP_HEIGHT).toFixed(1)}`;
+		})
+		.join('');
+const areaPath = (coords: [number, number][]) => `${toPath(coords)}Z`;
+const mappedEntries = new Set(areas.filter((a) => a.entry).map((a) => a.entry));
+const usedAreaSources = [...new Set(areas.map((a) => a.source))].map((k) => areaSources[k]);
+// State names drawn on the map, one per area that has a label position.
+const stateLabels = areas
+	.filter((a) => a.label)
+	.map((a) => ({ ...a, text: a.labelName ?? a.name, pos: mapPosition(a.label![0], a.label![1]) }));
+// Other states drawn on the map, by name, with the years each is drawn.
+const otherStates = [...new Map(
+	areas
+		.filter((a) => a.kind === 'context' && a.coordinates.length && (a.stateName ?? a.legendName ?? a.name))
+		.map((a) => [a.stateName ?? a.legendName ?? a.name, a]),
+).entries()].map(([name, a]) => ({
+	name,
+	color: a.color,
+	runs: yearRuns((y) => areas.some((b) => b.kind === 'context' && (b.stateName ?? b.legendName ?? b.name) === name && activeIn(b, y))),
+}));
+const AREA_KIND_LABEL = { ruled: 'Ruled', claimed: 'Claimed, not ruled', context: 'Other state, for context', disputed: 'Disputed', occupied: 'Its troops present, not annexed' };
+
+// Each state's colour, and a darker shade of it for outlines and names.
+const darker = (hex: string, f = 0.62) =>
+	'#' + [1, 3, 5].map((i) => Math.round(parseInt(hex.slice(i, i + 2), 16) * f).toString(16).padStart(2, '0')).join('');
+// Solid fills: the state's colour mixed with the land colour (ruled areas stronger than context).
+const FILL_K = { ruled: 0.62, context: 0.4, claimed: 0.62, occupied: 0.62, disputed: 0.4 } as const;
+const colorStyle = (c: string, kind: keyof typeof FILL_K = 'ruled') => `--c:${c};--cd:${darker(c)};--cf:${solid(c, FILL_K[kind])};`;
+// Claimed areas are hatched in their own state's colour, one pattern per colour.
+const claimColors = [...new Set(areas.filter((a) => a.kind === 'claimed' || a.kind === 'occupied').map((a) => a.color))];
+const hatchId = (c: string) => `claimed-hatch-${c.replace('#', '')}`;
+
+// Legend keys come and go with the year. Each key is rendered once per unbroken
+// run of years in which something it describes is on the map.
+function yearRuns(test: (year: number) => boolean) {
+	const runs: { start: number; end: number }[] = [];
+	for (let y = YEAR_MIN; y <= YEAR_MAX; y++) {
+		if (!test(y)) continue;
+		const last = runs.at(-1);
+		if (last && last.end === y - 1) last.end = y;
+		else runs.push({ start: y, end: y });
+	}
+	return runs;
+}
+const lineRuns = (approximate: boolean) =>
+	yearRuns((y) =>
+		borders.some((b) => activeIn(b, y) && b.sectors.some((sec) => sec.precision !== 'claim' && sec.precision !== 'internal' && (sec.precision === 'approximate') === approximate)),
+	);
+// Claim lines and internal boundaries get a legend key each, for the years their border is drawn.
+const INTERNAL_KEY: Record<string, string> = { 'line-admin': 'Outer Mongolia under the Qing', 'line-province': 'Provincial boundary' };
+const claimKeys = [
+	...borders.flatMap((b) =>
+		b.sectors
+			.filter((sec) => sec.precision === 'claim')
+			.map((sec) => ({ cls: sec.cls ?? 'line-claim', text: `${sec.label} (${b.start}–${b.end})`, start: b.start, end: b.end })),
+	),
+	...Object.entries(INTERNAL_KEY).flatMap(([cls, text]) =>
+		yearRuns((y) => borders.some((b) => activeIn(b, y) && b.sectors.some((sec) => sec.cls === cls))).map((r) => ({ cls, text, ...r })),
+	),
+];
+// One legend key per state (areas that share a legend name share a key).
+const legendKeys = [...new Map(areas.filter((a) => a.coordinates.length).map((a) => [a.legendName ?? a.name, a])).values()].map((a) => {
+	const key = a.legendName ?? a.name;
+	const same = areas.filter((b) => (b.legendName ?? b.name) === key && b.coordinates.length);
+	return { text: key, kind: a.kind, color: a.color, runs: yearRuns((y) => same.some((b) => activeIn(b, y))) };
+});
+const LEGEND_LINES = [
+	{ approximate: true, cls: 'line-approximate', text: 'Border, approximate' },
+	{ approximate: false, cls: 'line-uncertain', text: 'Border, uncertain or different then' },
+];
+// Campaign routes: a gentle curve from tail to head, stopped short of the town so
+// the arrowhead does not cover it; the label sits at the curve's middle.
+const px = (lon: number, lat: number) => {
+	const { left, top } = mapPosition(lon, lat);
+	return [(left / 100) * BASE_MAP_WIDTH, (top / 100) * BASE_MAP_HEIGHT];
+};
+const routeShapes = campaigns.flatMap((c) =>
+	c.routes.map((r) => {
+		const [x0, y0] = px(...r.from);
+		let [x1, y1] = px(...r.to);
+		const len = Math.hypot(x1 - x0, y1 - y0);
+		x1 -= ((x1 - x0) / len) * 12;
+		y1 -= ((y1 - y0) / len) * 12;
+		const bend = 0.12 * len;
+		const cx = (x0 + x1) / 2 + ((y1 - y0) / len) * bend;
+		const cy = (y0 + y1) / 2 - ((x1 - x0) / len) * bend;
+		const mx = 0.25 * x0 + 0.5 * cx + 0.25 * x1;
+		const my = 0.25 * y0 + 0.5 * cy + 0.25 * y1;
+		return {
+			campaign: c,
+			route: r,
+			d: `M${x0.toFixed(1)} ${y0.toFixed(1)}Q${cx.toFixed(1)} ${cy.toFixed(1)} ${x1.toFixed(1)} ${y1.toFixed(1)}`,
+			label: { left: (100 * mx) / BASE_MAP_WIDTH, top: (100 * my) / BASE_MAP_HEIGHT },
+		};
+	}),
+);
+const campaignRuns = yearRuns((y) => campaigns.some((c) => activeIn(c, y)));
+const bordersStart = Math.min(...borders.map((b) => b.start));
+const bordersEnd = Math.max(...borders.map((b) => b.end));
+const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', differs: 'Differed in this period', claim: 'Claimed line', internal: 'Boundary inside one state' };
 ---
 
-<Layout>
-	<main>
-		<h1>Timeline Map</h1>
-		<p>The interactive map is coming soon.</p>
+<Layout title="Timeline Map">
+	<main class="map-page" data-map data-year-min={YEAR_MIN} data-year-max={YEAR_MAX}>
+		<h1 class="visually-hidden">Timeline Map</h1>
+
+		<aside class="panel">
+			<section class="card year-card">
+				<div class="year-head">
+					<label for="map-year" class="overline">Year</label>
+					<button type="button" class="text-button" data-play aria-pressed="false">
+						<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+							<path data-play-icon d="M8 5v14l11-7z" fill="currentColor"></path>
+							<path data-pause-icon d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor" hidden></path>
+						</svg>
+						<span data-play-label>Play</span>
+					</button>
+				</div>
+				<output for="map-year" class="year-value" data-year-out aria-live="polite">{START_YEAR}</output>
+				<input id="map-year" type="range" min={YEAR_MIN} max={YEAR_MAX} step="1" value={START_YEAR} data-year-input />
+				<div class="range-ends" aria-hidden="true"><span>{YEAR_MIN}</span><span>{YEAR_MAX}</span></div>
+				<p class="note year-rule">Each year shows the map as it stood on 1 July of that year.</p>
+				<noscript><p class="note">The year slider needs JavaScript. Everything on the map is listed in the panels with its dates.</p></noscript>
+
+				<fieldset class="layers">
+					<legend class="overline">Show</legend>
+					<label><input type="checkbox" checked data-layer="places" /><span class="swatch swatch-place" aria-hidden="true"></span>Places in the atlas</label>
+					<label><input type="checkbox" checked data-layer="battles" /><span class="swatch swatch-battle" aria-hidden="true"></span>Battles in the atlas</label>
+					<label><input type="checkbox" checked data-layer="areas" /><span class="swatch swatch-area" aria-hidden="true"></span>State territories</label>
+					<label><input type="checkbox" checked data-layer="borders" /><svg class="swatch-line" width="18" height="10" aria-hidden="true"><line x1="1" y1="5" x2="17" y2="5" class="line-approximate"></line></svg>Borders</label>
+					<label><input type="checkbox" checked data-layer="towns" /><span class="swatch swatch-town" aria-hidden="true"></span>Other towns, for reference</label>
+					<label><input type="checkbox" checked data-layer="wall" /><svg class="swatch-line" width="18" height="10" aria-hidden="true"><line x1="1" y1="5" x2="17" y2="5" class="great-wall-base"></line><line x1="1" y1="5" x2="17" y2="5" class="great-wall-dots"></line></svg>Great Wall</label>
+					<label><input type="checkbox" checked data-layer="routes" /><svg class="swatch-line" width="18" height="10" aria-hidden="true"><line x1="1" y1="5" x2="17" y2="5" class="route"></line></svg>Campaign routes</label>
+					<label><input type="checkbox" checked data-layer="labels" /><span class="swatch swatch-label" aria-hidden="true">A</span>Region and feature names</label>
+				</fieldset>
+			</section>
+
+			<section class="card">
+				<h2 class="overline">On the map</h2>
+				<div class="chips">
+					{places.map((p) => (
+						<button type="button" class={`chip chip-${p.type}`} data-place-select={p.id} aria-pressed="false">{p.title}</button>
+					))}
+				</div>
+			</section>
+
+			<section class="card place-card" data-place-card="">
+				<p class="note hint">Select a place or battle on the map or above to see its entry.</p>
+			</section>
+			{places.map((p) => (
+				<section class="card place-card" data-place-card={p.id} hidden>
+					<p class={`overline place-type type-${p.type}`}>{POINT_TYPES[p.type]}</p>
+					<h2>{p.title}</h2>
+					{p.years && <p class="muted">{p.years}</p>}
+					<p class="summary">{p.summary}</p>
+					<p class="location-note">
+						<strong>{p.precision === 'confirmed' ? 'Location confirmed.' : 'Location approximate.'}</strong> {p.source}
+					</p>
+					<div class="card-actions"><a class="text-button" href={`/entry/${p.id}`}>Open entry</a></div>
+				</section>
+			))}
+
+			<section class="card">
+				<h2 class="overline">Inner Mongolian states in <span data-year-text>{START_YEAR}</span></h2>
+				<ul class="state-list">
+					{states.map((s) => (
+						<li data-start={s.start} data-end={s.end} data-state hidden={!activeIn(s, START_YEAR)}>
+							<span class="swatch swatch-state" aria-hidden="true"></span>
+							<span>
+								<a href={`/entry/${s.id}`}>{s.title}</a>
+								<span class="muted small">{s.years}{s.parent && <> · stage of {s.parent}</>}{mappedEntries.has(s.id) && <> · <span class="on-map">on the map</span></>}</span>
+							</span>
+						</li>
+					))}
+				</ul>
+				<p class="note" data-no-states hidden={states.some((s) => activeIn(s, START_YEAR))}>No Inner Mongolian state in the atlas existed in <span data-year-text>{START_YEAR}</span>.</p>
+				<p class="note">The Inner Mongolian governments that have entries in the atlas. This list names every one that existed at any time in the year, so it can include states founded after 1 July that the map shows only from the next year. States marked “on the map” have their territory drawn for at least part of their existence. The others are still to be traced from period maps.</p>
+				{unmappedPlaces.length > 0 && (
+					<p class="note">Not on the map yet, because no location has been sourced: {unmappedPlaces.join(', ')}.</p>
+				)}
+			</section>
+
+			<section class="card">
+				<h2 class="overline">Other states on the map in <span data-year-text>{START_YEAR}</span></h2>
+				<ul class="state-list">
+					{otherStates.flatMap((o) =>
+						o.runs.map((r) => (
+							<li data-start={r.start} data-end={r.end} data-other-state hidden={!activeIn(r, START_YEAR)}>
+								<span class="swatch swatch-state" style={`background:${o.color}`} aria-hidden="true"></span>
+								<span>
+									{o.name}
+									<span class="muted small">drawn {r.start === r.end ? r.start : `${r.start}–${r.end}`}</span>
+								</span>
+							</li>
+						)),
+					)}
+				</ul>
+				<p class="note">States outside the atlas’s own subject, drawn for context: as they stood on 1 July of the year. Their notes are under “Territories on the map.”</p>
+			</section>
+
+			<section class="card" data-start={Math.min(...areas.map((a) => a.start))} data-end={Math.max(...areas.map((a) => a.end))} data-area-card hidden={!areas.some((a) => activeIn(a, START_YEAR))}>
+				<h2 class="overline">Territories on the map</h2>
+				<ul class="sector-list">
+					{areas.map((a) => (
+						<li data-start={a.start} data-end={a.end} data-area-item hidden={!activeIn(a, START_YEAR)}>
+							<span class={`swatch-area-key key-${a.kind}`} style={colorStyle(a.color, a.kind)} aria-hidden="true"></span>
+							<span>
+								<strong>{a.entry ? <a href={`/entry/${a.entry}`}>{a.name}</a> : a.name}</strong>
+								<span class="kind-tag">{AREA_KIND_LABEL[a.kind]}</span>
+								<br />{a.note}
+							</span>
+						</li>
+					))}
+				</ul>
+				{usedAreaSources.map((src) => (
+					<p class="location-note"><strong>Source.</strong> {src.full} {src.accuracy}</p>
+				))}
+			</section>
+
+			<section class="card" data-start={bordersStart} data-end={bordersEnd} data-border-card hidden={!borders.some((b) => activeIn(b, START_YEAR))}>
+				<h2 class="overline">Borders on the map</h2>
+				{borders.map((b) => (
+					<div class="border-item" data-start={b.start} data-end={b.end} data-border-item hidden={!activeIn(b, START_YEAR)}>
+						<p class="border-name">{b.name}</p>
+						<ul class="sector-list">
+							{b.sectors.map((sec) => (
+								<li>
+									<svg class="swatch-line" width="22" height="10" aria-hidden="true"><line x1="1" y1="5" x2="21" y2="5" class={sec.cls ?? `line-${sec.precision}`}></line></svg>
+									<span><strong>{sec.label}: {PRECISION_LABEL[sec.precision].toLowerCase()}.</strong> {sec.note}</span>
+								</li>
+							))}
+						</ul>
+						<p class="location-note"><strong>Source.</strong> {b.source}</p>
+					</div>
+				))}
+			</section>
+
+			{campaigns.map((c) => (
+				<section class="card" data-start={c.start} data-end={c.end} data-campaign-card hidden={!activeIn(c, START_YEAR)}>
+					<h2 class="overline">Campaigns on the map</h2>
+					<p class="border-name">{c.entry ? <a href={`/entry/${c.entry}`}>{c.name}</a> : c.name}</p>
+					<p class="note">Arrows show directions of advance as the sources give them, not front lines or territory held.</p>
+					<ul class="sector-list">
+						{c.routes.map((r) => (
+							<li>
+								<svg class="swatch-line" width="22" height="10" aria-hidden="true"><line x1="1" y1="5" x2="21" y2="5" class="route"></line></svg>
+								<span><strong>{r.label}.</strong> {r.note}</span>
+							</li>
+						))}
+					</ul>
+					{c.reached && (
+						<ul class="sector-list">
+							{c.reached.map((p) => (
+								<li>
+									<svg class="swatch-line" width="22" height="12" aria-hidden="true"><circle cx="11" cy="6" r="4.5" class="reached-mark"></circle></svg>
+									<span><strong>{p.name}.</strong> {p.note}</span>
+								</li>
+							))}
+						</ul>
+					)}
+					{c.reachedNote && <p class="location-note"><strong>Places occupied.</strong> {c.reachedNote}</p>}
+					<p class="location-note"><strong>Starting points.</strong> {c.tailNote}</p>
+					<p class="location-note"><strong>Source.</strong> {c.source}</p>
+				</section>
+			))}
+		</aside>
+
+		<section class="card map-card" aria-label="Map of Inner Mongolia and neighboring regions">
+			<div class="map">
+				<div class="map-frame">
+				<img src="/map/base.svg" width={BASE_MAP_WIDTH} height={BASE_MAP_HEIGHT} alt="" />
+
+				<svg class="overlay" viewBox={`0 0 ${BASE_MAP_WIDTH} ${BASE_MAP_HEIGHT}`} preserveAspectRatio="none" aria-hidden="true">
+					<defs>
+						<marker id="route-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse" markerUnits="strokeWidth">
+							<path d="M0 0L10 5L0 10z" fill="#b71c1c"></path>
+						</marker>
+						<pattern id="disputed-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+							<line x1="0" y1="0" x2="0" y2="8" stroke="#6d6d6d" stroke-opacity="0.55" stroke-width="2"></line>
+						</pattern>
+						<pattern id="claimed-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+							<rect width="10" height="10" fill="#00695c" fill-opacity="0.06"></rect>
+							<line x1="0" y1="0" x2="0" y2="10" stroke="#00695c" stroke-opacity="0.45" stroke-width="2.5"></line>
+						</pattern>
+						{claimColors.map((c) => (
+							<pattern id={hatchId(c)} width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+								<rect width="10" height="10" fill={c} fill-opacity="0.07"></rect>
+								<line x1="0" y1="0" x2="0" y2="10" stroke={darker(c)} stroke-opacity="0.5" stroke-width="2.5"></line>
+							</pattern>
+						))}
+					</defs>
+					<g class="areas-group">
+						{drawOrder(areas.filter((a) => a.coordinates.length)).map((a) => (
+							<path
+								data-area-id={a.id}
+								d={areaPath(a.coordinates) + (a.parts ? a.parts.map(areaPath).join('') : '') + (a.exclude ? areaPath(a.exclude) : '')}
+								class={`area area-${a.kind}`}
+								data-area
+								data-start={a.start}
+								data-end={a.end}
+								style={colorStyle(a.color, a.kind) + (a.kind === 'claimed' || a.kind === 'occupied' ? `fill:url(#${hatchId(a.color)});` : '') + (activeIn(a, START_YEAR) ? '' : 'display:none')}
+							></path>
+						))}
+					</g>
+					<g class="water-group" set:html={waterInner}></g>
+					<g class="borders-group">
+					{borders.map((b) => (
+						<g data-border data-start={b.start} data-end={b.end} style={activeIn(b, START_YEAR) ? undefined : 'display:none'}>
+							{b.sectors.map((sec) => (
+								<path d={toPath(sec.coordinates)} class={sec.cls ?? `line-${sec.precision}`}></path>
+							))}
+						</g>
+					))}
+					</g>
+					<g class="wall-group">
+						{greatWallLines.map((l) => (
+							<>
+								<path d={toPath(l)} class="great-wall-base"></path>
+								<path d={toPath(l)} class="great-wall-dots"></path>
+							</>
+						))}
+					</g>
+					<g class="routes-group">
+						{routeShapes.map((r) => (
+							<path d={r.d} class="route" data-route data-start={r.campaign.start} data-end={r.campaign.end} style={activeIn(r.campaign, START_YEAR) ? undefined : 'display:none'}></path>
+						))}
+						{campaigns.flatMap((c) =>
+							(c.reached ?? []).map((p) => {
+								const [x, y] = px(...p.at);
+								return (
+									<circle cx={x.toFixed(1)} cy={y.toFixed(1)} r="7" class="reached-mark" data-route data-start={c.start} data-end={c.end} style={activeIn(c, START_YEAR) ? undefined : 'display:none'}>
+										<title>{`${p.name}: occupied in ${c.start}`}</title>
+									</circle>
+								);
+							}),
+						)}
+					</g>
+				</svg>
+
+				{/* Routes are not labelled on the map: each arrow ends at a named town, and the campaign card lists them. */}
+
+				{stateLabels.map((a) => (
+					<span
+						class={`area-label state-label state-${a.kind}`}
+						data-for={a.coordinates.length ? a.id : undefined}
+						data-start={a.start}
+						data-end={a.end}
+						data-area-label
+						hidden={!activeIn(a, START_YEAR)}
+						style={`left:${pct(a.pos.left)};top:${pct(a.pos.top)};${colorStyle(a.color)}`}
+						aria-hidden="true"
+					>{a.text}</span>
+				))}
+
+				{labels.map((l) => (
+					<span
+						class={`area-label area-${l.kind}`}
+						data-start={l.start}
+						data-end={l.end}
+						data-period
+						hidden={!activeIn(l, START_YEAR)}
+						style={`left:${pct(l.pos.left)};top:${pct(l.pos.top)};${l.rotate ? `--rotate:${l.rotate}deg;` : ''}`}
+						aria-hidden="true"
+					>{l.name}</span>
+				))}
+
+				{towns.map((t) => (
+					<span
+						class:list={['town', { 'label-left': t.labelLeft }]}
+						data-prefer-left={t.labelLeft ? '' : undefined}
+						data-start={t.start}
+						data-end={t.end}
+						data-period
+						hidden={!activeIn(t, START_YEAR)}
+						style={`left:${pct(t.pos.left)};top:${pct(t.pos.top)}`}
+						aria-hidden="true"
+					><span class="town-dot"></span><span class="town-name">{t.name}</span></span>
+				))}
+
+				{places.map((p) => (
+					<button
+						type="button"
+						class:list={['place', p.type, { 'is-inactive': !activeIn(p, START_YEAR), nudged: nudged.has(p.id) }]}
+						style={`left:${pct(p.pos.left)};top:${pct(p.pos.top)}`}
+						data-place={p.id}
+						data-start={p.start}
+						data-end={p.end}
+						data-title={p.title}
+						data-years={p.years}
+						aria-pressed="false"
+						aria-label={`${p.title}, ${p.years}${activeIn(p, START_YEAR) ? '' : `, not documented in ${START_YEAR}`}`}
+					><span class="place-dot"></span><span class="place-name">{p.title}</span></button>
+				))}
+
+				</div>
+				<div class="legend" aria-hidden="true">
+					<span><span class="swatch swatch-place"></span><span>Documented in <span data-year-text>{START_YEAR}</span></span></span>
+					<span><span class="swatch swatch-place-off"></span><span>Not documented in <span data-year-text>{START_YEAR}</span></span></span>
+					<span><span class="swatch swatch-battle"></span><span>Battle</span></span>
+					{legendKeys.flatMap((k) =>
+						k.runs.map((r) => (
+							<span data-start={r.start} data-end={r.end} data-area-legend hidden={!activeIn(r, START_YEAR)}><span class={`swatch-area-key key-${k.kind}`} style={colorStyle(k.color, k.kind)}></span><span>{k.text}</span></span>
+						)),
+					)}
+					<span><span class="swatch swatch-town"></span><span>Other town, for reference</span></span>
+					<span><svg class="swatch-line" width="22" height="10"><line x1="1" y1="5" x2="21" y2="5" class="great-wall-base"></line><line x1="1" y1="5" x2="21" y2="5" class="great-wall-dots"></line></svg><span>Great Wall</span></span>
+					{claimKeys.map((k) => (
+						<span data-start={k.start} data-end={k.end} data-border-legend hidden={!activeIn(k, START_YEAR)}><svg class="swatch-line" width="22" height="10"><line x1="1" y1="5" x2="21" y2="5" class={k.cls}></line></svg><span>{k.text}</span></span>
+					))}
+					{campaignRuns.map((r) => (
+						<span data-start={r.start} data-end={r.end} data-area-legend hidden={!activeIn(r, START_YEAR)}><svg class="swatch-line" width="22" height="10"><line x1="1" y1="5" x2="21" y2="5" class="route"></line></svg><span>Campaign route (direction only)</span></span>
+					))}
+					{campaignRuns.map((r) => (
+						<span data-start={r.start} data-end={r.end} data-area-legend hidden={!activeIn(r, START_YEAR)}><svg class="swatch-line" width="22" height="12"><circle cx="11" cy="6" r="4.5" class="reached-mark"></circle></svg><span>Occupied by the campaign</span></span>
+					))}
+					{LEGEND_LINES.flatMap((k) =>
+						lineRuns(k.approximate).map((r) => (
+							<span data-start={r.start} data-end={r.end} data-border-legend hidden={!activeIn(r, START_YEAR)}><svg class="swatch-line" width="22" height="10"><line x1="1" y1="5" x2="21" y2="5" class={k.cls}></line></svg><span>{k.text}</span></span>
+						)),
+					)}
+				</div>
+			</div>
+			<p class="credit">Base map: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain). Lambert conformal conic projection. Positions of towns and region names are approximate. Great Wall: traced from {greatWallSource.short}.</p>
+		</section>
 	</main>
 </Layout>
 
+<script>
+	const root = document.querySelector<HTMLElement>('[data-map]');
+	if (root) {
+		const input = root.querySelector<HTMLInputElement>('[data-year-input]')!;
+		const output = root.querySelector<HTMLOutputElement>('[data-year-out]')!;
+		const playButton = root.querySelector<HTMLButtonElement>('[data-play]')!;
+		const min = Number(root.dataset.yearMin);
+		const max = Number(root.dataset.yearMax);
+		const cards = root.querySelectorAll<HTMLElement>('[data-place-card]');
+		const markers = root.querySelectorAll<HTMLButtonElement>('[data-place]');
+		const chips = root.querySelectorAll<HTMLButtonElement>('[data-place-select]');
+		let timer: number | undefined;
+
+		const isActive = (el: HTMLElement, year: number) =>
+			year >= Number(el.dataset.start) && year <= Number(el.dataset.end);
+
+		function setYear(year: number) {
+			input.value = String(year);
+			output.textContent = String(year);
+			root!.querySelectorAll('[data-year-text]').forEach((el) => (el.textContent = String(year)));
+
+			let anyState = false;
+			root!.querySelectorAll<HTMLElement>('[data-state]').forEach((li) => {
+				const on = isActive(li, year);
+				li.hidden = !on;
+				anyState ||= on;
+			});
+			root!.querySelector<HTMLElement>('[data-no-states]')!.hidden = anyState;
+
+			root!
+				.querySelectorAll<HTMLElement>('[data-other-state], [data-border-card], [data-border-item], [data-border-legend], [data-area-card], [data-area-item], [data-area-legend], [data-area-label], [data-period], [data-campaign-card]')
+				.forEach((el) => (el.hidden = !isActive(el, year)));
+			root!.querySelectorAll<SVGElement>('[data-border], [data-area], [data-route]').forEach((g) => {
+				g.style.display = isActive(g as unknown as HTMLElement, year) ? '' : 'none';
+			});
+
+			markers.forEach((m) => {
+				const on = isActive(m, year);
+				m.classList.toggle('is-inactive', !on);
+				m.setAttribute('aria-label', `${m.dataset.title}, ${m.dataset.years}${on ? '' : `, not documented in ${year}`}`);
+			});
+			layoutLabels();
+		}
+
+		// ---- Keeping names apart -----------------------------------------------
+		// Names are placed in order of importance, and none may cover one placed
+		// before it: atlas places; then the names of the Mongol governments; then
+		// reference towns; then other states; then region names; then physical
+		// features. A state's name is only tried at spots inside its own territory.
+		// Place and town names try the right, the left, and the four diagonals.
+		// Region and feature names, town names and context state names that still
+		// do not fit are hidden for that year; atlas places and Mongol governments
+		// always keep their names.
+		const frame = root.querySelector<HTMLElement>('.map-frame')!;
+		const svg = root.querySelector<SVGSVGElement>('.overlay')!;
+		type Box = { l: number; t: number; r: number; b: number };
+		const PAD = 3;
+		const shown = (el: HTMLElement) => !el.hidden && el.getClientRects().length > 0 && getComputedStyle(el).visibility !== 'hidden';
+		const boxOf = (el: Element, base: DOMRect): Box => {
+			const r = el.getBoundingClientRect();
+			return { l: r.left - base.left - PAD, t: r.top - base.top - PAD, r: r.right - base.left + PAD, b: r.bottom - base.top + PAD };
+		};
+		const hits = (a: Box, b: Box) => a.l < b.r && a.r > b.l && a.t < b.b && a.b > b.t;
+		const shift = (a: Box, dx: number, dy: number): Box => ({ l: a.l + dx, t: a.t + dy, r: a.r + dx, b: a.b + dy });
+
+		function offsets(w: number, h: number, reach: number) {
+			const out: [number, number][] = [[0, 0]];
+			for (let k = 1; k <= reach; k++) {
+				const dy = k * h * 0.6, dx = k * w * 0.25;
+				out.push([0, -dy], [0, dy], [dx, 0], [-dx, 0], [dx, -dy], [-dx, -dy], [dx, dy], [-dx, dy]);
+			}
+			return out;
+		}
+
+		// True when a point of the frame lies inside the area drawn for this label.
+		function insideArea(id: string | undefined, x: number, y: number, base: DOMRect) {
+			if (!id) return true;
+			const path = svg.querySelector<SVGGeometryElement>(`[data-area-id="${id}"]`);
+			const ctm = svg.getScreenCTM();
+			if (!path || !ctm || typeof path.isPointInFill !== 'function') return true;
+			const pt = new DOMPoint(base.left + x, base.top + y).matrixTransform(ctm.inverse());
+			return path.isPointInFill(pt);
+		}
+
+		// How firmly a box sits on its area: 2 = centre inside, 1 = some part inside, 0 = none.
+		function onArea(id: string | undefined, c: Box, base: DOMRect) {
+			if (!id) return 2;
+			const cx = (c.l + c.r) / 2, cy = (c.t + c.b) / 2;
+			if (insideArea(id, cx, cy, base)) return 2;
+			for (const [x, y] of [[c.l, c.t], [c.r, c.t], [c.l, c.b], [c.r, c.b], [cx, c.t], [cx, c.b], [c.l, cy], [c.r, cy]])
+				if (insideArea(id, x, y, base)) return 1;
+			return 0;
+		}
+
+		function place(el: HTMLElement, placed: Box[], base: DOMRect, reach: number, mustShow: boolean, centreOnArea = false) {
+			const box = boxOf(el, base);
+			const w = box.r - box.l, h = box.b - box.t;
+			const area = el.dataset.for;
+			// A free spot with the name's centre on its territory is best; then a free
+			// spot that at least touches it; then the least crowded spot on it.
+			let best: [number, number] | null = null, bestScore = Infinity, bestHits = Infinity;
+			for (const [dx, dy] of offsets(w, h, reach)) {
+				const c = shift(box, dx, dy);
+				if (c.l < -PAD || c.t < -PAD || c.r > base.width + PAD || c.b > base.height + PAD) continue;
+				const on = onArea(area, c, base);
+				if (on === 0 || (centreOnArea && on < 2)) continue;
+				const n = placed.filter((p) => hits(c, p)).length;
+				const score = n === 0 ? (on === 2 ? 0 : 1) : 2 + n + (on === 2 ? 0 : 0.5);
+				if (score < bestScore) { best = [dx, dy]; bestScore = score; bestHits = n; }
+				if (score === 0) break;
+			}
+			// A name that must show but has no free spot on its territory (a small
+			// state on a narrow screen) may sit just off it, if that spot is free.
+			if (mustShow && (!best || bestHits > 0)) {
+				for (const [dx, dy] of offsets(w, h, reach * 2)) {
+					const c = shift(box, dx, dy);
+					if (c.l < -PAD || c.t < -PAD || c.r > base.width + PAD || c.b > base.height + PAD) continue;
+					if (!placed.some((p) => hits(c, p))) { best = [dx, dy]; bestHits = 0; break; }
+				}
+			}
+			if (!best || (bestHits > 0 && !mustShow)) {
+				if (!mustShow) { el.classList.add('label-crowded'); return; }
+				best = [0, 0];
+			}
+			el.style.setProperty('--dx', `${best[0]}px`);
+			el.style.setProperty('--dy', `${best[1]}px`);
+			placed.push(shift(box, best[0], best[1]));
+		}
+
+		// Place or town names: right or left of the dot, level or on a diagonal.
+		function placeName(marker: HTMLElement, name: HTMLElement, sideClass: string, preferLeft: boolean, placed: Box[], own: Box, base: DOMRect) {
+			const tries: [boolean, number][] = [];
+			for (const lift of [0, -1, 1]) for (const left of [preferLeft, !preferLeft]) tries.push([left, lift]);
+			for (const [left, lift] of tries) {
+				marker.classList.toggle(sideClass, left);
+				name.style.setProperty('--ny', '0px');
+				const h = name.getBoundingClientRect().height;
+				name.style.setProperty('--ny', `${lift * h * 0.75}px`);
+				const b = boxOf(name, base);
+				if (b.l >= 0 && b.r <= base.width && b.t >= 0 && b.b <= base.height && !placed.some((p) => p !== own && hits(b, p))) {
+					placed.push(b);
+					return true;
+				}
+			}
+			marker.classList.toggle(sideClass, preferLeft);
+			name.style.setProperty('--ny', '0px');
+			return false;
+		}
+
+		function layoutLabels() {
+			const base = frame.getBoundingClientRect();
+			if (!base.width) return;
+			frame.querySelectorAll<HTMLElement>('.area-label, .town, .place').forEach((el) => {
+				el.classList.remove('label-crowded', 'name-crowded', 'name-left');
+				el.style.removeProperty('--dx');
+				el.style.removeProperty('--dy');
+				if (el.classList.contains('town')) el.classList.toggle('label-left', el.dataset.preferLeft !== undefined);
+			});
+			frame.querySelectorAll<HTMLElement>('.place-name, .town-name').forEach((n) => n.style.removeProperty('--ny'));
+			const placed: Box[] = [];
+			const pick = (sel: string) => [...frame.querySelectorAll<HTMLElement>(sel)].filter(shown);
+
+			// Atlas places: dots are fixed and come first; the selected place's name
+			// is placed first and always shown.
+			const places = pick('.place');
+			const dots = new Map<HTMLElement, Box>();
+			places.forEach((el) => { const d = boxOf(el.querySelector('.place-dot')!, base); dots.set(el, d); placed.push(d); });
+			const towns = pick('.town');
+			const tdots = new Map<HTMLElement, Box>();
+			towns.forEach((t) => { const d = boxOf(t.querySelector('.town-dot')!, base); tdots.set(t, d); placed.push(d); });
+			places
+				// The selected marker first, then places before battles.
+				.sort((x, y) =>
+					Number(y.getAttribute('aria-pressed') === 'true') - Number(x.getAttribute('aria-pressed') === 'true') ||
+					Number(x.classList.contains('battle')) - Number(y.classList.contains('battle')))
+				.forEach((el) => {
+					const name = el.querySelector<HTMLElement>('.place-name')!;
+					if (!shown(name)) return;
+					if (placeName(el, name, 'name-left', false, placed, dots.get(el)!, base)) return;
+					if (el.getAttribute('aria-pressed') === 'true') placed.push(boxOf(name, base));
+					else el.classList.add('name-crowded');
+				});
+
+			pick('.state-label:not(.state-context)').forEach((el) => place(el, placed, base, 6, true));
+
+			towns.forEach((t) => {
+				const name = t.querySelector<HTMLElement>('.town-name')!;
+				if (!shown(name)) return;
+				if (!placeName(t, name, 'label-left', t.dataset.preferLeft !== undefined, placed, tdots.get(t)!, base)) t.classList.add('name-crowded');
+			});
+
+			pick('.state-context').forEach((el) => place(el, placed, base, 4, false, true));
+			pick('.area-region').forEach((el) => place(el, placed, base, 2, false));
+			pick('.area-desert, .area-mountains, .area-water').forEach((el) => place(el, placed, base, 2, false));
+		}
+
+		new ResizeObserver(() => layoutLabels()).observe(frame);
+		document.fonts?.ready.then(() => layoutLabels());
+
+		function select(id: string) {
+			markers.forEach((m) => m.setAttribute('aria-pressed', String(m.dataset.place === id)));
+			chips.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.placeSelect === id)));
+			cards.forEach((c) => (c.hidden = c.dataset.placeCard !== id));
+			layoutLabels();
+		}
+
+		function stop() {
+			window.clearInterval(timer);
+			timer = undefined;
+			playButton.setAttribute('aria-pressed', 'false');
+			playButton.querySelector('[data-play-label]')!.textContent = 'Play';
+			playButton.querySelector<SVGElement>('[data-play-icon]')!.removeAttribute('hidden');
+			playButton.querySelector<SVGElement>('[data-pause-icon]')!.setAttribute('hidden', '');
+		}
+
+		function play() {
+			if (Number(input.value) >= max) setYear(min);
+			playButton.setAttribute('aria-pressed', 'true');
+			playButton.querySelector('[data-play-label]')!.textContent = 'Pause';
+			playButton.querySelector<SVGElement>('[data-play-icon]')!.setAttribute('hidden', '');
+			playButton.querySelector<SVGElement>('[data-pause-icon]')!.removeAttribute('hidden');
+			timer = window.setInterval(() => {
+				const next = Number(input.value) + 1;
+				if (next > max) return stop();
+				setYear(next);
+			}, 900);
+		}
+
+		input.addEventListener('input', () => {
+			stop();
+			setYear(Number(input.value));
+		});
+		playButton.addEventListener('click', () => (timer === undefined ? play() : stop()));
+		markers.forEach((m) => m.addEventListener('click', () => select(m.dataset.place!)));
+		chips.forEach((c) => c.addEventListener('click', () => select(c.dataset.placeSelect!)));
+		root.querySelectorAll<HTMLInputElement>('[data-layer]').forEach((box) =>
+			box.addEventListener('change', () => {
+				root.classList.toggle(`hide-${box.dataset.layer}`, !box.checked);
+				layoutLabels();
+			}),
+		);
+
+		// Links from entry pages open the map at a year, with a place selected:
+		// /map/?year=1938&place=kalgan. The address follows the slider so a view can be shared.
+		const params = new URLSearchParams(location.search);
+		const askedYear = Math.round(Number(params.get('year')));
+		if (askedYear >= min && askedYear <= max) setYear(askedYear);
+		const askedPlace = params.get('place');
+		if (askedPlace && [...markers].some((m) => m.dataset.place === askedPlace)) select(askedPlace);
+		const syncUrl = () => {
+			const p = new URLSearchParams(location.search);
+			p.set('year', input.value);
+			const pressed = [...markers].find((m) => m.getAttribute('aria-pressed') === 'true');
+			if (pressed) p.set('place', pressed.dataset.place!);
+			history.replaceState(null, '', `${location.pathname}?${p}`);
+		};
+		input.addEventListener('change', syncUrl);
+		playButton.addEventListener('click', () => window.setTimeout(syncUrl, 0));
+		markers.forEach((m) => m.addEventListener('click', syncUrl));
+		chips.forEach((c) => c.addEventListener('click', syncUrl));
+	}
+</script>
+
 <style>
-	main {
-		max-width: 60ch;
+	.map-page {
+		--primary: #1d3f73;
+		--place: #c62828;
+		--state: #00695c;
+		--battle: #6d4c41;
+		--town: #546e7a;
+		--text: #212121;
+		--muted: #616161;
+		max-width: 1240px;
 		margin: 0 auto;
-		padding: 4rem 1.5rem;
-		font-family: system-ui, sans-serif;
+		padding: 1.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		align-items: flex-start;
+		font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+		color: var(--text);
 	}
 
-	h1 {
-		font-size: 2rem;
+	[hidden] {
+		display: none !important;
+	}
+
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+
+	.card {
+		background: #fff;
+		border-radius: 2px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		padding: 1rem 1.25rem;
+	}
+
+	.panel {
+		flex: 1 1 280px;
+		min-width: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.overline {
+		margin: 0;
+		font-size: 0.875rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	.muted {
+		color: var(--muted);
+		margin: 0.15rem 0 0;
+	}
+
+	.small {
+		display: block;
+		font-size: 0.875rem;
+	}
+
+	.note {
+		margin: 0.75rem 0 0;
+		font-size: 0.875rem;
+		line-height: 1.4;
+		color: var(--muted);
+	}
+
+	.text-button {
+		font: inherit;
+		font-size: 0.875rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--primary);
+		background: none;
+		border: 0;
+		border-radius: 2px;
+		padding: 0.6rem 0.75rem;
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.text-button:hover {
+		background: #e8eaf6;
+	}
+
+	.year-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.year-value {
+		display: block;
+		font-size: 3rem;
+		line-height: 1.1;
+		color: var(--primary);
+	}
+
+	.year-card input[type='range'] {
+		width: 100%;
+		margin: 0.75rem 0 0;
+		accent-color: var(--primary);
+	}
+
+	.range-ends {
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.8125rem;
+		color: var(--muted);
+	}
+
+	.layers {
+		border: 0;
+		margin: 1.25rem 0 0;
+		padding: 0;
+	}
+
+	.layers label {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		min-height: 40px;
+		font-size: 0.9375rem;
+	}
+
+	.layers input {
+		width: 18px;
+		height: 18px;
+		accent-color: var(--primary);
+	}
+
+	.swatch {
+		display: inline-block;
+		flex: none;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		vertical-align: middle;
+	}
+
+	.swatch-place {
+		background: var(--place);
+	}
+
+	.swatch-place-off {
+		background: #fff;
+		border: 2px solid #9e9e9e;
+		box-sizing: border-box;
+		width: 12px;
+		height: 12px;
+	}
+
+	.swatch-battle {
+		background: var(--battle);
+		border-radius: 1px;
+		transform: rotate(45deg) scale(0.85);
+	}
+
+	.swatch-line {
+		flex: none;
+		overflow: visible;
+	}
+
+	.line-approximate,
+	.line-uncertain,
+	.line-differs {
+		fill: none;
+		stroke-width: 2.5;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		vector-effect: non-scaling-stroke;
+	}
+
+	.line-approximate {
+		stroke: #5b4a6e;
+		stroke-dasharray: 9 5;
+	}
+
+	.line-uncertain {
+		stroke: #5b4a6e;
+		stroke-dasharray: 1 6;
+	}
+
+	.line-differs {
+		stroke: #9e8fb0;
+		stroke-dasharray: 1 6;
+	}
+
+	.overlay {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.area {
+		fill-rule: evenodd;
+		vector-effect: non-scaling-stroke;
+		stroke-linejoin: round;
+	}
+
+	/* Every area takes its state's colour (--c, and --cd for the darker outline). */
+	.area-ruled {
+		fill: var(--cf);
+		stroke: var(--cd);
+		stroke-width: 1.5;
+	}
+
+	.area-claimed {
+		fill: url(#claimed-hatch);
+		stroke: var(--cd);
+		stroke-width: 1.2;
+		stroke-dasharray: 6 4;
+	}
+
+	/* Land a state's troops held for a time: its hatch, with a solid outline. */
+	.area-occupied {
+		stroke: var(--cd);
+		stroke-width: 1.5;
+	}
+
+	.area-context {
+		fill: var(--cf);
+		stroke: var(--cd);
+		stroke-width: 1;
+	}
+
+	.area-disputed {
+		fill: url(#disputed-hatch);
+		stroke: var(--cd);
+		stroke-width: 1;
+		stroke-dasharray: 3 3;
+	}
+
+	/*
+	 * State names: bold, dark, in ordinary capitals, haloed, and on up to two
+	 * lines. Region names (below) are small, light and spaced-out capitals, so
+	 * the two never read as the same kind of name.
+	 */
+	.state-label {
+		font-size: 0.875rem;
+		font-weight: 700;
+		line-height: 1.15;
+		letter-spacing: 0.01em;
+		text-align: center;
+		white-space: pre-line;
+		color: #37474f;
+		text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 6px #fff;
+	}
+
+	.state-ruled {
+		font-size: 0.8125rem;
+	}
+
+	/* Each state's name is written in a dark shade of its colour. */
+	.area-label.state-label {
+		color: var(--cd, #37474f);
+	}
+
+	/* Must beat .area-label's nowrap, which comes later in this sheet. */
+	.area-label.state-label {
+		white-space: pre-line;
+	}
+
+	.swatch-area,
+	.swatch-area-key {
+		display: inline-block;
+		flex: none;
+		width: 14px;
+		height: 10px;
+		border-radius: 1px;
+		box-sizing: border-box;
+	}
+
+	/* The layer switch's swatch has no state of its own: it uses the Mongol governments' colour. */
+	.swatch-area {
+		--c: #00897b;
+		--cd: #00554c;
+	}
+
+	.swatch-area,
+	.key-ruled {
+		background: var(--cf, var(--c));
+		border: 1.5px solid var(--cd);
+	}
+
+	.key-claimed {
+		background: repeating-linear-gradient(45deg, var(--c) 0 2px, transparent 2px 5px);
+		border: 1.5px dashed var(--cd);
+	}
+
+	.key-occupied {
+		background: repeating-linear-gradient(45deg, var(--c) 0 2px, transparent 2px 5px);
+		border: 1.5px solid var(--cd);
+	}
+
+	.key-disputed {
+		background: repeating-linear-gradient(-45deg, var(--c) 0 1.5px, transparent 1.5px 4px);
+		border: 1px dashed var(--cd);
+	}
+
+	.key-context {
+		background: var(--cf, var(--c));
+		border: 1px solid var(--cd);
+	}
+
+	.sector-list .swatch-area-key {
+		margin-top: 0.25rem;
+	}
+
+	.kind-tag {
+		display: inline-block;
+		margin-left: 0.35rem;
+		padding: 0 0.4rem;
+		border-radius: 8px;
+		background: #eceff1;
+		color: #455a64;
+		font-size: 0.75rem;
+		font-weight: 500;
+	}
+
+	.on-map {
+		color: var(--state);
+		font-weight: 500;
+	}
+
+	.border-item + .border-item {
+		margin-top: 1rem;
+	}
+
+	.border-name {
+		margin: 0.4rem 0 0;
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
+	.sector-list {
+		list-style: none;
+		margin: 0.6rem 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		font-size: 0.875rem;
+		line-height: 1.4;
+		color: #424242;
+	}
+
+	.sector-list li {
+		display: flex;
+		gap: 0.6rem;
+		align-items: flex-start;
+	}
+
+	.sector-list .swatch-line {
+		margin-top: 0.3rem;
+	}
+
+	.swatch-town {
+		background: var(--town);
+		width: 8px;
+		height: 8px;
+	}
+
+	.swatch-state {
+		background: var(--state);
+		margin-top: 0.4rem;
+	}
+
+	.swatch-label {
+		width: 10px;
+		height: auto;
+		border-radius: 0;
+		font-size: 0.6875rem;
+		font-weight: 600;
+		color: #8a7e6b;
+	}
+
+	.place-card h2 {
+		margin: 0.25rem 0 0;
+		font-size: 1.375rem;
+		font-weight: 500;
+	}
+
+	.place-type {
+		color: var(--place);
+		font-size: 0.75rem;
+	}
+
+	.place-type.type-battle {
+		color: var(--battle);
+	}
+
+	.summary {
+		margin: 0.5rem 0 0;
+		font-size: 0.9375rem;
+		line-height: 1.5;
+	}
+
+	.location-note {
+		margin: 0.75rem 0 0;
+		font-size: 0.8125rem;
+		line-height: 1.4;
+		color: var(--muted);
+	}
+
+	.card-actions {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0.25rem -0.75rem -0.5rem 0;
+	}
+
+	.hint {
+		margin: 0;
+	}
+
+	.state-list {
+		list-style: none;
+		margin: 0.5rem 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		font-size: 0.9375rem;
+		line-height: 1.35;
+	}
+
+	.state-list li {
+		display: flex;
+		gap: 0.6rem;
+	}
+
+	.state-list a {
+		color: var(--text);
+		text-decoration: none;
+	}
+
+	.state-list a:hover {
+		text-decoration: underline;
+	}
+
+	.map-card {
+		flex: 999 1 560px;
+		min-width: 0;
+		padding: 0;
+		overflow: hidden;
+		container-type: inline-size;
+	}
+
+	/* When the map is narrow, the legend moves below it instead of covering towns. */
+	@container (max-width: 900px) {
+		.legend {
+			position: static;
+			flex-flow: row wrap;
+			gap: 6px 16px;
+			box-shadow: none;
+			padding: 0.5rem 1rem;
+		}
+	}
+
+	.map,
+	.map-frame {
+		position: relative;
+	}
+
+	.chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 0.6rem;
+	}
+
+	.chip {
+		font: inherit;
+		font-size: 0.875rem;
+		min-height: 36px;
+		padding: 0.35rem 0.85rem;
+		border: 1px solid #bdbdbd;
+		border-radius: 18px;
+		background: #fff;
+		color: var(--text);
+		cursor: pointer;
+	}
+
+	.chip[aria-pressed='true'] {
+		background: var(--primary);
+		border-color: var(--primary);
+		color: #fff;
+	}
+
+	.map img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.area-label {
+		position: absolute;
+		transform: translate(-50%, -50%) translate(var(--dx, 0px), var(--dy, 0px)) rotate(var(--rotate, 0deg));
+		white-space: nowrap;
+		pointer-events: none;
+		font-size: 0.75rem;
+	}
+
+	/* Region names: small, light and widely spaced. */
+	.area-region {
+		font-size: 0.6875rem;
+		font-weight: 500;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #9a8c75;
+	}
+
+	/* Hidden by the label layout for this year because there is no room. */
+	.label-crowded,
+	.name-crowded .town-name,
+	.name-crowded .place-name {
+		visibility: hidden;
+	}
+
+	.place.name-left {
+		flex-direction: row-reverse;
+		transform: translate(calc(-100% + 11px), -50%);
+	}
+
+	.place.battle.name-left {
+		transform: translate(calc(-100% + 9px), -50%);
+	}
+
+	.area-desert {
+		font-style: italic;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		color: #a39478;
+	}
+
+	.area-mountains {
+		font-style: italic;
+		color: #8d7f6a;
+	}
+
+	.area-water {
+		font-style: italic;
+		color: #4f7d98;
+	}
+
+	.town {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		transform: translate(-4px, -50%);
+		font-size: 0.75rem;
+		color: #455a64;
+		white-space: nowrap;
+		pointer-events: none;
+	}
+
+	.town.label-left {
+		flex-direction: row-reverse;
+		transform: translate(calc(-100% + 4px), -50%);
+	}
+
+	.town-name {
+		transform: translateY(var(--ny, 0px));
+		text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+	}
+
+	.town-dot {
+		flex: none;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: var(--town);
+		border: 1.5px solid #fff;
+		box-sizing: border-box;
+	}
+
+	.place {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		transform: translate(-11px, -50%);
+		padding: 4px 0;
+		margin: 0;
+		border: 0;
+		background: none;
+		font: inherit;
+		color: var(--text);
+		cursor: pointer;
+	}
+
+	.place-dot {
+		flex: none;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background: var(--place);
+		border: 3px solid #fff;
+		box-sizing: border-box;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+	}
+
+	.place-name {
+		transform: translateY(var(--ny, 0px));
+		font-size: 0.875rem;
+		font-weight: 600;
+		background: rgba(255, 255, 255, 0.9);
+		padding: 2px 6px;
+		border-radius: 2px;
+	}
+
+	.place[aria-pressed='true'] .place-dot {
+		box-shadow: 0 0 0 4px rgba(198, 40, 40, 0.3), 0 2px 6px rgba(0, 0, 0, 0.35);
+	}
+
+	.place[aria-pressed='true'] .place-name {
+		background: #fff;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	}
+
+	.place.is-inactive {
+		color: var(--muted);
+	}
+
+	.place.is-inactive .place-dot {
+		background: #fff;
+		border: 2px solid #9e9e9e;
+		box-shadow: none;
+	}
+
+	.place.is-inactive .place-name {
+		font-weight: 400;
+		background: rgba(255, 255, 255, 0.75);
+	}
+
+	.place.battle {
+		transform: translate(-9px, -50%);
+	}
+
+	/* A battle is drawn only in its own years (unless it is the selected entry). */
+	.place.battle.is-inactive:not([aria-pressed='true']) {
+		display: none;
+	}
+
+	.place.nudged {
+		margin-top: 34px;
+	}
+
+	.place.battle .place-dot {
+		width: 18px;
+		height: 18px;
+		border-radius: 2px;
+		background: var(--battle);
+		transform: rotate(45deg);
+	}
+
+	.place.battle.is-inactive .place-dot {
+		background: #fff;
+	}
+
+	.place:focus-visible {
+		outline: 3px solid var(--primary);
+		outline-offset: 2px;
+		border-radius: 2px;
+	}
+
+	.hide-places .place:not(.battle),
+	.hide-battles .place.battle,
+	.hide-borders .borders-group,
+	.hide-areas .areas-group,
+	.hide-areas .state-label,
+	.hide-towns .town,
+	.hide-labels .area-label:not(.state-label),
+	.hide-wall .wall-group,
+	.hide-routes .routes-group,
+	.hide-routes .route-label {
+		display: none;
+	}
+
+	/* The Great Wall: a brown line with pale dots, as the period maps draw it. */
+	.great-wall-base,
+	.great-wall-dots {
+		fill: none;
+		vector-effect: non-scaling-stroke;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	.great-wall-base {
+		stroke: #6d4c41;
+		stroke-width: 3.5;
+	}
+
+	.great-wall-dots {
+		stroke: #f4f1ea;
+		stroke-width: 1.4;
+		stroke-dasharray: 0.1 6;
+	}
+
+	/* An administrative boundary inside one state: dash-dot, in the state's own darker colour. */
+	.line-admin {
+		fill: none;
+		stroke: #7d5d10;
+		stroke-width: 2;
+		stroke-dasharray: 8 3 2 3;
+		stroke-linejoin: round;
+		vector-effect: non-scaling-stroke;
+	}
+
+	/* Provincial boundaries inside China: thin grey dash-dot. */
+	.line-province {
+		fill: none;
+		stroke: #6b7a90;
+		stroke-width: 1.3;
+		stroke-dasharray: 6 3 1.5 3;
+		stroke-linejoin: round;
+		vector-effect: non-scaling-stroke;
+	}
+
+	/* Claimed lines: thin, dashed, each in its own colour. */
+	.line-claim-cn,
+	.line-claim-mn {
+		fill: none;
+		stroke-width: 2;
+		stroke-dasharray: 5 4;
+		vector-effect: non-scaling-stroke;
+	}
+
+	.line-claim-cn {
+		stroke: #1f5fbf;
+	}
+
+	.line-claim-mn {
+		stroke: #2e8b2e;
+	}
+
+	/* Places a campaign occupied: open red rings. */
+	.reached-mark {
+		fill: #fff;
+		fill-opacity: 0.85;
+		stroke: #b71c1c;
+		stroke-width: 2.5;
+		vector-effect: non-scaling-stroke;
+	}
+
+	/* Campaign routes: dashed red arrows, directions only. */
+	.route {
+		fill: none;
+		stroke: #b71c1c;
+		stroke-width: 2.2;
+		stroke-dasharray: 8 5;
+		vector-effect: non-scaling-stroke;
+	}
+
+	.routes-group .route {
+		marker-end: url(#route-arrow);
+	}
+
+	.route-label {
+		font-size: 0.6875rem;
+		font-weight: 600;
+		color: #8e1b1b;
+		text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+	}
+
+	/* Below the map, not over it, so it never hides towns or names. */
+	.legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px 18px;
+		padding: 10px 2px 0;
+		font-size: 0.8125rem;
+		color: #424242;
+	}
+
+	.legend > span {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.credit {
+		margin: 0;
+		padding: 0.5rem 1rem;
+		border-top: 1px solid #eee;
+		font-size: 0.75rem;
+		color: var(--muted);
+	}
+
+	.credit a {
+		color: inherit;
+	}
+
+	/*
+	 * Once the panel and the map no longer fit side by side, the map comes first
+	 * and the year card right under it; the panel's other cards follow. Without
+	 * this the whole panel sat above the map and pushed it to the bottom.
+	 */
+	@media (max-width: 920px) {
+		.panel {
+			display: contents;
+		}
+
+		.panel > *,
+		.map-card {
+			flex: 1 1 100%;
+		}
+
+		.map-card {
+			order: -2;
+		}
+
+		.year-card {
+			order: -1;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.map-page {
+			padding: 1rem;
+		}
+
+		.place:not([aria-pressed='true']) .place-name {
+			display: none;
+		}
+
+		.town,
+		.area-mountains,
+		.area-water,
+		.area-desert {
+			display: none;
+		}
+
+		.area-label {
+			font-size: 0.625rem;
+		}
+
+		.state-label {
+			font-size: 0.6875rem;
+		}
+
+		.place-dot {
+			width: 14px;
+			height: 14px;
+			border-width: 2px;
+		}
+
+		.place-name {
+			font-size: 0.75rem;
+		}
+
+		.legend {
+			position: static;
+			box-shadow: none;
+			padding: 0.5rem 1rem;
+		}
 	}
 </style>

@@ -23,6 +23,10 @@ A second independent eyewitness confirms the same setting six years later. The W
 
 The immediate predecessor was Prince Namjilwangchug, who inherited the jasag of the Sunid Right Banner in 1863 and died in 1902 (Jagchid). Jagchid cautions that Demchugdongrub almost never spoke of his father, so only anecdotal information survives, much of it relayed to Jagchid by Prince Sungjingwangchug. He describes Namjilwangchug as an able administrator who rose to head the Shilingol League and was promoted to qinwang (first-ranking prince) at the court of the Empress Dowager Cixi, taking part in her sixtieth-birthday ceremonies in 1894, before unexpectedly resigning the league headship in 1895 (Jagchid). In his later years he grew withdrawn and fearful of betrayal, reportedly reading documents only through a glass window for fear the paper was poisoned (Jagchid). Preoccupied with fengshui, he expended much of the banner's wealth and labor building a geomantically sited palace as a symbol of his prestige. Jagchid notes that this same palace, the Wangin Ortu seen by Hedin and Jones above, later served as a symbolic power center of the Inner Mongolian autonomy movement in the 1930s (Jagchid).
 
+## Where the palace stands
+
+The palace survives as the Sünid palace museum, near Zhurihe town in Sünid Right Banner. Its location, the sources for it and their disagreement over who built it are set out in the [De Wang’s palace (Wangin Ortu)](/entry/wangin-ortu) entry, which also places it on the Timeline Map.
+
 ## Demchugdongrub, its most prominent head
 
 The line's best-documented and most consequential head was [Demchugdongrub](/entry/demchugdongrub), invested as jasag toroyin junwang of the Sunid Right Banner in 1908 after a six-year gap in the succession following his father Namjilwangchug's death (Jagchid). Demchugdongrub went on to lead the Inner Mongolian autonomy movement of the 1930s and then chaired the Japanese-sponsored [Mengjiang](/entry/mengjiang) regime from the late 1930s until its collapse in 1945.

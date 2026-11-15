@@ -33,6 +33,21 @@ const entries = defineCollection({
 		// Mengjiang-era governments each set partOf: "mengjiang"), used to nest related
 		// states in the entries index instead of listing them as flat overlapping peers.
 		partOf: z.string().optional(),
+		// Where a place sits on the Timeline Map (src/pages/map.astro), in decimal
+		// degrees (WGS84). Like every other claim in the atlas, a location carries
+		// its source: `source` says where the coordinates come from and what they
+		// stand for (e.g. a modern town centre standing in for a period settlement),
+		// and `precision` is 'confirmed' only once checked against a source in hand,
+		// otherwise 'approximate'. Places without a location are listed under the
+		// map as not yet placed rather than being guessed.
+		location: z
+			.object({
+				lat: z.number(),
+				lon: z.number(),
+				precision: z.enum(['approximate', 'confirmed']),
+				source: z.string(),
+			})
+			.optional(),
 		// Optional images with full attribution, rendered visibly on the entry page
 		// (not just recorded here) because several of this atlas's held images carry
 		// CC BY-ND terms requiring visible attribution, and public-domain images still
