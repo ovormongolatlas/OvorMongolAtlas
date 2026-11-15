@@ -20,6 +20,8 @@ This atlas's master chronology independently corroborates this government's form
 
 There is a wrinkle worth recording rather than smoothing over. The master chronology's own summary genealogy of Mengjiang-era government bodies lists the October 27–29 "Federated Autonomous Government of Mongolia" convocation and this government's December 1937 formal setup as two *separate* numbered items, even though both carry the same Chinese lineage name (蒙古聯盟自治政府) and the chronology's own narrative log reads them as continuous stages of one process: a princes' convocation that decided to form the government, followed by its formal inauguration and the occupation of Baotou. This atlas treats them as one government, consistent with how this entry has always presented the October 27 Congress and December 1 inauguration above, and records the chronology document's own internal inconsistency here rather than either resolving it or importing it into this entry's structure.
 
+Its formation is placed in context in [Operation Chahar (1937)](/entry/chahar-operation-1937).
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.

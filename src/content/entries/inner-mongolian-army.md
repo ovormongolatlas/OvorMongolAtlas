@@ -63,6 +63,8 @@ Over the following two years Li Shouxin tried repeatedly to rebuild a fighting f
 
 A last echo of the institution appeared in 1949. When Demchugdongrub and Li joined the final [Mongolian Autonomous Government](/entry/mongolian-autonomous-government-alashan) at Dingyuanying in Alashan, its cabinet included a Peace Preservation Committee under Prince Damzana with Li Shouxin and [Bai Haifeng](/entry/bai-haifeng) as deputies (Jagchid), a much-reduced remnant of the military structure Li had once commanded across Mengjiang's governments.
 
+See also the [Suiyuan campaign (1936)](/entry/suiyuan-campaign-1936) and [Operation Chahar (1937)](/entry/chahar-operation-1937) entries.
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.

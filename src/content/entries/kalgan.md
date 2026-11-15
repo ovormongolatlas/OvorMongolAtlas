@@ -32,6 +32,8 @@ A second Mengjiang-era Mongol periodical is recorded here with more caution: a j
 
 Kalgan sat at the edge of Chahar province, a region the geographer Owen Lattimore studied firsthand in the 1930s and described, in a 1938 interpretive essay, as caught in a slow-motion ecological and economic transformation. That is his framing, offered here as regional background rather than a claim about Kalgan itself. Lattimore observed that Chahar and neighboring Ulanchab League Mongols were being squeezed into progressively narrower grazing grounds as Chinese colonists took over the best winter pastures for farming, degrading the remaining Mongol pastoral economy even as some of that same colonized land, its soil exhausted by agriculture, was increasingly turned over to Chinese-run grazing instead (Lattimore, "Geographical Factor"). He framed this as part of a longer historical pattern along the Mongol-Chinese frontier in which, over time, some Chinese settlers were assimilated into pastoral, nomadic life while some Mongols were absorbed into Chinese agricultural society (Lattimore, "Geographical Factor").
 
+Kalgan fell on 27 August 1937; see [Operation Chahar (1937)](/entry/chahar-operation-1937).
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.

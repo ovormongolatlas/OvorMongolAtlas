@@ -14,6 +14,8 @@ This atlas's master chronology independently corroborates the September 4, 1937 
 
 This atlas holds no further detail on this government's internal administration, its personnel beyond Yu Pinqin, or its territorial extent within Chahar. A fuller entry would need dedicated sourcing this atlas does not currently have.
 
+Its formation is placed in context in [Operation Chahar (1937)](/entry/chahar-operation-1937).
+
 ### Sources
 
 - John Hunter Boyle, *China and Japan at War, 1937–1945: The Politics of Collaboration* (Stanford: Stanford University Press, 1972), Chapter 7, "Inner Mongolia," pp. 124–133, cited above as "Boyle." See this atlas's project notes for this source's tier and single-source caveats, which apply to different material than what is cited here.

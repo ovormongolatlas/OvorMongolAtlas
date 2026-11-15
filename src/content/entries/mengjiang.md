@@ -57,6 +57,8 @@ Not yet consulted for this atlas; listed here as candidates for future expansion
 - Demchugdongrub, "Demchugdongrub in His Own Words" (Demuchukedonglupu zishu), in *Nei Menggu wenshi ziliao* [Inner Mongolia Historical Materials], vol. 13 (1984).
 - Uradyn E. Bulag, *Collaborative Nationalism: The Politics of Friendship on China's Mongolian Frontier* (Rowman & Littlefield, 2010).
 
+For the campaigns that preceded the federation, see [Suiyuan campaign (1936)](/entry/suiyuan-campaign-1936) and [Operation Chahar (1937)](/entry/chahar-operation-1937).
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.

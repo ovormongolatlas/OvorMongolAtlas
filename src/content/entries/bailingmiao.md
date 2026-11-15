@@ -38,6 +38,8 @@ Prince Yondonwangchug, consistent with his opposition to the fighting in the fir
 
 Mugdenbuu's division, together with its Japanese advisors, retreated eastward to the Shira-Muren monastery in the Derben Keuked Banner, where a further engagement followed that December; that episode is not detailed in this entry (see this atlas's project notes, where it is logged as a candidate for future treatment). The defeat at Bat-khaalag itself was a serious blow to Demchugdongrub and to the wider autonomy movement, coming during the same Suiyuan campaign covered in the [Mongolian Military Government](/entry/mongolian-military-government) and [Inner Mongolian Army](/entry/inner-mongolian-army) entries.
 
+The wider campaign is covered in the [Suiyuan campaign (1936)](/entry/suiyuan-campaign-1936) entry; the 1913 advance that reached Batu-Khaalga is in [Five Roads campaign (1913)](/entry/five-roads-campaign); the 1937 recapture is in [Operation Chahar (1937)](/entry/chahar-operation-1937).
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." The sole source for this entry. Jagchid was not present at the battle itself; his corrective account of it rests on visits to the temple and conversations with monks there in the years afterward, a distinct kind of participant-adjacent testimony from his eyewitness accounts of events he attended directly. See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.

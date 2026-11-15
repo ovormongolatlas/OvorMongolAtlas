@@ -24,6 +24,8 @@ This entry's Western-travelers focus leaves out a role Hohhot played that this a
 
 A fuller Hohhot entry would need to draw on Mongol- and Chinese-language administrative sources for the Mengjiang period and beyond, rather than relying, as this one currently does, on a single article about Western travelers' impressions of the city before 1945. The city's post-1945 history under the Inner Mongolia Autonomous Region is not covered here at all.
 
+Hohhot was attacked in 1913 (see [Five Roads campaign](/entry/five-roads-campaign)) and occupied in October 1937 (see [Operation Chahar (1937)](/entry/chahar-operation-1937)).
+
 ### Sources
 
 - Isabelle Charleux, "The Inner Mongol City of Hohhot/Guihuacheng in the Eyes of Western Travellers," *Mongolica Pragensia '17*, 10/1 (2020): 37–88 (HAL: halshs-02984229), cited above as "Charleux." This entry's principal and, for the material above the "Hohhot in the autonomy movement's political narrative" section, sole source.

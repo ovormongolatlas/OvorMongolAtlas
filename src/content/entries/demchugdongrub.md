@@ -83,6 +83,8 @@ His wife's name is also given differently across sources, and this entry does no
 
 Independent of this specific naming disagreement, Hedin's 1929 account of the palace household is evidence that plural marriage was practiced in this family, which makes "more than one wife" a documented pattern here rather than pure speculation. Hedin records two dowager queens then living in Sünid, one of them Demchugdongrub's mother, and states that Demchugdongrub's father had had several wives. He separately describes Demchugdongrub's own wife at that time as having recently borne an heir after losing four earlier children, and as living in seclusion (Hedin). This does not resolve which name, if either, belongs to which wife, or whether Sebjidma and Renchintsoo are the same person. It only shows that the household is not a case where a single-wife assumption should be taken for granted.
 
+See also the [Suiyuan campaign (1936)](/entry/suiyuan-campaign-1936) and [Operation Chahar (1937)](/entry/chahar-operation-1937) entries.
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.

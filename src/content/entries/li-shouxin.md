@@ -53,6 +53,8 @@ After that government's collapse, Li Shouxin followed Demchugdongrub into the Mo
 
 The main source for this entry, a 2016 Chinese-language academic article by Narangerel of Inner Mongolia University, opens by noting that despite having been what it calls the "number two" figure in Demchugdongrub's regime, Li Shouxin has never been the subject of a dedicated scholarly monograph. This entry follows that same underlying source material (principally Li's own prison-era memoir, "Li Shouxin's Self-Narrative" [李守信自述], compiled posthumously in 1985 in *Inner Mongolia Historical Materials*, vol. 20, and a companion volume of "puppet Mongol Army historical materials") rather than independent verification. Most of this entry draws on Part 1 of Narangerel's article, covering Li's activity from 1945 onward, which this atlas holds and has read in full. The Gada Meiren passage above comes from Part 2 of the same article, covering his pre-1945 role, which this atlas has not held directly this pass; that passage is relayed per the maintainer's own research notes on that section rather than independently checked against the full text, and is flagged as such.
 
+See also the [Suiyuan campaign (1936)](/entry/suiyuan-campaign-1936) and [Operation Chahar (1937)](/entry/chahar-operation-1937) entries for his commands in those operations.
+
 ### Sources
 
 - Narangerel (娜仁格日勒), "Li Shouxin after the Defeat of Japan: On the Use of Japanese Materials" [日本战败后的李守信], *Inner Mongolia University* (2016), cited above as "Narangerel." Part 1 (activity from 1945 onward) is held in full by this atlas; the Gada Meiren passage above is drawn from Part 2, section 4 ("李守信在德王政权中的作用"), not independently held this pass. See the note on sources above.

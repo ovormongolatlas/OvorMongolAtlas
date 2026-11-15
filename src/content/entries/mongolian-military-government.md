@@ -20,6 +20,8 @@ A Mongol attempt to seize Suiyuan from Chinese forces that November ended in def
 
 This atlas's master chronology adds an independent scholarly source, Hirokawa 2024, which corroborates the broad shape of this government (its Dehua/Huade seat, [Yondonwangchug](/entry/yondonwangchug) as nominal chairman with Demchugdongrub as director-general, and the establishment of the Mongol Army General Headquarters that February in Sünit Right Banner) while giving the founding itself a different date than either source already used above. Three sources now give three different dates for events clustered around the government's founding, and this atlas records them side by side rather than picking one: Hirokawa 2024 gives April 1936; the Chinese local histories underlying this entry's own account (via Jagchid and Zorigt) give May 12, 1936 (recorded above); and Narangoa 2004 cites a separate Manchukuo "root-policy toward Mongols" act dated May 20, 1936. These are most likely three different things, a formation, a formal ceremony, and a Manchukuo policy directive, rather than one event misdated three times. But no source used here states that reconciliation explicitly, so this atlas does not assert it as settled.
 
+See also the [Suiyuan campaign (1936)](/entry/suiyuan-campaign-1936) entry.
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.
