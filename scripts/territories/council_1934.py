@@ -50,7 +50,8 @@ riv = [shape(f['geometry']) for f in json.load(open(sys.argv[2]))['features'] if
 huang = max([g for r in riv for g in getattr(r, 'geoms', [r])], key=lambda p: p.length)
 north = huang.intersection(box(106.8, 40.0, 108.9, 41.5))
 north = unary_union([LineString([P(x, y) for x, y in g.coords]) for g in getattr(north, 'geoms', [north])])
-hetao = north.buffer(45000).intersection(box(*P(106.8, 39.0), *P(108.9, 42.0))).buffer(8000).buffer(-8000)
+ordos = polys[3]   # Yikezhao: its northern edge is the river itself, so only the north bank is cut
+hetao = north.buffer(45000).intersection(box(*P(106.8, 39.0), *P(111.5, 42.0))).difference(ordos.buffer(2000)).buffer(8000).buffer(-8000)
 L = L.difference(hetao)
 nom = unary_union([xy(r) for r in O['nomonhan']])
 for key, cut in [('council1934', [xy(T['manchukuo1933'])]), ('council1935', [xy(T['manchukuo']), nom])]:
