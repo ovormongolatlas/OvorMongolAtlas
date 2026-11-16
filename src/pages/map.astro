@@ -96,7 +96,6 @@ const toPath = (coords: [number, number][]) =>
 		.join('');
 const areaPath = (coords: [number, number][]) => `${toPath(coords)}Z`;
 const mappedEntries = new Set(areas.filter((a) => a.entry).map((a) => a.entry));
-const usedAreaSources = [...new Set(areas.map((a) => a.source))].map((k) => areaSources[k]);
 // State names drawn on the map, one per area that has a label position.
 const stateLabels = areas
 	.filter((a) => a.label)
@@ -322,12 +321,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 						</li>
 					))}
 				</ul>
-				<details class="fold">
-					<summary>Map sources ({usedAreaSources.length})</summary>
-					{usedAreaSources.map((src) => (
-						<p class="location-note"><strong>Source.</strong> {src.full} {src.accuracy}</p>
-					))}
-				</details>
+				<p class="location-note"><a href="/map/sources">Sources for these outlines</a></p>
 				</details>
 			</section>
 
@@ -346,7 +340,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 								</li>
 							))}
 						</ul>
-						<p class="location-note"><strong>Source.</strong> {b.source}</p>
+						<p class="location-note"><a href={`/map/sources#border-${b.id}`}>Source for this border</a></p>
 						</details>
 					</div>
 				))}
@@ -380,7 +374,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 					)}
 					{c.reachedNote && <p class="location-note"><strong>Places occupied.</strong> {c.reachedNote}</p>}
 					<p class="location-note"><strong>Starting points.</strong> {c.tailNote}</p>
-					<p class="location-note"><strong>Source.</strong> {c.source}</p>
+					<p class="location-note"><a href={`/map/sources#campaign-${c.id}`}>Sources for these routes</a></p>
 					</details>
 				</details>
 				</section>
@@ -542,7 +536,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 					)}
 				</div>
 			</div>
-			<p class="credit">Base map: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain). Lambert conformal conic projection. Positions of towns and region names are approximate. Great Wall: traced from {greatWallSource.short}.</p>
+			<p class="credit">Base map: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain). Lambert conformal conic projection. Positions of towns and region names are approximate. Great Wall: traced from {greatWallSource.short}. <a href="/map/sources">All map sources</a>.</p>
 		</section>
 	</main>
 </Layout>

@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { areaSources, areas, borders, campaigns } from '../../data/map-boundaries';
+
+const usedKeys = [...new Set(areas.map((a) => a.source))];
+const usedBy = (key: string) => [...new Set(areas.filter((a) => a.source === key).map((a) => a.name))];
+---
+
+<Layout title="Map sources">
+	<main class="page-narrow">
+		<article class="card text-card prose">
+			<p class="overline"><a href="/map">Timeline Map</a></p>
+			<h1>Map sources</h1>
+
+			<p>Every outline, border and route on the Timeline Map was traced from a period map or a described boundary, then fitted to a latitude and longitude grid using the positions of towns on the source. The stated accuracy is the distance between traced positions and known towns, not a survey. Where sources draw a line differently, the map follows the one that agrees best with the other period maps, and the notes on the map say which.</p>
+			<p>The base map (coast, lakes, rivers) is <a href="https://www.naturalearthdata.com/">Natural Earth</a>, public domain, drawn on a Lambert conformal conic projection. Positions of towns and region names are approximate.</p>
+
+			<h2>Territory outlines</h2>
+			{usedKeys.map((key) => {
+				const src = areaSources[key];
+				const names = usedBy(key);
+				return (
+					<section id={key} class="source">
+						<h3>{src.short}</h3>
+						<p>{src.full}</p>
+						<p><strong>Accuracy.</strong> {src.accuracy}</p>
+						<p class="used"><strong>Used for:</strong> {names.join('; ')}.</p>
+					</section>
+				);
+			})}
+
+			<h2>Borders</h2>
+			{borders.map((b) => (
+				<section id={`border-${b.id}`} class="source">
+					<h3>{b.name}</h3>
+					<p>{b.source}</p>
+				</section>
+			))}
+
+			<h2>Campaign routes</h2>
+			{campaigns.map((c) => (
+				<section id={`campaign-${c.id}`} class="source">
+					<h3>{c.entry ? <a href={`/entry/${c.entry}`}>{c.name}</a> : c.name}</h3>
+					<p>{c.source}</p>
+				</section>
+			))}
+
+			<h2>Great Wall</h2>
+			<p>Traced from <a href="#nakamura1941">{areaSources.nakamura1941.short}</a>.</p>
+		</article>
+	</main>
+</Layout>
+
+<style>
+	.text-card {
+		padding: 2rem 2.25rem 2.25rem;
+	}
+
+	h1 {
+		margin: 0.3rem 0 0.5rem;
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 1.2;
+	}
+
+	.source {
+		margin: 1rem 0 0;
+		padding-top: 0.25rem;
+	}
+
+	.source h3 {
+		margin: 0 0 0.25rem;
+	}
+
+	.source p {
+		margin: 0.4rem 0 0;
+	}
+
+	.used {
+		color: var(--muted, #616161);
+		font-size: 0.9375rem;
+	}
+
+	@media (max-width: 600px) {
+		.text-card {
+			padding: 1.25rem;
+		}
+	}
+</style>

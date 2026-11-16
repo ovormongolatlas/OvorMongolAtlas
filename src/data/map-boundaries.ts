@@ -63,7 +63,7 @@ export const borders: Border[] = [
 		name: 'Border between Mongolia and Russia (the Soviet Union from 1922)',
 		start: 1890,
 		end: 1950,
-		source: 'Korostovets’s Map of Mongolia (about 1914), traced from its fills for Russia (with Uriankhai) and Outer Mongolia; see the source note under the territories. Treaty history: “Mongolia–Russia border,” Wikipedia (read October 2026).',
+		source: 'Korostovets’s Map of Mongolia (about 1914), traced from its fills for Russia (with Uriankhai) and Outer Mongolia; see “Korostovets, Map of Mongolia” under Territory outlines above. Treaty history: “Mongolia–Russia border,” Wikipedia (read October 2026).',
 		sectors: [
 			{
 				label: 'Kyakhta line',
@@ -78,7 +78,7 @@ export const borders: Border[] = [
 		name: 'Border between Mongolia and Tuva (the Soviet Union from 1944)',
 		start: 1914,
 		end: 1950,
-		source: 'Korostovets’s Map of Mongolia (about 1914), traced from its fills for Russia (with Uriankhai) and Outer Mongolia; see the source note under the territories. Later history: “Tuvan People’s Republic,” Wikipedia (read October 2026).',
+		source: 'Korostovets’s Map of Mongolia (about 1914), traced from its fills for Russia (with Uriankhai) and Outer Mongolia; see “Korostovets, Map of Mongolia” under Territory outlines above. Later history: “Tuvan People’s Republic,” Wikipedia (read October 2026).',
 		sectors: [
 			{
 				label: 'Uriankhai (Tuva) section',
@@ -93,7 +93,7 @@ export const borders: Border[] = [
 		name: 'Border between Manchuria and Russia (the Soviet Union from 1922)',
 		start: 1890,
 		end: 1950,
-		source: 'Korostovets’s Map of Mongolia (about 1914), traced from its fills for Russia (with Uriankhai) and Outer Mongolia; see the source note under the territories. East of Blagoveshchensk: AoifeIves, “Territorial Changes along the Sino-Russian Border (1689–2023), Map 1 (of 3): Eastern Border Section.” Treaty history: “China–Russia border,” Wikipedia (read October 2026).',
+		source: 'Korostovets’s Map of Mongolia (about 1914), traced from its fills for Russia (with Uriankhai) and Outer Mongolia; see “Korostovets, Map of Mongolia” under Territory outlines above. East of Blagoveshchensk: AoifeIves, “Territorial Changes along the Sino-Russian Border (1689–2023), Map 1 (of 3): Eastern Border Section.” Treaty history: “China–Russia border,” Wikipedia (read October 2026).',
 		sectors: [
 			{
 				label: 'Argun and Amur rivers',
@@ -222,7 +222,7 @@ export const areaSources = {
 	},
 	qingOutline: {
 		short: 'Korostovets’s border with Russia; the Yalu with Korea',
-		full: 'All land in this map’s frame except Russia, as Korostovets draws it (see above), and Korea. Korea’s border is the Yalu River, which Korostovets’s map does not reach; it is drawn along the river (Natural Earth, public domain), the boundary the Qing and Joseon kept. Beyond the north-east edge of Korostovets’s map, Russia is completed from Natural Earth.',
+		full: 'All land in this map’s frame except Russia, as Korostovets draws it (see the Korostovets entry), and Korea. Korea’s border is the Yalu River, which Korostovets’s map does not reach; it is drawn along the river (Natural Earth, public domain), the boundary the Qing and Joseon kept. Beyond the north-east edge of Korostovets’s map, Russia is completed from Natural Earth.',
 		accuracy: 'The Russian border as Korostovets traces it, within about 10–20 km; the coast and the Yalu follow the physical map.',
 	},
 	aoife: {
