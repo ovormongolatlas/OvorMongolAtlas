@@ -1718,11 +1718,14 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 	 * and the year card right under it; the panel's other cards follow. Without
 	 * this the whole panel sat above the map and pushed it to the bottom.
 	 */
-	@media (min-width: 921px) and (min-height: 760px) {
+	@media (min-width: 921px) {
 		.map-card {
 			position: sticky;
 			top: 4.5rem;
 			align-self: flex-start;
+			max-height: calc(100vh - 5.5rem);
+			overflow-x: hidden;
+			overflow-y: auto;
 		}
 	}
 
