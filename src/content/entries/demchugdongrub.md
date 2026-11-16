@@ -89,6 +89,8 @@ Independent of this specific naming disagreement, Hedin's 1929 account of the pa
 
 See also the [Suiyuan campaign (1936)](/entry/suiyuan-campaign-1936) and [Operation Chahar (1937)](/entry/chahar-operation-1937) entries.
 
+The two friends of his later years and the movement that replaced his are covered in the [Dilowa Khutugtu](/entry/dilowa-khutugtu) and [Ulanhu](/entry/ulanhu) entries.
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.

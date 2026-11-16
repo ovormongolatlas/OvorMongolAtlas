@@ -51,6 +51,8 @@ Three Mongol representatives who met American officials in Nanjing on 10 August 
 
 The government is drawn on the 1946 map as a hatched claim, although it was dissolved before 1 July. The outline is the banner lands of the Jirim, Juu Uda and Josotu leagues as a 1930s English map of the banners draws them, with Hulunbuir on its 1912 outline. Nawen Muren, around Zalantun, has no outline in hand and is not drawn. Hulunbuir also had its own autonomous provincial government in 1945–1946, which is not drawn separately.
 
+See also [Ulanhu](/entry/ulanhu), who pressured it into accepting Communist leadership in 1946.
+
 ### Sources
 
 - “东蒙古人民自治政府,” Chinese Wikipedia (read October 2026), cited above as “Chinese Wikipedia.” A tertiary source; its references include Husel Borjigin (ボルジギン・フスレ), 『中国共産党・国民党の対内モンゴル政策（1945〜1949年）』 (Tokyo: Fūkyōsha, 2010), Fang Zhida, 《兴安革命史话》, and articles in 《档案与社会》 (2010) and the 《辽宁大学学报》 (2009). Borjigin’s book is the obvious scholarly source to check its account against.

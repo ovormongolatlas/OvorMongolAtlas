@@ -39,6 +39,8 @@ Jagchid, writing decades later from outside China, states only that Khafungga, g
 
 The "Hafon A" biography is not an academic or peer-reviewed source. It is a lengthy personal or family-compiled account published on a Chinese blogging platform, covering Khafungga alongside numerous relatives and in-laws in a single sprawling document. It is used here only where it independently corroborates Jagchid or where a claim is clearly and specifically attributed to Khafungga himself; its more detailed institutional and career claims should be treated with the same caution this atlas applies to any single, non-scholarly source.
 
+Khafungga's relationship with [Ulanhu](/entry/ulanhu) is covered in that entry.
+
 ### Sources
 
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.
