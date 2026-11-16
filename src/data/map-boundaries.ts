@@ -456,7 +456,7 @@ export const areas: Area[] = [
 		label: [118.25, 47.9],
 		labelName: 'Khalkhin Gol\n(disputed)',
 		color: C.disputed,
-		legendName: 'Disputed',
+		legendName: 'Disputed: Khalkhin Gol strip (MPR and Manchukuo)',
 	},
 	{
 		id: 'manchukuo-1932',
@@ -563,7 +563,7 @@ export const areas: Area[] = [
 		label: [113.6, 45.6],
 		labelName: 'Dariganga\n(disputed)',
 		color: C.disputed,
-		legendName: 'Disputed',
+		legendName: 'Disputed: Dariganga (MPR and Mengjiang)',
 	},
 	{
 		id: 'mlaag-claimed',
@@ -1043,7 +1043,7 @@ export const areas: Area[] = [
 		label: [126.3, 40.3],
 		labelName: 'Korea\n(Japan)',
 		color: C.japan,
-		legendName: 'Japanese Empire',
+		legendName: 'Japanese Empire (Korea and the Kwantung Leased Territory)',
 	},
 	{
 		id: 'korea-soviet',
@@ -1159,7 +1159,7 @@ export const areas: Area[] = [
 		label: [121.75, 39.2],
 		labelName: 'Dairen\n(Japan)',
 		color: C.japan,
-		legendName: 'Japanese Empire',
+		legendName: 'Japanese Empire (Korea and the Kwantung Leased Territory)',
 	},
 	{
 		id: 'kwantung-china-1946',

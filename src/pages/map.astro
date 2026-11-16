@@ -156,6 +156,10 @@ const legendKeys = [...new Map(areas.filter((a) => a.coordinates.length).map((a)
 	const same = areas.filter((b) => (b.legendName ?? b.name) === key && b.coordinates.length);
 	return { text: key, kind: a.kind, color: a.color, runs: yearRuns((y) => same.some((b) => activeIn(b, y))) };
 });
+// Keys in the order a reader looks for them: the Mongol governments first, then
+// claims and disputes, then the neighbouring states for context.
+const KEY_RANK: Record<string, number> = { ruled: 0, occupied: 1, claimed: 2, disputed: 3, context: 4 };
+legendKeys.sort((a, b) => (KEY_RANK[a.kind] ?? 9) - (KEY_RANK[b.kind] ?? 9));
 const LEGEND_LINES = [
 	{ approximate: true, cls: 'line-approximate', text: 'Border, approximate' },
 	{ approximate: false, cls: 'line-uncertain', text: 'Border, uncertain or different then' },
@@ -510,8 +514,8 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 
 				</div>
 				<div class="legend" aria-hidden="true">
-					<span><span class="swatch swatch-place"></span><span>Documented in <span data-year-text>{START_YEAR}</span></span></span>
-					<span><span class="swatch swatch-place-off"></span><span>Not documented in <span data-year-text>{START_YEAR}</span></span></span>
+					<span><span class="swatch swatch-place"></span><span>Place documented in <span data-year-text>{START_YEAR}</span></span></span>
+					<span><span class="swatch swatch-place-off"></span><span>Place not documented in <span data-year-text>{START_YEAR}</span></span></span>
 					<span><span class="swatch swatch-battle"></span><span>Battle</span></span>
 					{legendKeys.flatMap((k) =>
 						k.runs.map((r) => (
