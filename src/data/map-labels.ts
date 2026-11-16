@@ -65,6 +65,11 @@ export const referenceTowns: ReferenceTown[] = [
  */
 export const areaLabels: AreaLabel[] = [
 	{ name: 'Outer Mongolia', lon: 111.2, lat: 46.3, kind: 'region' },
+	// Russia is base-map land only (no outline is drawn), so its name sits on the strip of it that shows along the top edge, north of Kyakhta.
+	// Names follow the state in 1 July of each year. The Russian Empire ended in March 1917 and the Soviet Union was founded on 30 December 1922, so the first 1 July it existed on is 1923. In between, Russia was split by civil war (Far Eastern Republic around Transbaikalia 1920 to November 1922, Japanese intervention 1918 to 1922); the label there is deliberately just "Russia".
+	{ name: 'Russian Empire', lon: 108.6, lat: 51.15, kind: 'region', end: 1916 },
+	{ name: 'Russia', lon: 108.6, lat: 51.15, kind: 'region', start: 1917, end: 1922 },
+	{ name: 'Soviet Union', lon: 108.6, lat: 51.15, kind: 'region', start: 1923 },
 	{ name: 'Manchuria', lon: 125.3, lat: 46.4, kind: 'region' },
 	{ name: 'Hulunbuir', lon: 120.3, lat: 48.3, kind: 'region' },
 	{ name: 'Chahar', lon: 114.7, lat: 43.3, kind: 'region' },
