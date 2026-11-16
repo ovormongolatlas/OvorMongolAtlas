@@ -229,12 +229,14 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 			</section>
 
 			<section class="card">
-				<h2 class="overline">On the map</h2>
+				<details class="card-fold" open>
+				<summary><h2 class="overline">On the map</h2></summary>
 				<div class="chips">
 					{places.map((p) => (
 						<button type="button" class={`chip chip-${p.type}`} data-place-select={p.id} aria-pressed="false">{p.title}</button>
 					))}
 				</div>
+				</details>
 			</section>
 
 			<section class="card place-card" data-place-card="">
@@ -254,7 +256,8 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 			))}
 
 			<section class="card">
-				<h2 class="overline">Inner Mongolian states in <span data-year-text>{START_YEAR}</span></h2>
+				<details class="card-fold" open>
+				<summary><h2 class="overline">Inner Mongolian states in <span data-year-text>{START_YEAR}</span></h2></summary>
 				<ul class="state-list">
 					{states.map((s) => (
 						<li data-start={s.start} data-end={s.end} data-state hidden={!activeIn(s, START_YEAR)}>
@@ -274,10 +277,12 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 						<p class="note">Not on the map yet, because no location has been sourced: {unmappedPlaces.join(', ')}.</p>
 					)}
 				</details>
+				</details>
 			</section>
 
 			<section class="card">
-				<h2 class="overline">Other states on the map in <span data-year-text>{START_YEAR}</span></h2>
+				<details class="card-fold">
+				<summary><h2 class="overline">Other states on the map in <span data-year-text>{START_YEAR}</span></h2></summary>
 				<ul class="state-list">
 					{otherStates.flatMap((o) =>
 						o.runs.map((r) => (
@@ -295,10 +300,12 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 					<summary>About this list</summary>
 					<p class="note">States outside the atlas’s own subject, drawn for context: as they stood on 1 July of the year. Their notes are under “Territories on the map.”</p>
 				</details>
+				</details>
 			</section>
 
 			<section class="card" data-start={Math.min(...areas.map((a) => a.start))} data-end={Math.max(...areas.map((a) => a.end))} data-area-card hidden={!areas.some((a) => activeIn(a, START_YEAR))}>
-				<h2 class="overline">Territories on the map</h2>
+				<details class="card-fold">
+				<summary><h2 class="overline">Territories on the map</h2></summary>
 				<ul class="sector-list">
 					{areas.map((a) => (
 						<li data-start={a.start} data-end={a.end} data-area-item hidden={!activeIn(a, START_YEAR)}>
@@ -321,10 +328,12 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 						<p class="location-note"><strong>Source.</strong> {src.full} {src.accuracy}</p>
 					))}
 				</details>
+				</details>
 			</section>
 
 			<section class="card" data-start={bordersStart} data-end={bordersEnd} data-border-card hidden={!borders.some((b) => activeIn(b, START_YEAR))}>
-				<h2 class="overline">Borders on the map</h2>
+				<details class="card-fold">
+				<summary><h2 class="overline">Borders on the map</h2></summary>
 				{borders.map((b) => (
 					<div class="border-item" data-start={b.start} data-end={b.end} data-border-item hidden={!activeIn(b, START_YEAR)}>
 						<details class="fold">
@@ -341,11 +350,13 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 						</details>
 					</div>
 				))}
+				</details>
 			</section>
 
 			{campaigns.map((c) => (
 				<section class="card" data-start={c.start} data-end={c.end} data-campaign-card hidden={!activeIn(c, START_YEAR)}>
-					<h2 class="overline">Campaigns on the map</h2>
+					<details class="card-fold">
+				<summary><h2 class="overline">Campaigns on the map</h2></summary>
 					<details class="fold">
 					<summary class="border-name">{c.entry ? <a href={`/entry/${c.entry}`}>{c.name}</a> : c.name}</summary>
 					<p class="note">Arrows show directions of advance as the sources give them, not front lines or territory held.</p>
@@ -371,6 +382,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 					<p class="location-note"><strong>Starting points.</strong> {c.tailNote}</p>
 					<p class="location-note"><strong>Source.</strong> {c.source}</p>
 					</details>
+				</details>
 				</section>
 			))}
 		</aside>
@@ -1208,6 +1220,44 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 		margin: 0.5rem 0 0;
 		font-size: 0.9375rem;
 		line-height: 1.5;
+	}
+
+	.card-fold > summary {
+		cursor: pointer;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		min-height: 32px;
+		color: var(--primary);
+	}
+
+	.card-fold > summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.card-fold > summary::before {
+		content: '';
+		flex: none;
+		width: 0.5rem;
+		height: 0.5rem;
+		border-right: 2px solid currentColor;
+		border-bottom: 2px solid currentColor;
+		transform: rotate(-45deg);
+		transition: transform 0.15s;
+	}
+
+	.card-fold[open] > summary::before {
+		transform: rotate(45deg);
+	}
+
+	.card-fold > summary:focus-visible {
+		outline: 2px solid var(--primary);
+		outline-offset: 2px;
+	}
+
+	.card-fold > summary .overline {
+		color: var(--muted);
 	}
 
 	.fold {
