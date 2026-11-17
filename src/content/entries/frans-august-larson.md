@@ -1,7 +1,7 @@
 ---
 title: "Frans August Larson"
 type: person
-summary: "Swedish missionary-turned-businessman styled the \"Duke of Mongolia\" (Chinese title Lan xiansheng, Mr. Lan), a duke/gung title reportedly conferred by the Bogda Khan of Urga during Outer Mongolia's early independence period; later a Sünid-circle intimate, present at the October 1934 Bat-khaalag autonomy conference, and a liaison between Demchugdongrub and Westerners."
+summary: "Swedish missionary-turned-businessman styled the \"Duke of Mongolia\" (Chinese title Lan xiansheng, Mr. Lan), a duke/gung title reportedly conferred by the Bogd Khan during Outer Mongolia's early independence period; later a Sünid-circle intimate, present at the October 1934 Bat-khaalag autonomy conference, and a liaison between Demchugdongrub and Westerners."
 startYear: 1919
 endYear: 1934
 yearType: documented
@@ -37,9 +37,9 @@ Frans August Larson, known in Chinese as Lan xiansheng (Mr. Lan) and in Sweden a
 
 ## Title, business, and the 1919–1920 Beijing mission
 
-[Sechin Jagchid](/entry/sechin-jagchid) records that Larson held the Chinese title Lan xiansheng and had received a gung (duke) title from the Bogda Khan of Ulaanbaatar during the early period of Outer Mongolian independence (Jagchid). Independently, Uranchimeg Tsultemin's peer-reviewed study of a Library of Congress thangka states that Larson's title was conferred specifically by the Eighth Jebtsundamba Bogdo Gegeen (1870–1924) at some point during Larson's "35 years of life in Mongolia" (Tsultemin, pp. 74–75). This atlas treats the two as corroborating rather than conflicting, since the Bogda Khan and the Eighth Jebtsundamba Bogdo Gegeen are the same office and figure named two different ways, not two different grantors; neither source gives an exact year for the grant, so the precise date remains open (see verify-gates below).
+[Sechin Jagchid](/entry/sechin-jagchid) records that Larson held the Chinese title Lan xiansheng and had received a gung (duke) title from the Bogd Khan in Urga during the early period of Outer Mongolian independence (Jagchid). Independently, Uranchimeg Tsultemin's peer-reviewed study of a Library of Congress thangka states that Larson's title was conferred specifically by the Eighth Jebtsundamba Khutugtu, the Bogd Gegeen (1870–1924), at some point during Larson's "35 years of life in Mongolia" (Tsultemin, pp. 74–75). This atlas treats the two as corroborating rather than conflicting, since the Bogd Khan and the Eighth Jebtsundamba Khutugtu are the same office and figure named two different ways, not two different grantors; neither source gives an exact year for the grant, so the precise date remains open (see verify-gates below).
 
-Tsultemin also documents Larson's business career: he ran Larson & Co., dealing in wool and cattle, and served as the Urga representative of the Danish-American firm Andersen, Meyer and Company (Tsultemin, pp. 74–75, citing Larson's own 1930 memoir, *Duke of Mongolia*, at pp. 242, 244, 245, and 251). Jagchid separately places Larson in the entourage of the 1919–1920 Jalkhanza Khutugtu mission to Beijing, on which Larson was working for an American trading company operating out of Ulaanbaatar and Kalgan; the mission's aim was to seek American intervention, and it failed (Jagchid).
+Tsultemin also documents Larson's business career: he ran Larson & Co., dealing in wool and cattle, and served as the Urga representative of the Danish-American firm Andersen, Meyer and Company (Tsultemin, pp. 74–75, citing Larson's own 1930 memoir, *Duke of Mongolia*, at pp. 242, 244, 245, and 251). Jagchid separately places Larson in the entourage of the 1919–1920 Jalkhanza Khutugtu mission to Beijing, on which Larson was working for an American trading company operating out of Urga and Kalgan; the mission's aim was to seek American intervention, and it failed (Jagchid).
 
 ## Two separate 1920s expeditions, not one event
 

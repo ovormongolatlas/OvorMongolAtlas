@@ -7,7 +7,7 @@ endYear: 1938
 yearType: documented
 ---
 
-Yondonwangchug, head of the Ulanchab League, was one of the senior Mongol nobles [Demchugdongrub](/entry/demchugdongrub) worked through in building elite support for the autonomy movement. [Sechin Jagchid](/entry/sechin-jagchid) describes Demchugdongrub persuading him, alongside Prince Sodnamrabdan of Ujumuchin, in secret talks at Bat-khaalag during what Jagchid calls Demchugdongrub's 1933 "golden age" (Jagchid; see the Demchugdongrub entry). The years given here mark the span of his political activity documented in the sources used for this entry, not birth and death dates. His birth year is not established by any source this atlas holds, though his death is (see below).
+Yondonwangchug, head of the Ulanchab League, was one of the senior Mongol nobles [Demchugdongrub](/entry/demchugdongrub) worked through in building elite support for the autonomy movement. [Sechin Jagchid](/entry/sechin-jagchid) describes Demchugdongrub persuading him, alongside Prince Sodnamrabdan of Üjümüchin, in secret talks at Bat-khaalag during what Jagchid calls Demchugdongrub's 1933 "golden age" (Jagchid; see the Demchugdongrub entry). The years given here mark the span of his political activity documented in the sources used for this entry, not birth and death dates. His birth year is not established by any source this atlas holds, though his death is (see below).
 
 ## Nominal chairman of successive governments
 
