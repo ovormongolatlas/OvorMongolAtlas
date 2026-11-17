@@ -197,6 +197,7 @@ const C = {
 	hulunbuir: '#4f7396',
 	soviet: '#b23a3a',
 	impr: '#5e35b1',
+	kwantung: '#6d4c41',
 };
 
 export const areaSources = {
@@ -244,6 +245,12 @@ export const areaSources = {
 		short: 'English map of Mongol banners (1930s)',
 		full: 'Untitled two-page map of Inner and Outer Mongolia with the Mongol banners named (Ujumuchin, Abaga, Sunit, Urat and others), English-language, from a 1930s book not yet identified (the atlas’s copy is `mapofmongols1930s.png`). Used for Outer Mongolia’s frontier with the Inner Mongolian banners from about 104° E to the Hulunbuir corner, for the outline of the Dariganga district, and for the outer boundary of the Jirim, Juu Uda and Josotu banner lands (the 1946 East Mongolian government).',
 		accuracy: 'Fitted to its printed latitude–longitude grid, then corrected to seven towns on the page (residuals 4–15 km; leaving each town out, 10–26 km). The frontier runs within about 5–10 km of Korostovets’s line for most of its length.',
+	},
+
+	kwantungZone1936: {
+		short: 'Kwantung Army map of the special military zone near Hailar (March 1936)',
+		full: '海拉爾附近軍事特別地域地圖 (Map of the special military zone near Hailar), a single printed sheet issued in March 1936 with notices from the Kwantung Army commander (Shōwa 11, March) and the head of the Manchukuo State Railways (Kangde 3, 1 April), in Japanese, Chinese, Russian and English. The atlas holds images of the sheet and its notices. A dealer’s listing gives its scale as 1:2,750,000 and calls the sheet unique (Geographicus, “Map of the Special Military Area near Hailar”); that is the dealer’s claim, not checked. The notices say the area inside the black lines may not be observed, surveyed or photographed, and that the area inside the black dotted line is closed to aircraft; passengers may not look out of the coaches between Hake and Ugunor stations.',
+		accuracy: 'Fitted to four places on the sheet (Manzhouli, Hailar, Hulun Nur, Buir Nur) with an affine fit; residuals 0.6 to 14 pixels, about 0.3 to 7 km. The outlines were traced from the printed hatching by image processing and smoothed, so they can sit up to about 10 km off the printed line; the sheet’s own frontier, checked by eye against a modern border, agrees to within a few tens of km. An outline of what the sheet draws, not a survey.',
 	},
 
 	northChinaProvinces: {
@@ -1232,6 +1239,35 @@ export const areas: Area[] = [
 		label: [121.2, 45.0],
 		color: C.mongol,
 		legendName: 'East Mongolian People’s Autonomous Government (Jan–May 1946)',
+	},
+	{
+		id: 'kwantung-zone-1936',
+		name: 'Kwantung Army special military zone near Hailar (airspace closed)',
+		entry: 'kwantung-army-special-military-zone-1936',
+		labelName: 'Kwantung Army\nspecial military zone\n(March 1936)',
+		kind: 'context',
+		start: 1936,
+		end: 1936,
+		note: 'The area the Kwantung Army closed to aircraft in March 1936, the part of the sheet inside the black dotted line: much of Hulunbuir and the Manchukuo frontier with the Soviet Union and Outer Mongolia, from the Amur and Argun in the north-east to the Buir Nur region in the south. The sheet is dated March 1936, with no end date; nothing consulted says when it stopped applying, and it is shown for 1936 only.',
+		source: 'kwantungZone1936',
+		coordinates: ring('kwantungZone1936'),
+		label: [119.8, 48.4],
+		color: C.kwantung,
+		legendName: 'Kwantung Army special military zone, airspace closed (March 1936)',
+	},
+	{
+		id: 'kwantung-restricted-1936',
+		name: 'Kwantung Army restricted areas near Hailar (no observation or survey)',
+		entry: 'kwantung-army-special-military-zone-1936',
+		kind: 'context',
+		start: 1936,
+		end: 1936,
+		note: 'The four cross-hatched blocks inside the zone, the “areas circumscribed by black lines” in the commander’s order, where observing troop dispositions, surveying, photographing and sketching were forbidden without a permit: around Hailar (the block that the railway notice names, between Hake and Ugunor stations), around Manzhouli and Zalainor, in the north-east, and around Buir Nur. The notice names only the Hailar block for passengers.',
+		source: 'kwantungZone1936',
+		coordinates: T0('kwantungRestricted1936'),
+		parts: TP('kwantungRestricted1936'),
+		color: C.kwantung,
+		legendName: 'Kwantung Army restricted areas, no observation or survey (March 1936)',
 	},
 ];
 
