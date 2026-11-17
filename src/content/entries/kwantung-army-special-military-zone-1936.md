@@ -33,6 +33,8 @@ The map shows the railway across Hulunbuir with its stations (Zabaikalsk on the 
 
 The Timeline Map draws the zone and the four blocks for 1936 from the sheet. The outlines were traced from the printed hatching and are approximate, up to about 10 km off the printed line.
 
+Where the sheet’s hatching ran beyond the Manchukuo frontier into Outer Mongolia (along the south edge near 47.3° N, and at a salient near 119.5° E), the atlas cuts it to the frontier drawn on a 1935 Osaka Mainichi map of Manchuria, Korea and Japan. That map draws the Manchukuo line along the Khalkhin Gol, so the strip around Nomonhan, which Mongolia also claimed, stays inside the zone. The cut removes about 1,900 km² from the zone and about 700 km² from the restricted blocks.
+
 ## What is not known
 
 - The sheet is dated March 1936 and gives no end date. Nothing consulted says how long the zone applied, so the map shows it for 1936 only.
@@ -47,4 +49,5 @@ Japanese Wikipedia dates the building of the Hailar fortress (海拉爾要塞) f
 
 - 海拉爾附近軍事特別地域地圖 (Map of the special military zone near Hailar), with notices of the Kwantung Army commander (Shōwa 11, March 1936) and the head of the Manchukuo State Railways (Kangde 3, 1 April), images held by the atlas.
 - Geographicus Rare Antique Maps, “Map of the Special Military Area near Hailar” (dealer’s listing; scale, zone meanings and rarity as stated there).
+- 1935 Osaka Mainichi map of Manchuria, Korea and Japan (the Hulunbuir sheet, image held by the atlas), used for the frontier between Manchukuo and Outer Mongolia; the atlas has not identified the individual sheet’s title or issue.
 - Japanese Wikipedia, 海拉爾要塞 (Hailar fortress), for the dates and units.
