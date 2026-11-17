@@ -1,7 +1,7 @@
 ---
 title: "Frans August Larson"
 type: person
-summary: "Swedish missionary-turned-businessman styled the \"Duke of Mongolia\" (Chinese title Lan xiansheng, Mr. Lan), a duke/gung title reportedly conferred by the Bogd Khan during Outer Mongolia's early independence period; later a Sünid-circle intimate, present at the October 1934 Bat-khaalag autonomy conference, and a liaison between Demchugdongrub and Westerners."
+summary: "Swedish missionary-turned-businessman styled the \"Duke of Mongolia\" (Chinese title Lan xiansheng, Mr. Lan), a duke/gung title reportedly conferred by the Bogd Khan during Outer Mongolia's early independence period; later a Sünid-circle intimate, present at the October 1933 Bat-khaalag autonomy conference, and a liaison between Demchugdongrub and Westerners."
 startYear: 1919
 endYear: 1934
 yearType: documented
@@ -33,7 +33,7 @@ images:
     note: "The Commons file page itself notes, as of the date this was checked, that a US public-domain tag is required and was not present. Recorded here as an open item, not upgraded to an unqualified public-domain claim."
 ---
 
-Frans August Larson, known in Chinese as Lan xiansheng (Mr. Lan) and in Sweden as "Hertig Larson," the Duke of Mongolia, was a Swedish missionary who moved into business and then into an informal diplomatic-liaison role in Mongolia. He is documented in this atlas's held sources moving in the Sünid/De Wang circle and, on at least one occasion, as [Demchugdongrub](/entry/demchugdongrub)'s own houseguest. The frontmatter years above mark the earliest and latest specific years attached to him in the sources this entry draws on (the 1919–1920 Beijing mission and the October 1934 Bat-khaalag conference respectively), not a birth-death span or the full length of his Mongolia career, which the atlas's working notes place roughly 1893–1939 in general terms broader than what the sources below individually confirm.
+Frans August Larson, known in Chinese as Lan xiansheng (Mr. Lan) and in Sweden as "Hertig Larson," the Duke of Mongolia, was a Swedish missionary who moved into business and then into an informal diplomatic-liaison role in Mongolia. He is documented in this atlas's held sources moving in the Sünid/De Wang circle and, on at least one occasion, as [Demchugdongrub](/entry/demchugdongrub)'s own houseguest. The frontmatter years above mark the earliest and latest specific years attached to him in the sources this entry draws on (the 1919–1920 Beijing mission, and Walter Bosshard’s portrait of about 1933–1934), not a birth-death span or the full length of his Mongolia career, which the atlas's working notes place roughly 1893–1939 in general terms broader than what the sources below individually confirm.
 
 ## Title, business, and the 1919–1920 Beijing mission
 
@@ -47,13 +47,13 @@ Two distinct documented associations exist between Larson and named foreign expe
 
 ## Settlement in Chahar and the Sünid circle
 
-Per Jagchid, Larson settled in Aduuchin Pasture, Chahar (later Shangdu Banner), after the Outer Mongolian revolution and remained there until the Japanese invasion. Jagchid describes him as fluent in Mongolian and a friend of Demchugdongrub's. Larson was present at Beile-yin sume (the temple complex at [Bat-khaalag](/entry/bailingmiao)) during the October 1934 autonomy conference, alongside Owen Lattimore, where he expressed goodwill toward the Mongol cause and helped win it sympathetic foreign press coverage (Jagchid). Jagchid also describes Larson's broader role, beyond this one conference, as a liaison between the prince and Westerners.
+Per Jagchid, Larson settled in Aduuchin Pasture, Chahar (later Shangdu Banner), after the Outer Mongolian revolution and remained there until the Japanese invasion. Jagchid describes him as fluent in Mongolian and a friend of Demchugdongrub's. Larson was present at Beile-yin sume (the temple complex at [Bat-khaalag](/entry/bailingmiao)) during the autonomy conference of October 1933, alongside Owen Lattimore, where he expressed goodwill toward the Mongol cause and helped win it sympathetic foreign press coverage (Jagchid). Jagchid also describes Larson's broader role, beyond this one conference, as a liaison between the prince and Westerners.
 
-## A visit to the Sünid palace, ca. 1932 (inferred)
+## A visit to the Sünid palace, before 1930
 
-Larson's own memoir, *Duke of Mongolia* (1930), includes a chapter, "The Nobles," recounting a visit to the Sünid palace. The book's 1930 publication date sets an outer bound, but Larson describes "the Prince of Sunit" in the visit itself as "a tall, thin young man of thirty years"; since Demchugdongrub was born in 1902, that description places the visit at approximately 1932. This atlas states that dating as an inference from internal textual evidence, not a date Larson gives directly, and marks it "ca. 1932 (inferred)" throughout rather than as a bare date. (Because the visit's internal evidence points past the book's own 1930 publication date, the chapter's placement in Larson's published 1930 memoir and the ca. 1932 internal dating of the episode it describes sit in some tension; this atlas records both facts as given rather than resolving the discrepancy.)
+Larson’s own memoir, *Duke of Mongolia* (1930), has a chapter, “The Nobles,” which he says he wrote in the palace of the Prince of Sunit during a visit. He describes “the Prince of Sunit” as “a tall, thin young man of thirty years.” The book appeared in 1930, when Demchugdongrub was in his late twenties, so “thirty” is approximate and the visit took place before 1930; the chapter does not give its year.
 
-By his own account Larson had known the Prince since childhood, had known his father (the previous ruler), and had known an uncle who served as regent in Urga after his brother's death, during the current Prince's minority.
+By his own account Larson had known the Prince since he was a little boy and had known his father, the previous ruler. He had also known the Prince’s uncle, “a very influential man in the capital of Mongolia, Urga, twenty-five years ago,” who acted as regent in the Sünid banner after his brother’s death, while the Prince was too young to rule. Jagchid names the official who ran the banner in those years as the senior tusalagchi Pandei (see the [Demchugdongrub](/entry/demchugdongrub) entry); neither source says whether Pandei is the uncle Larson means.
 
 **The previous ruler's household**, kept distinct here from the current Prince's own family below: the previous ruler (Demchugdongrub's father) had three wives. The first died without issue. The second, 58 years old at the time of Larson's visit, was also childless; Larson credits her with installing what he describes as the first bathroom known in a Mongolian home, against local superstition. The third was a commoner's daughter chosen for her family's fertility, and bore two sons, one of them the current Prince.
 

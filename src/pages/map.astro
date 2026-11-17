@@ -28,7 +28,7 @@ function span(d: { startYear?: number; endYear?: number; altStartYear?: number; 
 const activeIn = (s: { start: number; end: number }, year: number) => year >= s.start && year <= s.end;
 // Fills are opaque, so context states go underneath and hatched areas on top.
 const KIND_ORDER: Record<string, number> = { context: 0, ruled: 1, occupied: 2, claimed: 3, disputed: 4 };
-const drawOrder = <T extends { kind: string }>(list: T[]) => [...list].sort((a, b) => KIND_ORDER[a.kind] - KIND_ORDER[b.kind]);
+const drawOrder = <T extends { kind: string; look?: string }>(list: T[]) => [...list].sort((a, b) => (a.look ? 10 : KIND_ORDER[a.kind]) - (b.look ? 10 : KIND_ORDER[b.kind]));
 
 // Entry types that can be pinned to a point on the map.
 const POINT_TYPES = { place: 'Place', battle: 'Battle' } as const;
@@ -119,7 +119,7 @@ const darker = (hex: string, f = 0.62) =>
 const FILL_K = { ruled: 0.62, context: 0.4, claimed: 0.62, occupied: 0.62, disputed: 0.4 } as const;
 const colorStyle = (c: string, kind: keyof typeof FILL_K = 'ruled') => `--c:${c};--cd:${darker(c)};--cf:${solid(c, FILL_K[kind])};`;
 // Claimed areas are hatched in their own state's colour, one pattern per colour.
-const claimColors = [...new Set(areas.filter((a) => a.kind === 'claimed' || a.kind === 'occupied').map((a) => a.color))];
+const claimColors = [...new Set(areas.filter((a) => a.kind === 'claimed' || a.kind === 'occupied' || a.look === 'blocks').map((a) => a.color))];
 const hatchId = (c: string) => `claimed-hatch-${c.replace('#', '')}`;
 
 // Legend keys come and go with the year. Each key is rendered once per unbroken
@@ -154,7 +154,7 @@ const claimKeys = [
 const legendKeys = [...new Map(areas.filter((a) => a.coordinates.length).map((a) => [a.legendName ?? a.name, a])).values()].map((a) => {
 	const key = a.legendName ?? a.name;
 	const same = areas.filter((b) => (b.legendName ?? b.name) === key && b.coordinates.length);
-	return { text: key, kind: a.kind, color: a.color, runs: yearRuns((y) => same.some((b) => activeIn(b, y))) };
+	return { text: key, kind: a.kind, look: a.look, color: a.color, runs: yearRuns((y) => same.some((b) => activeIn(b, y))) };
 });
 // Keys in the order a reader looks for them: the Mongol governments first, then
 // claims and disputes, then the neighbouring states for context.
@@ -312,7 +312,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 				<ul class="sector-list">
 					{areas.map((a) => (
 						<li data-start={a.start} data-end={a.end} data-area-item hidden={!activeIn(a, START_YEAR)}>
-							<span class={`swatch-area-key key-${a.kind}`} style={colorStyle(a.color, a.kind)} aria-hidden="true"></span>
+							<span class={`swatch-area-key key-${a.kind}${a.look ? ` key-look-${a.look}` : ''}`} style={colorStyle(a.color, a.kind)} aria-hidden="true"></span>
 							<details class="fold fold-item">
 								<summary>
 									<span>
@@ -414,11 +414,11 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 							<path
 								data-area-id={a.id}
 								d={areaPath(a.coordinates) + (a.parts ? a.parts.map(areaPath).join('') : '') + (a.exclude ? areaPath(a.exclude) : '')}
-								class={`area area-${a.kind}`}
+								class={`area area-${a.kind}${a.look ? ` area-look-${a.look}` : ''}`}
 								data-area
 								data-start={a.start}
 								data-end={a.end}
-								style={colorStyle(a.color, a.kind) + (a.kind === 'claimed' || a.kind === 'occupied' ? `fill:url(#${hatchId(a.color)});` : '') + (activeIn(a, START_YEAR) ? '' : 'display:none')}
+								style={colorStyle(a.color, a.kind) + (a.kind === 'claimed' || a.kind === 'occupied' || a.look === 'blocks' ? `fill:url(#${hatchId(a.color)});` : '') + (activeIn(a, START_YEAR) ? '' : 'display:none')}
 							></path>
 						))}
 					</g>
@@ -519,7 +519,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 					<span><span class="swatch swatch-battle"></span><span>Battle</span></span>
 					{legendKeys.flatMap((k) =>
 						k.runs.map((r) => (
-							<span data-start={r.start} data-end={r.end} data-area-legend hidden={!activeIn(r, START_YEAR)}><span class={`swatch-area-key key-${k.kind}`} style={colorStyle(k.color, k.kind)}></span><span>{k.text}</span></span>
+							<span data-start={r.start} data-end={r.end} data-area-legend hidden={!activeIn(r, START_YEAR)}><span class={`swatch-area-key key-${k.kind}${k.look ? ` key-look-${k.look}` : ''}`} style={colorStyle(k.color, k.kind)}></span><span>{k.text}</span></span>
 						)),
 					)}
 					<span><span class="swatch swatch-town"></span><span>Other town, for reference</span></span>
@@ -1048,6 +1048,20 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 		stroke-width: 1;
 	}
 
+	/* Overlays that are not states (the 1936 Kwantung Army zone): see-through. */
+	.area.area-look-zone {
+		fill: var(--c);
+		fill-opacity: 0.22;
+		stroke: var(--cd);
+		stroke-width: 1.6;
+		stroke-dasharray: 7 4;
+	}
+
+	.area.area-look-blocks {
+		stroke: var(--cd);
+		stroke-width: 1.1;
+	}
+
 	.area-disputed {
 		fill: url(#disputed-hatch);
 		stroke: var(--cd);
@@ -1124,6 +1138,16 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 
 	.key-context {
 		background: var(--cf, var(--c));
+		border: 1px solid var(--cd);
+	}
+
+	.swatch-area-key.key-look-zone {
+		background: color-mix(in srgb, var(--c) 18%, transparent);
+		border: 1.5px dashed var(--cd);
+	}
+
+	.swatch-area-key.key-look-blocks {
+		background: repeating-linear-gradient(45deg, var(--c) 0 2px, transparent 2px 5px);
 		border: 1px solid var(--cd);
 	}
 

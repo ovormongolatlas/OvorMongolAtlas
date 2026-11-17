@@ -19,7 +19,7 @@ His family placed him at the center of this world from the start, which is also 
 
 ## After 1949
 
-After the Chinese Communist conquest ended any prospect of an autonomous Inner Mongolia along the lines Demchugdongrub's movement had sought, Jagchid left mainland China, living for a time in Japan and ultimately settling in the United States. He went on to teach and conduct research at Brigham Young University for many years (Jagchid).
+After the Chinese Communist conquest ended any prospect of an autonomous Inner Mongolia along the lines Demchugdongrub's movement had sought, Jagchid took refuge on Taiwan, then in Japan, and ultimately settled in the United States. He went on to teach and conduct research at Brigham Young University for many years (Jagchid).
 
 ## As a source for this atlas
 

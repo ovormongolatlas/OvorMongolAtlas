@@ -35,10 +35,10 @@ const cf = (c: string, kind: string) => solid(c, kind === 'context' || kind === 
 			</defs>
 			<rect x="0" y="0" width={BASE_MAP_WIDTH} height={BASE_MAP_HEIGHT} fill={LAND}></rect>
 			{map.areas.filter((a) => !a.own).map((a) => (
-				<path d={a.d} class={`mm-area mm-${a.kind}`} style={`--c:${a.color};--cd:${a.dark};--cf:${cf(a.color, a.kind)}`} fill={a.kind === 'claimed' || a.kind === 'occupied' ? `url(#${hatch(a.color)})` : a.kind === 'disputed' ? 'url(#mm-hatch-disputed)' : undefined}><title>{a.name}</title></path>
+				<path d={a.d} class={`mm-area mm-${a.kind}${a.look ? ` mm-look-${a.look}` : ''}`} style={`--c:${a.color};--cd:${a.dark};--cf:${cf(a.color, a.kind)}${a.look === 'blocks' ? `;fill:url(#${hatch(a.color)})` : ''}`} fill={a.kind === 'claimed' || a.kind === 'occupied' || a.look === 'blocks' ? `url(#${hatch(a.color)})` : a.kind === 'disputed' ? 'url(#mm-hatch-disputed)' : undefined}><title>{a.name}</title></path>
 			))}
 			{map.areas.filter((a) => a.own).map((a) => (
-				<path d={a.d} class={`mm-area mm-${a.kind} mm-own`} style={`--c:${a.color};--cd:${a.dark};--cf:${cf(a.color, a.kind)}`} fill={a.kind === 'claimed' || a.kind === 'occupied' ? `url(#${hatch(a.color)})` : a.kind === 'disputed' ? 'url(#mm-hatch-disputed)' : undefined}><title>{a.name}</title></path>
+				<path d={a.d} class={`mm-area mm-${a.kind} mm-own${a.look ? ` mm-look-${a.look}` : ''}`} style={`--c:${a.color};--cd:${a.dark};--cf:${cf(a.color, a.kind)}${a.look === 'blocks' ? `;fill:url(#${hatch(a.color)})` : ''}`} fill={a.kind === 'claimed' || a.kind === 'occupied' || a.look === 'blocks' ? `url(#${hatch(a.color)})` : a.kind === 'disputed' ? 'url(#mm-hatch-disputed)' : undefined}><title>{a.name}</title></path>
 			))}
 			<g class="mm-water" set:html={waterInner}></g>
 			{map.routes.map((d) => <path d={d} class="mm-route" marker-end="url(#mm-arrow)"></path>)}
@@ -66,7 +66,7 @@ const cf = (c: string, kind: string) => solid(c, kind === 'context' || kind === 
 			<ul class="minimap-legend">
 				{map.legend.map((l) => (
 					<li class:list={{ own: l.own }}>
-						<span class={`key key-${l.kind}`} style={`--c:${l.color};--cd:${darker(l.color)};--cf:${cf(l.color, l.kind)}`} aria-hidden="true"></span>
+						<span class={`key key-${l.kind}${l.look ? ` key-look-${l.look}` : ''}`} style={`--c:${l.color};--cd:${darker(l.color)};--cf:${cf(l.color, l.kind)}`} aria-hidden="true"></span>
 						<span>{l.name}{l.kind !== 'ruled' && l.kind !== 'context' && !/claim|disput|occup/i.test(l.name) && <span class="kind"> · {AREA_KIND_LABEL[l.kind].toLowerCase()}</span>}</span>
 					</li>
 				))}
@@ -237,6 +237,27 @@ const cf = (c: string, kind: string) => solid(c, kind === 'context' || kind === 
 	}
 
 	.key-occupied {
+		border-style: solid;
+	}
+
+	.mm-area.mm-look-zone {
+		fill: var(--c);
+		fill-opacity: 0.22;
+		stroke-width: 1.4;
+		stroke-dasharray: 6 3;
+	}
+
+	.mm-area.mm-look-blocks {
+		stroke-width: 1;
+	}
+
+	.key.key-look-zone {
+		background: color-mix(in srgb, var(--c) 18%, transparent);
+		border: 1.5px dashed var(--cd);
+	}
+
+	.key.key-look-blocks {
+		background: repeating-linear-gradient(45deg, var(--c) 0 2px, transparent 2px 5px);
 		border-style: solid;
 	}
 

@@ -56,10 +56,10 @@ export interface MiniMapData {
 	displayWidth: number;
 	view: Box;
 	fontSize: number;
-	areas: { d: string; color: string; dark: string; kind: AreaKind; name: string; own: boolean }[];
+	areas: { d: string; color: string; dark: string; kind: AreaKind; look?: 'zone' | 'blocks'; name: string; own: boolean }[];
 	hatchColors: string[];
 	points: (MiniPoint & { x: number; y: number; label?: { x: number; y: number; anchor: 'start' | 'end' | 'middle' } })[];
-	legend: { name: string; color: string; kind: AreaKind; own: boolean }[];
+	legend: { name: string; color: string; kind: AreaKind; look?: 'zone' | 'blocks'; own: boolean }[];
 	mapHref: string;
 	/** The entry's own point, when it is drawn. */
 	selfOnMap: boolean;
@@ -193,7 +193,7 @@ export function buildMiniMap(e: MiniMapInput): MiniMapData | null {
 	// Territories in force on 1 July of the year, culled to the view.
 	const KIND_ORDER: Record<string, number> = { context: 0, ruled: 1, occupied: 2, claimed: 3, disputed: 4 };
 	// Fills are opaque, so context states go underneath and hatched areas on top.
-	const drawn = year === undefined ? [] : areas.filter((a) => a.coordinates.length && active(a, year)).sort((a, b) => KIND_ORDER[a.kind] - KIND_ORDER[b.kind]);
+	const drawn = year === undefined ? [] : areas.filter((a) => a.coordinates.length && active(a, year)).sort((a, b) => (a.look ? 10 : KIND_ORDER[a.kind]) - (b.look ? 10 : KIND_ORDER[b.kind]));
 	const tol = scale * 0.8;
 	const areaShapes = drawn
 		.map((a) => ({ a, rs: rings(a) }))
@@ -203,6 +203,7 @@ export function buildMiniMap(e: MiniMapInput): MiniMapData | null {
 			color: a.color,
 			dark: darker(a.color),
 			kind: a.kind,
+			look: a.look,
 			name: a.legendName ?? a.name,
 			own: a.entry === e.id,
 		}));
@@ -244,7 +245,7 @@ export function buildMiniMap(e: MiniMapInput): MiniMapData | null {
 	});
 
 	const legend = [...new Map(
-		[...areaShapes].sort((a, b) => Number(b.own) - Number(a.own)).map((s) => [s.name, { name: s.name, color: s.color, kind: s.kind, own: s.own }]),
+		[...areaShapes].sort((a, b) => Number(b.own) - Number(a.own)).map((s) => [s.name, { name: s.name, color: s.color, kind: s.kind, look: s.look, own: s.own }]),
 	).values()].slice(0, 8);
 
 	const routes = ownCamps.flatMap((c) =>
@@ -272,7 +273,7 @@ export function buildMiniMap(e: MiniMapInput): MiniMapData | null {
 		view,
 		fontSize,
 		areas: areaShapes,
-		hatchColors: [...new Set(areaShapes.filter((s) => s.kind === 'claimed' || s.kind === 'occupied').map((s) => s.color))],
+		hatchColors: [...new Set(areaShapes.filter((s) => s.kind === 'claimed' || s.kind === 'occupied' || s.look === 'blocks').map((s) => s.color))],
 		points,
 		legend,
 		mapHref: `/map/${q ? `?${q}` : ''}`,

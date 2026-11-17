@@ -167,6 +167,12 @@ export interface Area {
 	labelName?: string;
 	/** The state's colour on the map and in the legend. */
 	color: string;
+	/**
+	 * A different look for an overlay that is not a state: 'zone' is a light,
+	 * see-through fill with a dashed edge (the land beneath stays visible);
+	 * 'blocks' is a cross-hatch with a solid edge, for small areas inside a zone.
+	 */
+	look?: 'zone' | 'blocks';
 	/** Name in the legend, when several areas share one (e.g. the MPR's yearly outlines). */
 	legendName?: string;
 	/** Name in the panel's list of other states, when it differs from the legend name; '' leaves the area out of that list. */
@@ -197,7 +203,7 @@ const C = {
 	hulunbuir: '#4f7396',
 	soviet: '#b23a3a',
 	impr: '#5e35b1',
-	kwantung: '#6d4c41',
+	kwantung: '#37474f',
 };
 
 export const areaSources = {
@@ -1253,6 +1259,7 @@ export const areas: Area[] = [
 		coordinates: ring('kwantungZone1936'),
 		label: [119.8, 48.4],
 		color: C.kwantung,
+		look: 'zone',
 		legendName: 'Kwantung Army special military zone, airspace closed (March 1936)',
 	},
 	{
@@ -1267,6 +1274,7 @@ export const areas: Area[] = [
 		coordinates: T0('kwantungRestricted1936'),
 		parts: TP('kwantungRestricted1936'),
 		color: C.kwantung,
+		look: 'blocks',
 		legendName: 'Kwantung Army restricted areas, no observation or survey (March 1936)',
 	},
 ];
