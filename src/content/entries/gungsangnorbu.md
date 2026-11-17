@@ -7,6 +7,7 @@ endYear: 1930
 yearType: contested
 altStartYear: 1872
 altEndYear: 1931
+role: "Prince of Kharachin Right Banner"
 ---
 
 Gungsangnorbu (Prince Gung, 貢桑諾爾布) was the ruling prince of Kharachin Right Banner in Josotu League and the best-known Inner Mongolian modernizer of the late Qing. His schools in Kharachin trained a large share of the Mongol politicians and writers of the next generation, and from 1912 he headed the Republic’s office for Mongolian and Tibetan affairs in Beijing.

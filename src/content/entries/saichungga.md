@@ -5,6 +5,7 @@ summary: "Inner Mongolian poet and essayist (1914–1973), a founder of modern I
 startYear: 1914
 endYear: 1973
 yearType: life
+role: "Poet and essayist"
 ---
 
 Saichungga was a poet and essayist whom Christopher Atwood reads as one of the founders of modern Inner Mongolian literature (Atwood). The spelling used here follows the source; scholarly variants include Sayičungγa, Na. Sayinčoγtu, and Sainchogtu. This entry rests almost entirely on Atwood's 1999 study, a peer-reviewed article by a leading historian of Inner Mongolia. It is treated here as the best available scholarly account, weighted at this atlas's top tier alongside Jagchid, but as a single-source portrait that later work may correct or deepen. Atwood's article reproduces his own English translations of Saichungga's 1945 poems and of the essay "A Ghost"; those translations are in copyright, so this entry paraphrases and quotes only sparingly.

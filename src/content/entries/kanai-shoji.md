@@ -5,6 +5,7 @@ summary: "Japanese physician and bacteriologist (b. 1886) who became a senior Ma
 startYear: 1886
 endYear: 1947
 yearType: documented
+role: "Japanese supreme advisor"
 ---
 
 Kanai Shoji (rendered Kanai Shōji, with a macron, by the Hoover Institution among others) began his career as a physician and bacteriologist and ended it as a senior Japanese colonial administrator. His relevance to this atlas lies almost entirely in the second half of that career, above all his years as Supreme Advisor (最高顧問) to [Demchugdongrub](/entry/demchugdongrub)'s Mengjiang government, where his office held more real financial, police, and transport power than any single Mongol official's, behind the prince's formal chairmanship. The medical career and the Manchukuo posts are covered below briefly, as background to that role rather than as this entry's center of gravity. The frontmatter years span his earliest and latest independently documented dates, his birth in 1886 and his Tokyo Tribunal testimony in 1947; they are not a claim that his active career filled that span without gaps.

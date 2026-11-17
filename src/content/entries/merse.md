@@ -5,6 +5,10 @@ summary: "Daur Mongol nationalist (1894–1934?; Chinese name Guo Daofu) from Hu
 startYear: 1894
 endYear: 1934
 yearType: documented
+role: "Daur nationalist and educator"
+names:
+  chinese: "郭道甫"
+  chineseSource: "Nahiya, 「「満洲国」期におけるモンゴル人留学事業の展開」 (2019), n. 58; Atwood romanizes it Guo Daofu."
 ---
 
 Merse (1894–1934?), known in Chinese as Guo Daofu, was a Daur Mongol from Hulunbuir and one of the most influential nationalist organizers among the eastern Mongols [1, 2]. He helped found the Eastern Border People’s Party and the Inner Mongolian People’s Revolutionary Party, led part of the 1928 Barga uprising in Hulunbuir, and then, after coming to terms with Zhang Xueliang, founded a teachers’ college at Mukden that trained a generation of Mongol nationalists, [Khafungga](/entry/khafungga) among them. After the Japanese took Mukden in 1931 he fled to Hulunbuir, and in December he walked into the Soviet consulate at Manchuria Station, where the Soviet secret police detained him. The last record of his case is from 1934; what became of him is unknown.

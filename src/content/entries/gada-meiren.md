@@ -5,6 +5,10 @@ summary: "STUB: Mongol banner militia officer who led armed resistance to Chines
 startYear: 1929
 endYear: 1931
 yearType: documented
+role: "Banner militia officer"
+names:
+  chinese: "嘎达梅林"
+  chineseSource: "Narangerel, Part 2 (the Chinese-language article on Li Shouxin used in that entry)."
 ---
 
 > **PLACEHOLDER ENTRY.** This is an intentional placeholder, not an unfinished or neglected entry: this atlas names and dates entities it cannot yet treat fully rather than omit them from the record, and this entry is deliberately held at minimal, reference-tier detail pending the specific scholarly source named in its VERIFY-GATE below.

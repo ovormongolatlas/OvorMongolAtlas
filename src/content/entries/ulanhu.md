@@ -5,6 +5,7 @@ summary: "Tümed Mongol Communist (1906–1988; Chinese name Yun Ze, also Ulanfu
 startYear: 1906
 endYear: 1988
 yearType: life
+role: "Mongol Communist leader"
 ---
 
 Ulanhu is the Mongol Communist who stood on the other side of the 1945 settlement from [Demchugdongrub](/entry/demchugdongrub). This atlas's sources agree on the outline of his career and differ sharply in how they weigh it. Atwood's *Encyclopedia* treats him as the Chinese Communists' “man in Inner Mongolia”; Jagchid, a partisan of Demchugdongrub, sees a clique built on Communist backing; Lattimore, from personal acquaintance, offers a short assessment of why the Party wanted him. The entry gives each in turn.

@@ -1,48 +1,78 @@
 ---
 title: "Khafungga"
 type: person
-summary: "Eastern Inner Mongolian nationalist and later Communist-aligned political figure (1908–1978), a contemporary of Demchugdongrub who organized covert resistance to Japan from within Manchukuo before helping found the Communist-aligned autonomy movement in the east."
+summary: "Eastern Inner Mongolian nationalist (1908–1970; Chinese name Teng Xuwen), a student of Merse and a Manchukuo official who secretly worked for the Inner Mongolian People's Revolutionary Party, led the East Mongolian movement of 1945–46, then served as Ulanhu's deputy until 1954; persecuted to death in the Cultural Revolution."
 startYear: 1908
-endYear: 1978
-yearType: life
+endYear: 1970
+altEndYear: 1978
+yearType: contested
+role: "Mongol nationalist leader"
+names:
+  mongolian: "ᠬᠠᠫᠣᠩᠭ᠎ᠠ"
+  mongolianStatus: "converter"
+  mongolianSource: "Converted letter for letter from the scholarly transliteration Qapongɣ-a given by Nahiya [2]; not yet checked against a source in Mongol script."
+  chinese: "哈丰阿"
+  chineseSource: "The Chinese rendering of his Mongol name, as in the family biography [5]; Nahiya [2] prints it 哈豊阿. His Chinese personal name was Teng Xuwen [1] (滕続文 in Nahiya’s Japanese text [2])."
 ---
 
-## Identification: two names for one man
+Khafungga (1908–1970), Chinese name Teng Xuwen, was the most popular leader of the eastern Inner Mongolian nationalist movement at the end of the Second World War [1]. The son of a Khorchin banner militia commander, he studied under [Merse](/entry/merse) at the Northeast Mongolian Banners’ Normal School and secretly joined the Inner Mongolian People’s Revolutionary Party in 1931–32. Through the Manchukuo years he held office under the Japanese while spreading pro-Soviet, pan-Mongolist ideas. In August 1945 he launched the East Mongolian movement at Wangyemiao, and in 1946 he brought it under [Ulanhu](/entry/ulanhu)’s Communist-led front, serving as Ulanhu’s deputy until 1954. He was persecuted in the Cultural Revolution and died in struggle sessions at Ulanhot in 1970 [1].
 
-[Sechin Jagchid](/entry/sechin-jagchid)'s biography of Demchugdongrub mentions "Khafungga" only briefly, as one of the "most influential initiators" of an early-1930s eastern Mongol nationalist movement (Jagchid). A much longer biographical account, published on the Chinese platform meipian.cn and evidently compiled by descendants, covers the same period under the name "Hafeng'a" (哈丰阿), a different transliteration of the same Mongolian name. The identification rests on more than similar sounds: both sources independently describe the same formative detail, study under the Daur Mongol educator and political activist [Merse](/entry/merse) (Chinese name Guo Daofu) at the Northeast Mongolian Banner Normal School he founded in Shenyang in 1929 (Jagchid; "Hafon A" biography). Nakami Tatsuo's scholarly chapter on Inner Mongolia independently confirms this teacher-student tie, naming Khafungga among the disciples who carried Merse's nationalist current forward (Nakami; see the [Merse](/entry/merse) entry for that thread in fuller detail). This entry treats Jagchid's "Khafungga" and the biography's "Hafeng'a" as the same person.
+*A note on sources.* The entry rests on Christopher Atwood’s *Encyclopedia of Mongolia* [1] and on Nahiya’s study of Mongol students in Manchukuo [2], which gives his offices year by year. [Sechin Jagchid](/entry/sechin-jagchid) [3] and Nakami Tatsuo [4] add episodes. A long family-compiled biography on the Chinese site meipian.cn [5] covers the same life under the name Hafeng’a (哈丰阿); it is not a scholarly source, and where it disagrees with Atwood and Nahiya the differences are listed below.
 
-The two sources disagree on his home banner: Jagchid gives "Bingtu Banner," while the biography states he was born in Kezuo Zhong Qi (Khorchin Left Wing Middle Banner) of the Zhelimu (Jirim) League. Both place him in the same eastern Mongol milieu, but this atlas does not attempt to reconcile the specific banner name.
+## Family and school (1908–1931)
 
-## Early nationalist activity, 1931–1937
+Khafungga was born in 1908, the eldest of seven children of Rinchinjamsu (Teng Haishan), commander of the banner militia in the Khorchin Left Wing Middle Banner of the Jirim League [1]. The family biography gives his birthday as 16 March 1908 and his father’s name as Renqin Ningbu [5]. Jagchid instead gives his home as “Bingtu Banner” [3].
 
-According to the biography, Khafungga was born March 16, 1908, the son of Renqin Ningbu, a local banner police and militia commander ("Hafon A" biography). After the Mukden Incident of September 1931, he joined the Inner Mongolia Autonomous Army, one of several eastern Mongol armed groups formed in its aftermath to press for an independent Mongol state (Jagchid; "Hafon A" biography). Jagchid names Khafungga, together with the Dahur intellectual Jirgalang and Ashkan (an intellectual from the Darhan Banner), as the movement's most influential organizers. When Japan moved to establish its Manchukuo puppet state instead, the movement disbanded under threat, and its leaders were offered official posts within the new Japanese-controlled administration, without their underlying commitment to Mongol self-determination changing, in Jagchid's account (Jagchid).
+He attended Merse’s Northeast Mongolian Banners’ Normal School in Shenyang (Mukden), where his poems and speeches were admired [1]. Nahiya dates his time there to 1929–30 and records that he edited two issues of the school’s journal, in Mongolian and Chinese [2]; Atwood places him there in 1930 [1]. Nakami names him among the disciples who carried Merse’s nationalism forward [4]. He spoke Chinese and Japanese as well as Mongolian and was known for his intelligence and gentleness [1].
 
-The biography describes Khafungga's brother-in-law Asigen (married to his sister Dalif), very likely the same person Jagchid calls Ashkan, as a close political partner through this period; the two were later compared to the "Sleeping Dragon" and "Young Phoenix" of Chinese legend for their shared influence in the region ("Hafon A" biography). Within the Autonomous Army, Khafungga made contact with Comintern-linked representatives and joined the Inner Mongolia People's Revolutionary Party in April 1932 ("Hafon A" biography).
+## Party member and Manchukuo official (1931–1945)
 
-## Covert resistance under Japanese rule, and the 1945 uprising
+In the summer of 1931 the Comintern agent Temürbagana inspired Khafungga’s father to raise an army against the warlords and secretly recruited Khafungga and his sister’s new husband, Asgan (Li Youtong, 1908–48), into the [Inner Mongolian People’s Revolutionary Party](/entry/inner-mongolian-peoples-revolutionary-party) [1]. Nahiya dates his joining to 1932, the year he wrote the poem “Köke tuγ” (“The Blue Banner”), which was later widely sung among Mongols as a song [2]. After pro-Japanese Mongols took over their army, all three became officials in Japanese-occupied Manchukuo, while covertly spreading pro-Soviet, pan-Mongolist ideas [1].
 
-Khafungga studied in Japan twice during the 1930s, graduating from the Japanese Army University in 1938, and used positions inside the Japanese-sponsored Manchukuo military and educational system to work against Japanese interests, according to the biography. During the 1939 Nomonhan Incident on the Mongolian-Manchurian border, he reportedly encouraged Mongol soldiers to surrender to Soviet and Mongolian People's Republic forces rather than fight them. From 1941–42, as an instructor at the puppet Xing'an Military Academy, he is said to have used history lessons on Korea's colonization to cultivate anti-Japanese national sentiment among Mongol officer cadets ("Hafon A" biography). On August 11, 1945, in the war's final days, more than a thousand officers and students at that academy rose up against their Japanese officers, an event the biography credits substantially to years of clandestine organizing by Khafungga and Asigen ("Hafon A" biography). This account of his wartime activity comes from a single, non-academic source and has not been independently verified for this atlas.
+Jagchid names Khafungga, with the Daur intellectual Jirgalang and Ashkan, an intellectual from the Darhan Banner, as the most influential organizers of an eastern Mongol nationalist movement after the Mukden Incident, which disbanded under Japanese pressure when Manchukuo was founded [3]. Ashkan is very likely Asgan.
 
-Nakami records a further Japan posting in 1941, when Khafungga went to Tokyo as a counsellor of the Manchukuo embassy there. This atlas does not attempt to reconcile that posting's exact timing against the biography's 1941–42 dating of his instructorship at the Xing'an Military Academy. Both may be true in sequence or overlap, but no source used here states how they fit together. In Tokyo, per Nakami, Khafungga gathered Mongol students around him and preached "Mongol nationalism," reportedly predicting that Japan and Germany would be defeated and that Inner Mongolia's unification might then be achieved with Soviet and Mongolian People's Republic support (Nakami).
+Nahiya lists his Manchukuo posts [2]:
 
-## The Communist-aligned autonomy movement in the east
+- 1933–37: education and culture work in the Xing’an West Province office at Kailu.
+- 1937–40: secretary-general of Manchukuo’s Xing’an Bureau.
+- January 1941 – June 1943: secretary at the Manchukuo embassy in Tokyo.
+- July 1943 – September 1944: counsellor in the General Affairs Agency of the State Council.
+- October 1944 – August 1945: official of the Xing’an General Province office.
 
-After Japan's surrender, Khafungga and Asigen were central to organizing an armed, Communist-aligned Mongol autonomy movement in the east, a track distinct from, and in practice a rival to, both the Nationalist Chinese government and the western Inner Mongolian movement associated with [Demchugdongrub](/entry/demchugdongrub) and eventually [Mengjiang](/entry/mengjiang). Asigen helped found the [East Mongolian People’s Autonomous Government](/entry/east-mongolian-peoples-autonomous-government) at Wangyemiao (Ulanhot) in February 1946 and later joined the Chinese Communist Party outright ("Hafon A" biography).
+In Tokyo, Atwood writes, he helped sponsor an association of Mongol students [1]. Nakami adds that he gathered Mongol students around him and preached “Mongol nationalism,” predicting that Japan and Germany would be defeated and that Inner Mongolia might then be unified with Soviet and Mongolian support [4].
 
-Nakami gives a fuller account of Khafungga's own political trajectory in these same months. Immediately after Japan's defeat, per Nakami, Khafungga launched a political movement and traveled to Ulaanbaatar to appeal for the amalgamation of Inner and Outer Mongolia; Marshal Choibalsan rejected the appeal (Nakami). Khafungga's aim then shifted to autonomy for Inner Mongolia alone; soon, in Nakami's words, “the agreement with the Chinese Communist Party spearheaded by Ulaghanhegüü (Ulanhu) broke down,” and in 1947 the Inner Mongolian Autonomous Government was set up, a form of Mongol unification achieved within a "China" framework, in keeping with Chinese Communist Party policy of the time (Nakami). That government is not built out as its own entry in this atlas; see this atlas's project notes for it as a logged candidate. Khafungga went on to hold a series of positions within the Communist Party's Inner Mongolian autonomy apparatus and, later, the cultural and publishing institutions of the Inner Mongolia Autonomous Region, according to the biography. The source's coverage of his later offices is difficult to disentangle from those of other relatives described in the same lengthy document, and is not reproduced here in detail for that reason.
+The family biography tells this period differently [5]. It has him studying twice in Japan and graduating from the Japanese Army University in 1938; urging Mongol soldiers to surrender to the Soviet and Mongolian forces at Nomonhan in 1939; and in 1941–42 teaching at the Xing’an Military Academy, where he used lessons on Korea’s colonization to stir national feeling among the cadets. The atlas has not found these claims in the scholarly sources, and some of them are hard to fit with Nahiya’s dated list of his posts.
 
-## Later life and death
+## The East Mongolian movement (1945–1946)
 
-Jagchid, writing decades later from outside China, states only that Khafungga, grouped with "most of his other compatriots who had struggled for Mongolian nationalistic aspirations," did not escape persecution during the Cultural Revolution (Jagchid). The biography corroborates this in general terms, stating he suffered persecution as an intellectual during that period, without detailing its severity ("Hafon A" biography). He is reported to have died in [Hohhot](/entry/hohhot) in July 1978.
+Reassigned to Wang-un Süme (Wangyemiao, modern Ulanhot) in the summer of 1945, Khafungga began planning against the Japanese. When the Soviet Union declared war on Japan, he launched a coup at Wangyemiao on 11 August 1945 and proclaimed the revived party’s aim of a revolutionary pan-Mongolian republic [1]. Nahiya dates his “Declaration of the Liberation of the Inner Mongolian People” at Wangyemiao, and the founding of an Inner Mongolian People’s Liberation Committee, to 18 August [2]. The family biography credits him and Asgan with years of secret organizing behind the rising of more than a thousand officers and cadets at the Xing’an Military Academy on 11 August [5].
 
-### A note on sources
+From then until the spring of 1946 he was the movement’s most popular leader and chief organizer, assisted by Asgan and Temürbagana [1]. Nakami writes that he went to Ulaanbaatar to ask for the union of Inner and Outer Mongolia, which Marshal Choibalsan refused [4]. In Atwood’s account, Choibalsan told him in an audience to stop pan-Mongolist agitation and cooperate with the Chinese Communists, and in April 1946 Khafungga and Temürbagana put themselves under Ulanhu’s Communist-controlled front [1]. Asgan helped found the [East Mongolian People’s Autonomous Government](/entry/east-mongolian-peoples-autonomous-government) at Wangyemiao in February 1946 [5] and commanded Inner Mongolia’s army until he died of encephalitis on 31 January 1948 [1].
 
-The "Hafon A" biography is not an academic or peer-reviewed source. It is a lengthy personal or family-compiled account published on a Chinese blogging platform, covering Khafungga alongside numerous relatives and in-laws in a single sprawling document. It is used here only where it independently corroborates Jagchid or where a claim is clearly and specifically attributed to Khafungga himself; its more detailed institutional and career claims should be treated with the same caution this atlas applies to any single, non-scholarly source.
+Nakami describes the next step in these words: “the agreement with the Chinese Communist Party spearheaded by Ulaghanhegüü (Ulanhu) broke down,” and in 1947 the Inner Mongolian Autonomous Government was set up, a unification of Inner Mongolia achieved within a Chinese framework [4].
 
-Khafungga's relationship with [Ulanhu](/entry/ulanhu) is covered in that entry.
+## Under Ulanhu (1946–1966)
+
+Khafungga joined the Chinese Communist Party and until 1954 served as Ulanhu’s deputy in the Inner Mongolian government, though he was kept out of the region’s top party leadership. In the government formed in 1954 he was demoted to one of seven deputy chairmen, in charge of education. He chaired committees on ending illiteracy (from January 1953), on introducing the Cyrillic script (from July 1955) and on science (from March 1958). Zhou Enlai’s rejection of the Cyrillic script in March 1958 damaged his standing, and in 1964 he was moved to the People’s Political Consultative Conference in Beijing, a sinecure [1].
+
+## Death
+
+When the Cultural Revolution turned on Ulanhu’s policies, Khafungga’s past made him an obvious target. He was sent back to Ulanhot and tormented in struggle sessions until his death in 1970 [1]; Nahiya also gives his dates as 1908–70 [2]. Jagchid says only that he did not escape persecution in the Cultural Revolution [3]. The family biography, and through it an earlier version of this entry, has him dying in Hohhot in July 1978 [5]. He is still widely admired in the eastern Inner Mongolian countryside [1].
+
+## Open questions
+
+- **Death.** Ulanhot, 1970 (Atwood [1], Nahiya [2]) or Hohhot, July 1978 (family biography [5]).
+- **Home banner and father.** Khorchin Left Wing Middle Banner and Rinchinjamsu (Atwood [1]); Renqin Ningbu (family biography [5]); “Bingtu Banner” (Jagchid [3]).
+- **Joining the party.** Summer 1931 (Atwood [1]) or 1932 (Nahiya [2]).
+- **The 1945 rising.** A coup on 11 August (Atwood [1]) and a declaration on 18 August (Nahiya [2]).
+- **His career in 1938–42.** Army University and the Xing’an Military Academy (family biography [5]) against Nahiya’s list of civil posts [2].
 
 ### Sources
 
-- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.
-- "A Brief Biography of Hafon A (Part 1)," published at meipian.cn, cited above as "'Hafon A' biography." A personal or family-authored account, not an academic source; used here with caution and only where independently corroborated or clearly attributed.
-- Nakami Tatsuo, chapter in *Imperial Japan and National Identities in Asia, 1895–1945* (RoutledgeCurzon, 2003), cited above as "Nakami." A peer-reviewed, top-tier scholarly source; this atlas's copy is the maintainer's supplied excerpt rather than the full chapter, so exact page numbers are not verified. See this atlas's project notes for the standing caveat on this source.
+Numbers in square brackets in the text refer to this list.
+
+1. Christopher P. Atwood, *Encyclopedia of Mongolia and the Mongol Empire* (New York: Facts on File, 2004), “Khafungga,” pp. 298–299. Atwood’s further reading is his “The East Mongolian Revolution and Chinese Communism,” *Mongolian Studies* 15 (1992): 7–83, not yet held.
+2. Nahiya (娜荷芽), 「「満洲国」期におけるモンゴル人留学事業の展開」, 『アジア地域文化研究』 No. 15 (March 2019), section 3, “ハーフォンガーの構想,” about p. 29. Gives his names as 滕続文 / 哈豊阿 / Qapongɣ-a and his dates as 1908–70.
+3. Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999). See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas’s standing caveat on weighing his participant-partisan perspective.
+4. Nakami Tatsuo, chapter in *Imperial Japan and National Identities in Asia, 1895–1945* (RoutledgeCurzon, 2003), which spells his name Qafunggh-a. Exact page numbers are not yet recorded here; see this atlas’s project notes for the standing caveat on this source.
+5. “A Brief Biography of Hafon A (Part 1),” meipian.cn (https://www.meipian.cn/3iha37xu). A family-compiled account, not an academic source; used here only where it agrees with the scholarly sources or as a recorded variant.

@@ -5,6 +5,10 @@ summary: "Mongol general (1892–1970) from Josotu League who allied with Japan 
 startYear: 1892
 endYear: 1970
 yearType: life
+role: "Mongol general"
+names:
+  chinese: "李守信"
+  chineseSource: "Narangerel, “日本战败后的李守信” (2016), the main source of that entry."
 ---
 
 Li Shouxin was born July 11, 1892, a Mongol from the Tümed Right Banner of Josotu League (present-day Chaoyang, Liaoning), originally named Nasun Bayar; he adopted the name Li Shouxin after joining a Rehe guerrilla cavalry unit (Narangerel). He rose through the Northeastern Army under Zhang Xueliang as a cavalry brigade commander before allying with Japan in 1933, after which he held a series of military and administrative posts in Japanese-sponsored eastern Chahar (Narangerel). From 1936 he held continuous senior military and political office within [Demchugdongrub](/entry/demchugdongrub)'s governments. A modern academic source on his life describes his forces as the military backbone of the regime, and [Sechin Jagchid](/entry/sechin-jagchid) records him as military commander of the [Mongolian Allied League Autonomous Government](/entry/mongolian-allied-league-autonomous-government) and, per Lückenhaus's 1943 account, supreme commander of the [Mengjiang](/entry/mengjiang) [army](/entry/inner-mongolian-army) under the name "Li Shou-hsin" (Narangerel; Jagchid; Lückenhaus).

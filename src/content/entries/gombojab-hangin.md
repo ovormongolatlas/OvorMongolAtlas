@@ -5,6 +5,7 @@ summary: "Inner Mongolian scholar, teacher, and lexicographer (1921–1989) who 
 startYear: 1921
 endYear: 1989
 yearType: life
+role: "Teacher, editor and scholar"
 ---
 
 This entry rests substantially on a single source: a 2022 memorial slideshow by Sanj Altan, produced for the Mongol-American Cultural Association on the 33rd anniversary of Hangin's death. It is a community-memorial source, affectionate and commemorative in register rather than peer-reviewed scholarship, and is corroborated below against Christopher Atwood's 1999 study where the two overlap. Where a claim rests on the slideshow alone, that is noted, and one specific figure below (his mother's death date) is flagged rather than stated flat because it does not square with the rest of the timeline as given.

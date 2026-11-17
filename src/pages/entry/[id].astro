@@ -98,7 +98,7 @@ const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)
 			<div class="head-text">
 				<p class="overline entry-type">{TYPE_LABEL[d.type]}</p>
 				<h1>{d.title}</h1>
-				{d.names?.chinese && <p class="name-zh" lang="zh-Hant">{d.names.chinese}</p>}
+				{d.names?.chinese && <p class="name-zh" lang="zh">{d.names.chinese}</p>}
 				{d.names?.cyrillic && <p class="name-cyr" lang="mn-Cyrl">{d.names.cyrillic}</p>}
 				{d.role && <p class="entry-role">{d.role}</p>}
 				{years && <p class="entry-years">{years}</p>}
@@ -175,7 +175,7 @@ const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)
 						{d.names?.chinese && (
 							<div>
 								<dt>Chinese</dt>
-								<dd lang="zh-Hant">
+								<dd lang="zh">
 									{d.names.chinese}
 									{d.names.chineseSource && <details><summary>Where this comes from</summary><p>{d.names.chineseSource}</p></details>}
 								</dd>

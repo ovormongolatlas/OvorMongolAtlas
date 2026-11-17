@@ -5,6 +5,10 @@ summary: "American scholar of China's Inner Asian frontiers (1900–1989) who tr
 startYear: 1900
 endYear: 1989
 yearType: life
+role: "American scholar of Inner Asia"
+names:
+  chinese: "拉铁摩尔"
+  chineseSource: "Narangerel, Part 2 (the Chinese-language article on Li Shouxin)."
 ---
 
 Owen Lattimore is in this atlas as a contemporary observer and later witness, not as a source for the facts of Mengjiang-era politics. He wrote about the Inner Mongolian autonomy movement while it was happening, knew several of its figures personally, and in 1983 looked back on them in a filmed interview. His accounts are set against the Mongol-side and archival sources the atlas leans on elsewhere, and where later scholarship has corrected him, that is recorded.

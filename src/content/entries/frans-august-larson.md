@@ -31,6 +31,7 @@ images:
     license: "PD in Sweden, confirmed (SFS 1960:729, does not reach the Swedish threshold of originality / anonymous pre-1956 publication); PD in US inferred from the 1921 publication date, not explicitly confirmed on the source page"
     source: "Wikimedia Commons, File:Larsson Dagens Nyheter.jpg"
     note: "The Commons file page itself notes, as of the date this was checked, that a US public-domain tag is required and was not present. Recorded here as an open item, not upgraded to an unqualified public-domain claim."
+role: "Swedish missionary and trader"
 ---
 
 Frans August Larson, known in Chinese as Lan xiansheng (Mr. Lan) and in Sweden as "Hertig Larson," the Duke of Mongolia, was a Swedish missionary who moved into business and then into an informal diplomatic-liaison role in Mongolia. He is documented in this atlas's held sources moving in the Sünid/De Wang circle and, on at least one occasion, as [Demchugdongrub](/entry/demchugdongrub)'s own houseguest. The frontmatter years above mark the earliest and latest specific years attached to him in the sources this entry draws on (the 1919–1920 Beijing mission, and Walter Bosshard’s portrait of about 1933–1934), not a birth-death span or the full length of his Mongolia career, which the atlas's working notes place roughly 1893–1939 in general terms broader than what the sources below individually confirm.

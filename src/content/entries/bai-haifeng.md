@@ -5,6 +5,7 @@ summary: "Mongol officer and politician who served in turn the Communists, the K
 startYear: 1930
 endYear: 1950
 yearType: documented
+role: "Mongol officer and politician"
 ---
 
 Bai Haifeng was a Mongol officer and politician who changed sides several times between the early 1930s and 1950. Trained in the Soviet Union and sent into Inner Mongolia as a Communist, he became a member of the Kuomintang, served as security chief under [Demchugdongrub](/entry/demchugdongrub) at Bailingmiao, turned against him, and became a lieutenant general under the Nationalist commander Hu Zongnan. In 1949 he sat on Demchugdongrub’s committee at Alashan. In 1950 he came to Demchugdongrub as an envoy of the Chinese Communists.

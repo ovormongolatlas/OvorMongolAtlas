@@ -6,6 +6,10 @@ startYear: 1914
 altStartYear: 1915
 endYear: 2009
 yearType: contested
+role: "Historian"
+names:
+  chinese: "札奇斯欽"
+  chineseSource: "National Chengchi University, 政大記憶網, “札奇斯欽.” His personal Chinese name was Yu Baoheng (于寶衡)."
 ---
 
 Sechin Jagchid (Chinese name Yu Baoheng, 于寶衡; also written Jagchid Sechen) was an Inner Mongolian historian who had first lived through the events he wrote about. The son of a Kharachin Mongol family close to [Demchugdongrub](/entry/demchugdongrub), he grew up in the prince’s autonomy movement, served in its governments, was elected to China’s 1947 National Assembly, and after the Communist victory taught in Taiwan and then for many years at Brigham Young University. His *The Last Mongol Prince* (1999) is the fullest biography of Demchugdongrub and the source this atlas uses most. He died in California in 2009 [2].

@@ -5,6 +5,7 @@ summary: "STUB: jasag of Kharachin Right Banner, Josotu League, immediately prec
 startYear: 1898
 endYear: 1898
 yearType: documented
+role: "Prince of Kharachin Right Banner"
 ---
 
 **STUB entry: VERIFY-GATE.** Vangdudnamjil is documented in this atlas's master chronology only as [Gungsangnorbu](/entry/gungsangnorbu)'s immediate predecessor as jasag of Kharachin Right Banner, Josotu League, a succession dated to 1898. That date is itself reference-tier, not independently citable scholarship. No other fact about him (birth, death, tenure length, family, or any activity as jasag) is available to this atlas from any source currently in hand. The single frontmatter year above, 1898, marks the one documented point, the succession, not a birth, death, or tenure span.

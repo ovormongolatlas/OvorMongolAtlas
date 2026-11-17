@@ -5,6 +5,7 @@ summary: "High lama from western Outer Mongolia who fled to Inner Mongolia in th
 startYear: 1935
 endYear: 1948
 yearType: documented
+role: "Reincarnate lama"
 ---
 
 The Dilowa Khutugtu (also written Diluwa, Diluv Khutagt, Dilowa Gegeen) was a high-ranking “living Buddha” of western Outer Mongolia who left the Mongolian People's Republic for Inner Mongolia and became [Demchugdongrub](/entry/demchugdongrub)'s closest friend among the Outer Mongolian refugees. The atlas has two friendly witnesses: [Sechin Jagchid](/entry/sechin-jagchid), who knew him through Demchugdongrub's circle, and [Owen Lattimore](/entry/owen-lattimore), who knew him in Peking, Chongqing and the United States. No source in hand gives his personal name or his dates of birth and death, so the years above are the span in which the atlas's sources document his activity, not his life. Both sources say he died in the United States; Lattimore places it after 1963.
