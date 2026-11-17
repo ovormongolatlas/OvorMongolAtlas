@@ -27,7 +27,7 @@ Baabar names the routes as: Чуулалт хаалга (Kalgan) and the western
 The two sources organise the command differently:
 
 - **Mongoltoli (Myagmarsambuu)** describes two main thrusts. Forces under Sonomdorj and Chagdarjav advanced from the southern edge of Tüsheet Khan aimag toward Ulaanchab and Hohhot; forces under Manlai Baatar Damdinsüren and Yalguun Baatar Sumiya advanced from Dariganga and the Egüzer monastery toward Shilingol, Juu Uda, Chahar and Dolonnor.
-- **Baabar** names Damdinsüren as overall commander, with gün Chimidtseren on the Egüzer monastery route, Khaisan and the deputy minister Bavuujav on the Dariganga route, Nasan-Arvijikh on the route toward the Sönöd and Dörvöd Wang banners, and Sumiya on the Yellow River route.
+- **Baabar** names Damdinsüren as overall commander, with gün Chimidtseren on the Egüzer monastery route, Khaisan and the deputy minister Bavuujav on the Dariganga route, Nasan-Arvijikh on the route toward the Sünid and Dörvöd Wang banners, and Sumiya on the Yellow River route.
 
 Jagchid names a different pair of commanders for the eastern thrust: Urga, he writes, sent Shirun *jiangjun* (general) and Namsarai *bagatur* (hero) with an army to take Doloonnor, the religious center between the eastern Shilingol and Chahar leagues, to intimidate the Inner Mongolian leagues and banners into joining the new state (Jagchid, p. 15). Neither name appears in Baabar's or Mongoltoli's account; whether they are the same men under other names is not established here.
 

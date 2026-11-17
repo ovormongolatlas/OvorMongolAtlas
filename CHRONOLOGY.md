@@ -61,7 +61,7 @@ One grievance recurs under different names across the whole spine: Chinese agric
 - **1937, Jul** — Second Sino-Japanese War begins; from 1937 Japan also cuts back the Xing'an Office's authority in Manchukuo. [Narangoa 2004, p.64]
 - **1937, Aug–Oct** — Chahar operation; **Sep 4** South Chahar Autonomous Government (Kalgan); **Oct 15** North Shansi Autonomous Government (Tatung); Suiyuan taken in Oct. [Boyle 1972, p.127]
 - **1937, Oct 27–29** — Federated Autonomous Government of Mongolia (蒙古聯盟自治政府 lineage; Boyle's "Federated Autonomous Government of Mongolia") formed from the Mongol princes' convocation; headed by Yun Wang, capital eventually Hohhot. [Boyle 1972, p.127]
-- **1937, Nov 22** — United Committee of Mengchiang (蒙疆聯合委員会 / Mökyö Rengö Iinkai) established — Boyle's "United Committee." [Boyle 1972, pp.132–133; Hirokawa 2024] {THIS is the entity the repo's earlier pass could not place against the repo's "Joint Committee"/"Mengjiang Federation Committee" — see genealogy below}
+- **1937, Nov 22** — United Committee of Mengjiang (蒙疆聯合委員会 / Mökyö Rengö Iinkai) established — Boyle's "United Committee." [Boyle 1972, pp.132–133; Hirokawa 2024] {THIS is the entity the repo's earlier pass could not place against the repo's "Joint Committee"/"Mengjiang Federation Committee" — see genealogy below}
 - **1937, Dec** — Baotou occupied; the Mongol League Autonomous Government (蒙古聯盟自治政府) set up, capital Hohhot (厚和); Suiyuan and Chahar provinces abolished and reorganized into new leagues: **Chahar, Shilingol, Ulanqab, Bayantala**, plus Hohhot and Baotou cities. [Hirokawa 2024] {the Ulanqab/Bayantala reorganization is Hirokawa's core contribution; Bayantala absorbs Wuchuan & Guyang counties from old Ulanqab, which becomes the grievance at the 1940 conference}
 - **1938–1939** — Tada Fumio + Keijo Imperial University geographic fieldwork/expedition into Mengjiang (surveys of markets, pastoral society, Hohhot). [Winstanley-Chesters & Cathcart 2022] {peripheral; a knowledge-making data point, useful for a "how Mengjiang was mapped" theme}
 - **1938, Aug** — the League Office System (盟公署官制) is promulgated and the Mengjiang United Committee strengthened; leagues reorganized from 4 bureaus to 3 (civil/livestock/security). [Hirokawa 2024]
@@ -116,7 +116,7 @@ All items [Pount, pp.48–62; sourced to Atwood, Liu Xiaoyuan, Bulag, Sneath, Ha
 1. 1934 Apr — Mongol Local Autonomy Political Council (蒙政会, Bailingmiao)
 2. 1936 Apr/May — Mongol Military Government (蒙古軍政府, Dehua)
 3. 1937 Sep–Oct — South Chahar + North Shansi governments; Federated Autonomous Government of Mongolia
-4. 1937 Nov 22 — United Committee of Mengchiang (蒙疆聯合委員会 / Mökyö Rengö Iinkai) ← Boyle's "United Committee"
+4. 1937 Nov 22 — United Committee of Mengjiang (蒙疆聯合委員会 / Mökyö Rengö Iinkai) ← Boyle's "United Committee"
 5. 1937 Dec — Mongol League Autonomous Government (蒙古聯盟自治政府, Hohhot)
 6. 1939 Sep 1 — Mongol United Autonomous Government (蒙疆聯合自治政府, Kalgan)
 

@@ -12,7 +12,7 @@ location:
   source: "The present building, listed on Google Maps and Google Earth as “Sonid Youqi Mansion,” plus code CWXG+7FP (Sonid Right Banner, Xilingol League), supplied by the atlas maintainer from Google Earth in October 2026; the plus code decodes to 42.4482° N, 112.9262° E. Matches the museum’s listed address in Zhurihe town and the report of the palace 5 km from the town. The Sino-Swedish Expedition’s 1945 sketch map puts its “Residence of Barun Sunit Wang” about 17 km to the north-north-east, within that map’s error here."
 ---
 
-Wangin Ortu, “the King’s Camp,” was the seat of the princes of the Sunid Right Banner (West Sünit) and the home of [Demchugdongrub](/entry/demchugdongrub), Prince De. Chinese sources call it 德王府, “Prince De’s mansion.” See the [ruling house of West Sünit](/entry/west-sunit-ruling-house) for the family that built and held it.
+Wangin Ortu, “the King’s Camp,” was the seat of the princes of the Sünid Right Banner (West Sünid) and the home of [Demchugdongrub](/entry/demchugdongrub), Prince De. Chinese sources call it 德王府, “Prince De’s mansion.” See the [ruling house of West Sünid](/entry/west-sunid-ruling-house) for the family that built and held it.
 
 ## Building
 

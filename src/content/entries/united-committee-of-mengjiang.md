@@ -1,5 +1,5 @@
 ---
-title: "United Committee of Mengchiang"
+title: "United Committee of Mengjiang"
 type: state
 summary: "Japanese-run coordinating body established at Kalgan in November 1937 that unified Demchugdongrub's Mongol government with the Chinese South Chahar and North Shansi puppet governments, and under which the name 'Mengjiang' entered common use; likely the same body this atlas's other sources call the Joint Committee of Mongolian Territories and the Mengjiang Federation Committee."
 startYear: 1937
@@ -8,7 +8,7 @@ yearType: existed
 partOf: mengjiang
 ---
 
-The United Committee of Mengchiang (蒙疆聯合委員会, Japanese Mökyō Rengō Iinkai) was established at [Kalgan](/entry/kalgan) on November 22, 1937, as a Japanese-controlled coordinating body over three separate regimes: [Demchugdongrub](/entry/demchugdongrub)'s Mongol government (by then the [Mongolian Allied League Autonomous Government](/entry/mongolian-allied-league-autonomous-government), just inaugurated at Hohhot), the [South Chahar Autonomous Government](/entry/south-chahar-autonomous-government) at Kalgan, and the [North Shansi Autonomous Government](/entry/north-shansi-autonomous-government) at Tatung (Boyle, p.132–133; Hirokawa 2024, via this atlas's master chronology). It fits the pattern of leashed, counterweight-style Japanese sponsorship the [Mengjiang](/entry/mengjiang) entry describes at more length: folding a Mongol autonomy government together with two Chinese puppet regimes under one Japanese-run committee, rather than letting any of the three stand alone.
+The United Committee of Mengjiang (蒙疆聯合委員会, Japanese Mökyō Rengō Iinkai) was established at [Kalgan](/entry/kalgan) on November 22, 1937, as a Japanese-controlled coordinating body over three separate regimes: [Demchugdongrub](/entry/demchugdongrub)'s Mongol government (by then the [Mongolian Allied League Autonomous Government](/entry/mongolian-allied-league-autonomous-government), just inaugurated at Hohhot), the [South Chahar Autonomous Government](/entry/south-chahar-autonomous-government) at Kalgan, and the [North Shansi Autonomous Government](/entry/north-shansi-autonomous-government) at Tatung (Boyle, p.132–133; Hirokawa 2024, via this atlas's master chronology). It fits the pattern of leashed, counterweight-style Japanese sponsorship the [Mengjiang](/entry/mengjiang) entry describes at more length: folding a Mongol autonomy government together with two Chinese puppet regimes under one Japanese-run committee, rather than letting any of the three stand alone.
 
 ## Same body, four names
 

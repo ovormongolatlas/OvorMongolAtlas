@@ -12,7 +12,7 @@ The Üjümüchin (Ujimqin, Wuzhumuqin) are a Mongol people of Shilingol (Xilingo
 
 ## Origins and the Qing banners
 
-Atwood writes that Üjümüchin was a camp district of the Chakhar tümen in the sixteenth century, and that its princes, like those of Khuuchid and Sönid, descended from Bodi Alag Khan (1519–47), grandson of Dayan Khan (Atwood, *Encyclopedia*, p. 565). In 1627 the princes of Sönid, Üjümüchin and Abaga revolted against Ligdan Khan and moved north-west into Khalkha (Atwood, *Encyclopedia*, “Ligdan Khan,” p. 334).
+Atwood writes that Üjümüchin was a camp district of the Chakhar tümen in the sixteenth century, and that its princes, like those of Khuuchid and Sünid, descended from Bodi Alag Khan (1519–47), grandson of Dayan Khan (Atwood, *Encyclopedia*, p. 565). In 1627 the princes of Sünid, Üjümüchin and Abaga revolted against Ligdan Khan and moved north-west into Khalkha (Atwood, *Encyclopedia*, “Ligdan Khan,” p. 334).
 
 The sources differ on when they submitted to the Qing:
 

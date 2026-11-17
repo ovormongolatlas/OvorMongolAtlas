@@ -465,7 +465,9 @@ const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)
 		color: var(--muted);
 	}
 
-	.prose :global(h3#sources ~ ul) {
+	.prose :global(h3#sources ~ ul),
+	.prose :global(h3#sources ~ ol),
+	.prose :global(h3#sources ~ p) {
 		font-size: 0.88rem;
 		line-height: 1.55;
 		color: #424242;

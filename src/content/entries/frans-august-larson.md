@@ -1,7 +1,7 @@
 ---
 title: "Frans August Larson"
 type: person
-summary: "Swedish missionary-turned-businessman styled the \"Duke of Mongolia\" (Chinese title Lan xiansheng, Mr. Lan), a duke/gung title reportedly conferred by the Bogda Khan of Urga during Outer Mongolia's early independence period; later a Sunid-circle intimate, present at the October 1934 Bat-khaalag autonomy conference, and a liaison between Demchugdongrub and Westerners."
+summary: "Swedish missionary-turned-businessman styled the \"Duke of Mongolia\" (Chinese title Lan xiansheng, Mr. Lan), a duke/gung title reportedly conferred by the Bogda Khan of Urga during Outer Mongolia's early independence period; later a Sünid-circle intimate, present at the October 1934 Bat-khaalag autonomy conference, and a liaison between Demchugdongrub and Westerners."
 startYear: 1919
 endYear: 1934
 yearType: documented
@@ -32,7 +32,7 @@ images:
     note: "The Commons file page itself notes, as of the date this was checked, that a US public-domain tag is required and was not present. Recorded here as an open item, not upgraded to an unqualified public-domain claim."
 ---
 
-Frans August Larson, known in Chinese as Lan xiansheng (Mr. Lan) and in Sweden as "Hertig Larson," the Duke of Mongolia, was a Swedish missionary who moved into business and then into an informal diplomatic-liaison role in Mongolia. He is documented in this atlas's held sources moving in the Sunid/De Wang circle and, on at least one occasion, as [Demchugdongrub](/entry/demchugdongrub)'s own houseguest. The frontmatter years above mark the earliest and latest specific years attached to him in the sources this entry draws on (the 1919–1920 Beijing mission and the October 1934 Bat-khaalag conference respectively), not a birth-death span or the full length of his Mongolia career, which the atlas's working notes place roughly 1893–1939 in general terms broader than what the sources below individually confirm.
+Frans August Larson, known in Chinese as Lan xiansheng (Mr. Lan) and in Sweden as "Hertig Larson," the Duke of Mongolia, was a Swedish missionary who moved into business and then into an informal diplomatic-liaison role in Mongolia. He is documented in this atlas's held sources moving in the Sünid/De Wang circle and, on at least one occasion, as [Demchugdongrub](/entry/demchugdongrub)'s own houseguest. The frontmatter years above mark the earliest and latest specific years attached to him in the sources this entry draws on (the 1919–1920 Beijing mission and the October 1934 Bat-khaalag conference respectively), not a birth-death span or the full length of his Mongolia career, which the atlas's working notes place roughly 1893–1939 in general terms broader than what the sources below individually confirm.
 
 ## Title, business, and the 1919–1920 Beijing mission
 
@@ -44,13 +44,13 @@ Tsultemin also documents Larson's business career: he ran Larson & Co., dealing 
 
 Two distinct documented associations exist between Larson and named foreign expeditions in the 1920s, and this atlas records them side by side rather than merging them. Tsultemin's footnote 47 states that Larson joined Roy Chapman Andrews's Third Central Asiatic Expedition as an interpreter in 1922 (Tsultemin, n. 47). This is separate from Larson's participation in Sven Hedin's 1927–28 Baotou-to-Urumqi expedition, recorded in the Alvin/Uppsala University Library biographical note accompanying the Bosshard portrait catalogued below (record 195718). Neither source states or implies that one of these is a misdating of the other; they are recorded here as two different expeditions five to six years apart.
 
-## Settlement in Chahar and the Sunid circle
+## Settlement in Chahar and the Sünid circle
 
 Per Jagchid, Larson settled in Aduuchin Pasture, Chahar (later Shangdu Banner), after the Outer Mongolian revolution and remained there until the Japanese invasion. Jagchid describes him as fluent in Mongolian and a friend of Demchugdongrub's. Larson was present at Beile-yin sume (the temple complex at [Bat-khaalag](/entry/bailingmiao)) during the October 1934 autonomy conference, alongside Owen Lattimore, where he expressed goodwill toward the Mongol cause and helped win it sympathetic foreign press coverage (Jagchid). Jagchid also describes Larson's broader role, beyond this one conference, as a liaison between the prince and Westerners.
 
-## A visit to the Sunit palace, ca. 1932 (inferred)
+## A visit to the Sünid palace, ca. 1932 (inferred)
 
-Larson's own memoir, *Duke of Mongolia* (1930), includes a chapter, "The Nobles," recounting a visit to the Sunit palace. The book's 1930 publication date sets an outer bound, but Larson describes "the Prince of Sunit" in the visit itself as "a tall, thin young man of thirty years"; since Demchugdongrub was born in 1902, that description places the visit at approximately 1932. This atlas states that dating as an inference from internal textual evidence, not a date Larson gives directly, and marks it "ca. 1932 (inferred)" throughout rather than as a bare date. (Because the visit's internal evidence points past the book's own 1930 publication date, the chapter's placement in Larson's published 1930 memoir and the ca. 1932 internal dating of the episode it describes sit in some tension; this atlas records both facts as given rather than resolving the discrepancy.)
+Larson's own memoir, *Duke of Mongolia* (1930), includes a chapter, "The Nobles," recounting a visit to the Sünid palace. The book's 1930 publication date sets an outer bound, but Larson describes "the Prince of Sunit" in the visit itself as "a tall, thin young man of thirty years"; since Demchugdongrub was born in 1902, that description places the visit at approximately 1932. This atlas states that dating as an inference from internal textual evidence, not a date Larson gives directly, and marks it "ca. 1932 (inferred)" throughout rather than as a bare date. (Because the visit's internal evidence points past the book's own 1930 publication date, the chapter's placement in Larson's published 1930 memoir and the ca. 1932 internal dating of the episode it describes sit in some tension; this atlas records both facts as given rather than resolving the discrepancy.)
 
 By his own account Larson had known the Prince since childhood, had known his father (the previous ruler), and had known an uncle who served as regent in Urga after his brother's death, during the current Prince's minority.
 

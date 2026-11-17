@@ -1,7 +1,7 @@
 ---
 title: "North Shansi Autonomous Government"
 type: state
-summary: "Japanese-sponsored Chinese puppet government established at Tatung (Datong) in October 1937, the second of the two non-Mongol regimes folded together with Demchugdongrub's government under the United Committee of Mengchiang that November."
+summary: "Japanese-sponsored Chinese puppet government established at Tatung (Datong) in October 1937, the second of the two non-Mongol regimes folded together with Demchugdongrub's government under the United Committee of Mengjiang that November."
 startYear: 1937
 endYear: 1939
 yearType: existed
@@ -10,7 +10,7 @@ partOf: mengjiang
 
 The North Shansi Autonomous Government (晋北自治政府) was established at Tatung (present-day Datong, Shanxi) on October 15, 1937, weeks after the [South Chahar Autonomous Government](/entry/south-chahar-autonomous-government) and in the same wave of Japanese military expansion that took [Hohhot](/entry/hohhot) that same month (Boyle). Like its South Chahar counterpart, it was a Chinese puppet administration, not a Mongol one, distinct from [Demchugdongrub](/entry/demchugdongrub)'s own Mongol government.
 
-This atlas's master chronology independently corroborates the October 15, 1937 date and the Tatung seat via Hirokawa 2024. The [United Committee of Mengchiang](/entry/united-committee-of-mengchiang), established November 22, 1937, unified this government with the South Chahar Autonomous Government and Demchugdongrub's Mongol government under a single Japanese-controlled coordinating body; see that entry for the fuller genealogy. Its head, per Jagchid's already-established account of the September 1, 1939 merger (recorded in the [Mongolian Allied Autonomous Government](/entry/mongolian-allied-autonomous-government) entry), was Xia Gong, who became a deputy chairman of the merged government at that later date. That same entry records that at the start of 1943 the North Shanxi and South Chahar governments, by then long since demoted to political bureaus rather than independent regimes, were abolished outright and converted into ordinary provinces (per the [Mengjiang](/entry/mengjiang) entry, citing Lückenhaus).
+This atlas's master chronology independently corroborates the October 15, 1937 date and the Tatung seat via Hirokawa 2024. The [United Committee of Mengjiang](/entry/united-committee-of-mengjiang), established November 22, 1937, unified this government with the South Chahar Autonomous Government and Demchugdongrub's Mongol government under a single Japanese-controlled coordinating body; see that entry for the fuller genealogy. Its head, per Jagchid's already-established account of the September 1, 1939 merger (recorded in the [Mongolian Allied Autonomous Government](/entry/mongolian-allied-autonomous-government) entry), was Xia Gong, who became a deputy chairman of the merged government at that later date. That same entry records that at the start of 1943 the North Shanxi and South Chahar governments, by then long since demoted to political bureaus rather than independent regimes, were abolished outright and converted into ordinary provinces (per the [Mengjiang](/entry/mengjiang) entry, citing Lückenhaus).
 
 This atlas holds no further detail on this government's internal administration, its personnel beyond Xia Gong, or its territorial extent within North Shanxi. A fuller entry would need dedicated sourcing this atlas does not currently have.
 
