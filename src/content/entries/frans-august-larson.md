@@ -7,6 +7,7 @@ endYear: 1934
 yearType: documented
 images:
   - src: "/images/larson-bosshard-0178.jpg"
+    portrait: true
     alt: "Studio-style seated portrait of Frans August Larson in Mongolian dress, Kalgan, ca. 1933–1934."
     caption: "0178: Hertig Larsson"
     photographer: "Walter Bosshard"

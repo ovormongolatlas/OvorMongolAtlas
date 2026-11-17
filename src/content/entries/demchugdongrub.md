@@ -5,6 +5,13 @@ summary: "Chinggisid prince (1902–1966) who led the Inner Mongolian autonomy m
 startYear: 1902
 endYear: 1966
 yearType: life
+role: "Mongol prince"
+names:
+  mongolian: "ᠳᠡᠮᠴᠣᠭᠳᠣᠩᠷᠣᠪ"
+  mongolianStatus: "unverified"
+  mongolianSource: "Drafted for the page design; to be replaced with a spelling checked against a source."
+  chinese: "德穆楚克棟魯普"
+  chineseSource: "Supplied by the atlas maintainer; standard Chinese rendering of his name."
 ---
 
 Demchugdongrub (known in English as Prince De, or Te Wang) was the ruling prince of the Sünid Right Banner in Inner Mongolia, a descendant of Chinggis Khan born in 1902. In the early 1930s he became the leading figure of the Inner Mongolian autonomy movement, and from 1936 he headed a series of Japanese-sponsored Mongol governments, ending with the Mongolian Autonomous State at Kalgan in 1941. After the war he tried to hold out in the west, and in 1949 he led a last government at Alashan. According to the accounts followed here he was arrested in Mongolia, extradited to Beijing in 1950, held as a war criminal, amnestied in 1963, and died in Hohhot in 1966.

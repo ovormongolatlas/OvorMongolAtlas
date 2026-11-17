@@ -57,11 +57,35 @@ const entries = defineCollection({
 		// outright. `src` is a path under /public (e.g. "/images/foo.jpg"); every other
 		// field is free text so each institution's own cataloguing language can be used
 		// as given rather than forced into a fixed vocabulary.
+		// A short role line for the page header (e.g. "Mongol prince"). Falls back to
+		// the entry type when unset.
+		role: z.string().optional(),
+		// The subject's name in other scripts, shown in the page header. Each name
+		// carries its provenance, as the project notes require: `mongolianStatus` is
+		// 'sourced' only when the traditional-script spelling has been checked against
+		// a source in hand (named in `mongolianSource`); 'converter' marks a spelling
+		// drafted with a script converter such as Kimo (kimo.mngl.net) and not yet
+		// checked; 'unverified' marks any other unchecked draft. The status is shown
+		// in the page's "At a glance" box.
+		names: z
+			.object({
+				mongolian: z.string().optional(),
+				mongolianStatus: z.enum(['sourced', 'converter', 'unverified']).optional(),
+				mongolianSource: z.string().optional(),
+				cyrillic: z.string().optional(),
+				chinese: z.string().optional(),
+				chineseSource: z.string().optional(),
+			})
+			.optional(),
 		images: z
 			.array(
 				z.object({
 					src: z.string(),
 					alt: z.string(),
+					// Show this image in the page header as well. It is shown whole (never
+					// cropped), because some licenses recorded here forbid alteration; the
+					// full attribution stays with the figure in the text, linked from the header.
+					portrait: z.boolean().optional(),
 					caption: z.string().optional(),
 					photographer: z.string().optional(),
 					depicted: z.string().optional(),

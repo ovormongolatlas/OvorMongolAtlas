@@ -65,6 +65,14 @@ if (map) {
 	
 }
 
+const portraitIndex = (d.images ?? []).findIndex((im) => im.portrait);
+const portrait = portraitIndex >= 0 ? { image: d.images![portraitIndex], index: portraitIndex } : undefined;
+const MONG_STATUS: Record<string, string> = {
+	sourced: 'Checked against a source',
+	converter: 'Drafted with a script converter; not yet checked against a source',
+	unverified: 'Not yet checked against a source',
+};
+
 const span = (s: number, e: number) => (s === e ? `${s}` : `${s}–${e}`);
 const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)}° ${v >= 0 ? pos : neg}`;
 ---
@@ -83,19 +91,33 @@ const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)
 			)}
 		</nav>
 
-		<header class="card entry-head">
-			<p class="overline entry-type">{TYPE_LABEL[d.type]}</p>
-			<h1>{d.title}</h1>
-			{years && <p class="entry-years">{years}</p>}
-			<p class="entry-summary">{d.summary}</p>
+		<header class:list={['card', 'entry-head', { 'has-bichig': !!d.names?.mongolian, 'has-portrait': !!portrait }]}>
+			{d.names?.mongolian && (
+				<p class="bichig" lang="mn-Mong" title={MONG_STATUS[d.names.mongolianStatus ?? 'unverified']}>{d.names.mongolian}</p>
+			)}
+			<div class="head-text">
+				<p class="overline entry-type">{TYPE_LABEL[d.type]}</p>
+				<h1>{d.title}</h1>
+				{d.names?.chinese && <p class="name-zh" lang="zh-Hant">{d.names.chinese}</p>}
+				{d.names?.cyrillic && <p class="name-cyr" lang="mn-Cyrl">{d.names.cyrillic}</p>}
+				{d.role && <p class="entry-role">{d.role}</p>}
+				{years && <p class="entry-years">{years}</p>}
+				<p class="entry-summary">{d.summary}</p>
+			</div>
+			{portrait && (
+				<figure class="head-portrait">
+					<img src={portrait.image.src} alt={portrait.image.alt} />
+					<figcaption><a href={`#image-${portrait.index + 1}`}>Image source</a></figcaption>
+				</figure>
+			)}
 		</header>
 
 		<div class="entry-grid">
 			<article class="card entry-body">
 				{d.images && d.images.length > 0 && (
 					<div class="images">
-						{d.images.map((image) => (
-							<figure>
+						{d.images.map((image, i) => (
+							<figure id={`image-${i + 1}`}>
 								<img src={image.src} alt={image.alt} loading="lazy" />
 								<figcaption>
 									{image.caption && <><strong>{image.caption}.</strong> </>}
@@ -139,6 +161,26 @@ const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)
 					<dl class="facts">
 						<div><dt>Type</dt><dd>{TYPE_LABEL[d.type]}</dd></div>
 						{rawYears && <div><dt>{DATE_LABEL[d.yearType]}</dt><dd>{rawYears}</dd></div>}
+						{d.names?.mongolian && (
+							<div>
+								<dt>Mongol script</dt>
+								<dd>
+									<span class="bichig-inline" lang="mn-Mong">{d.names.mongolian}</span>
+									<span class:list={['precision', d.names.mongolianStatus === 'sourced' ? 'confirmed' : 'approximate']}>{d.names.mongolianStatus === 'sourced' ? 'checked' : d.names.mongolianStatus === 'converter' ? 'converter draft' : 'unchecked'}</span>
+									{d.names.mongolianSource && <details><summary>Where this comes from</summary><p>{d.names.mongolianSource}</p></details>}
+								</dd>
+							</div>
+						)}
+						{d.names?.cyrillic && <div><dt>Mongolian (Cyrillic)</dt><dd lang="mn-Cyrl">{d.names.cyrillic}</dd></div>}
+						{d.names?.chinese && (
+							<div>
+								<dt>Chinese</dt>
+								<dd lang="zh-Hant">
+									{d.names.chinese}
+									{d.names.chineseSource && <details><summary>Where this comes from</summary><p>{d.names.chineseSource}</p></details>}
+								</dd>
+							</div>
+						)}
 						{parent && <div><dt>Part of</dt><dd><a href={`/entry/${parent.id}`}>{parent.data.title}</a></dd></div>}
 						{d.location && (
 							<div>
@@ -245,15 +287,99 @@ const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)
 		border-top: 4px solid var(--type);
 	}
 
+	.entry-head.has-bichig,
+	.entry-head.has-portrait {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr) auto;
+		column-gap: 1.75rem;
+		align-items: start;
+	}
+
+	.entry-head:not(.has-bichig) .head-text {
+		grid-column: 1 / 3;
+	}
+
 	.entry-type {
 		color: var(--type);
 	}
 
 	h1 {
 		margin: 0.35rem 0 0.25rem;
-		font-size: 2.25rem;
-		font-weight: 400;
-		line-height: 1.2;
+		font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+		font-size: 2.6rem;
+		font-weight: 700;
+		line-height: 1.1;
+		letter-spacing: 0.01em;
+		color: var(--primary);
+	}
+
+	.bichig {
+		grid-column: 1;
+		margin: 0.2rem 0 0;
+		writing-mode: vertical-lr;
+		font-family: 'Noto Sans Mongolian', sans-serif;
+		font-size: 2.6rem;
+		line-height: 1;
+		color: var(--primary);
+		max-height: 18rem;
+	}
+
+	.bichig-inline {
+		font-family: 'Noto Sans Mongolian', sans-serif;
+		writing-mode: vertical-lr;
+		display: inline-block;
+		font-size: 1.15rem;
+		margin-right: 0.4rem;
+		vertical-align: top;
+	}
+
+	.name-zh {
+		margin: 0.1rem 0 0.2rem;
+		font-family: 'Noto Sans TC', 'PingFang TC', 'Hiragino Sans CNS', 'Microsoft JhengHei', 'Noto Sans CJK TC', sans-serif;
+		font-size: 2rem;
+		line-height: 1.25;
+		color: var(--primary);
+		letter-spacing: 0.04em;
+	}
+
+	.name-cyr {
+		margin: 0 0 0.2rem;
+		font-size: 1.15rem;
+		color: var(--primary);
+	}
+
+	.entry-role {
+		margin: 0.5rem 0 0.15rem;
+		font-size: 1.35rem;
+		font-weight: 500;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--primary);
+	}
+
+	.head-portrait {
+		grid-column: 3;
+		margin: 0;
+		width: 15rem;
+	}
+
+	.head-portrait img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 20rem;
+		object-fit: contain;
+		object-position: top;
+		box-shadow: var(--shadow-1);
+	}
+
+	.head-portrait figcaption {
+		margin-top: 0.35rem;
+		font-size: 0.75rem;
+	}
+
+	.head-portrait figcaption a {
+		color: var(--muted);
 	}
 
 	.entry-years {
@@ -519,6 +645,33 @@ const coord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)
 		.side-map {
 			max-width: 560px;
 			width: 100%;
+		}
+	}
+
+	@media (max-width: 760px) {
+		.entry-head.has-bichig,
+		.entry-head.has-portrait {
+			grid-template-columns: auto minmax(0, 1fr);
+		}
+
+		.head-portrait {
+			grid-column: 1 / -1;
+			grid-row: 1;
+			width: min(14rem, 70%);
+			margin-bottom: 1rem;
+		}
+
+		.bichig {
+			font-size: 2rem;
+		}
+
+		h1 {
+			font-size: 1.7rem;
+			overflow-wrap: anywhere;
+		}
+
+		.name-zh {
+			font-size: 1.6rem;
 		}
 	}
 
