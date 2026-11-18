@@ -1,35 +1,46 @@
 ---
 title: "Yondonwangchug"
 type: person
-summary: "Elderly Mongol prince, head of the Ulanchab League, who held the nominal chairmanship of every Mongol autonomy government from the 1934 Bailingmiao council through the 1937 Mongolian Allied League Autonomous Government, while Demchugdongrub held real power beneath him, until his death in March 1938."
-startYear: 1933
+summary: "Mongol prince (1871–1938), jasag of the Darhan Banner and head of the Ulanchab League, who gave the 1930s autonomy movement its senior name: nominal chairman of the 1934 Bailingmiao council and of the 1937 Mongolian Allied League Autonomous Government, with Demchugdongrub holding real power beneath him."
+startYear: 1871
 endYear: 1938
-yearType: documented
+yearType: life
 role: "Head of the Ulanchab League"
 ---
 
-Yondonwangchug, head of the Ulanchab League, was one of the senior Mongol nobles [Demchugdongrub](/entry/demchugdongrub) worked through in building elite support for the autonomy movement. [Sechin Jagchid](/entry/sechin-jagchid) describes Demchugdongrub persuading him, alongside Prince Sodnamrabdan of Üjümüchin, in secret talks at Bat-khaalag during what Jagchid calls Demchugdongrub's 1933 "golden age" (Jagchid; see the Demchugdongrub entry). The years given here mark the span of his political activity documented in the sources used for this entry, not birth and death dates. His birth year is not established by any source this atlas holds, though his death is (see below).
+Yondonwangchug (1871–1938) was the hereditary prince of the Darhan Banner and for many years head of the Ulanchab League, in the west of Inner Mongolia [4]. In the autonomy movement of the 1930s he was the senior prince whose name stood above [Demchugdongrub](/entry/demchugdongrub)’s: nominal chairman of the 1934 [Mongolian Political Affairs Council](/entry/mongolian-political-affairs-council) and of the [Mongolian Allied League Autonomous Government](/entry/mongolian-allied-league-autonomous-government) of 1937, while the younger prince held the real power [1, 2]. He died in March 1938 [1].
 
-## Nominal chairman of successive governments
+*A note on sources.* His political role comes from [Sechin Jagchid](/entry/sechin-jagchid) [1] and from D. Zorigt’s articles [2, 3]. Hirokawa Saho’s study of the Ulanchab League [4] gives his dates and his career as a banner prince, and Christopher Atwood’s history of the 1920s [6] records him in 1928.
 
-Yondonwangchug held the nominal chairmanship of the [Mongolian Political Affairs Council](/entry/mongolian-political-affairs-council) from its inauguration at Bat-khaalag on April 23, 1934, with Demchugdongrub holding only the formal title of secretariat chief beneath him, though both Jagchid and Zorigt agree real authority rested with Demchugdongrub alone (Jagchid; Zorigt, "Self-Rule Movement"). Hirokawa 2024, via this atlas's master chronology, extends this same arrangement one government earlier than this atlas had previously recorded: per Hirokawa, Yondonwangchug, rendered "Yun Wang," also held the nominal chairmanship of the 1936 [Mongolian Military Government](/entry/mongolian-military-government), with Demchugdongrub as director-general (zongcai). The pattern continued into the [Mongolian Allied League Autonomous Government](/entry/mongolian-allied-league-autonomous-government), where Yondonwangchug again held the nominal chairmanship while Demchugdongrub, as vice chairman, headed its Department of Administration (Jagchid; Zorigt, "Cooperation with the Japanese"). Boyle 1972, independently of Hirokawa, names this same Yun Wang as head of what Boyle calls the "Federated Autonomous Government of Mongolia," formed by a princes' convocation on October 27–29, 1937. This atlas's own identification of that body with the Mongolian Allied League Autonomous Government (recorded in that entry) rests partly on this same Yun Wang/Yondonwangchug convergence between Boyle and Hirokawa.
+## Prince and league head (1890–1932)
 
-Across every one of these governments, the consistent pattern, an elderly senior prince holding formal chairmanship while Demchugdongrub exercised real authority beneath him, is recorded here as this atlas's own observation drawn from its existing entries, not a claim any single source states as a general pattern.
+He became jasag (ruling prince) of the Darhan Banner, also called the Khalkha Right Banner, in 1890, as its twelfth ruler [4]. He served as vice head of the Ulanchab League and from 1920 as its head [4]. When the Nationalist government reorganised Suiyuan province in October 1928, he was one of two Mongols named, as tokens, to its seven-man provincial commission; Atwood calls him “Grand Duke” and notes that the Mongol members played no part in civil administration or finance [6]. In 1931 he gave up the banner seat, pleading the pressure of his other duties, and his younger brother Gendenjab succeeded him as jasag [4].
 
-## Opposition to the Battle of Bailingmiao
+## The autonomy movement (1933–1937)
 
-Yondonwangchug's religious attachment to Bat-khaalag (Bailingmiao), long held holy by his own banner, shaped his response when the site became a military target in November 1936. He specifically opposed turning "this famous religious center, long held holy by his banner, into a battlefield" (Jagchid), and when Fu Zuoyi's forces occupied it that month, he stayed at his residence some thirty-five kilometers away throughout the occupation rather than negotiate. His refusal to meet the victorious Fu Zuoyi afterward was widely applauded by fellow Mongols (Jagchid; see the [Bailingmiao](/entry/bailingmiao) entry for the battle in full).
+Demchugdongrub won him over in secret talks at Bat-khaalag (Bailingmiao) in 1933, together with Prince Sodnamrabdan of Üjümüchin, and the support of the two senior princes gave the autonomy movement its standing with the other nobles [1]. When the Mongolian Political Affairs Council was inaugurated at Bat-khaalag on 23 April 1934, Yondonwangchug became its chairman and Demchugdongrub only head of its secretariat. Jagchid and Zorigt agree that real authority rested with Demchugdongrub, since the senior princes were elderly and largely inactive [1, 2].
+
+Bat-khaalag was a holy place to his own banner. When it became a battlefield in November 1936, he objected to turning “this famous religious center, long held holy by his banner, into a battlefield,” and while Fu Zuoyi’s troops held it he stayed at his residence some thirty-five kilometres away and refused to negotiate. His refusal afterwards to meet the victorious Fu Zuoyi was widely applauded among the Mongols [1]. The [Bailingmiao](/entry/bailingmiao) entry covers the battle. In 1936 the league vice head, Babudorji, took over as head of the Ulanchab League [4].
+
+In October 1937 the second Mongolian Congress at Hohhot made him chairman of the new Mongolian Allied League Autonomous Government, with Demchugdongrub as vice chairman and head of its Department of Administration [1, 3]. John Hunter Boyle names the head of this government as “the aged Yun Wang” [5]. The atlas takes Yun Wang as Yondonwangchug, since the title and the government match, though Boyle does not give the Mongol name.
 
 ## Death
 
-Yondonwangchug died on March 20, 1938 (Jagchid). Demchugdongrub was elected chairman of the Mongolian Allied League Autonomous Government outright by a Third Mongolian Congress that followed on July 1, 1938 (Jagchid), the point at which the pattern of nominal chairman with real power beneath him, running through every government since 1934, finally ended.
+He died on 20 March 1938 [1]. On 1 July 1938 a Third Mongolian Congress elected Demchugdongrub chairman in his place [1].
 
-This atlas holds no source giving Yondonwangchug's birth year, family, or any biography beyond his political role in these governments and the Bailingmiao episode. A fuller entry would need dedicated sourcing this atlas does not currently have.
+## Open questions
+
+- **His years as jasag.** 1890–1931 (Hirokawa [4]) or 1890–1938 (Atwood [6], who may be counting his whole tenure as a ruling prince).
+- **His years as league head.** Hirokawa’s table runs his headship from 1920 to 1933, but her text has Babudorji replacing him in 1936 [4].
+- **The Military Government.** The atlas’s master chronology, crediting Hirokawa, made him nominal chairman of the 1936 [Mongolian Military Government](/entry/mongolian-military-government) as well. Hirokawa’s article does not say so, and no other source used here does.
 
 ### Sources
 
-- Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999), cited above as "Jagchid." Most of this entry is drawn from material already cited in the Demchugdongrub, Mongolian Political Affairs Council, Mongolian Allied League Autonomous Government, and Bailingmiao entries. See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas's standing caveat on weighing his participant-partisan perspective.
-- D. Zorigt, "The Self-Rule Movement Led by De Wang Unfolds in Inner Mongolia" (Олон Улс Судлал journal), cited above as "Zorigt, 'Self-Rule Movement.'" Full publication year, volume, and issue are not established; see this atlas's project notes for the consolidated citation-completeness flag.
-- D. Zorigt, "De Wang Begins Cooperating with the Japanese" (Олон Улс Судлал journal), cited above as "Zorigt, 'Cooperation with the Japanese.'"
-- Hirokawa, *Ajia Keizai* 65, no. 4 (2024), cited above as "Hirokawa 2024." T1 scholarly (Japanese, IDE-JETRO). This atlas holds only the material relayed via the master chronology, not the original article; see this atlas's project notes for the citation-completeness flag. This source's specific contribution here is the 1936 Mongolian Military Government chairmanship detail.
-- John Hunter Boyle, *China and Japan at War, 1937–1945: The Politics of Collaboration* (Stanford: Stanford University Press, 1972), Chapter 7, "Inner Mongolia," pp. 124–133, cited above as "Boyle," for the "Federated Autonomous Government of Mongolia" identification only. See this atlas's project notes for this source's tier and single-source caveats, which apply to different material than what is cited here.
+Numbers in square brackets in the text refer to this list.
+
+1. Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Center for East Asian Studies, Western Washington University, 1999). See the [Sechin Jagchid](/entry/sechin-jagchid) entry for his biography and this atlas’s standing caveat on weighing his participant-partisan perspective.
+2. D. Zorigt, “Өвөр Монголд Дэ вангийн толгойлсон өөртөө засах хөдөлгөөн өрнөсөн нь” (“The Self-Rule Movement Led by De Wang Unfolds in Inner Mongolia”), *Олон улс судлал* (Journal of International Studies, Mongolian Academy of Sciences), 2006, no. 2, pp. 101–112.
+3. D. Zorigt, “Дэ ван япончуудтай хамтран ажиллаж эхэлсэн нь” (“De Wang Begins Cooperating with the Japanese”), *Олон улс судлал*, 2006, no. 3, pp. 93–107.
+4. Hirokawa Saho (広川佐保), 「蒙疆政権期，オラーンチャブ盟の設立とその意義」 (“The establishment of Ulanchab League under the Mengjiang regime and its significance”), 『アジア経済』 (*Ajia Keizai*) 65, no. 4 (December 2024): 34–63, doi:10.24765/ajiakeizai.65.4_34, table 1 and n. 22, drawing on the Ulanchab League historical materials (1997) and the Suiyuan gazetteer.
+5. John Hunter Boyle, *China and Japan at War, 1937–1945: The Politics of Collaboration* (Stanford: Stanford University Press, 1972), p. 127.
+6. Christopher P. Atwood, *Young Mongols and Vigilantes in Inner Mongolia’s Interregnum Decades, 1911–1931*, 2 vols. (Leiden: Brill, 2002), chapter 24, pp. 947–948, where he is “Yondanwangchug.”

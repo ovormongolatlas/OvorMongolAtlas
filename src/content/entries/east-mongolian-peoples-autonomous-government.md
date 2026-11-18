@@ -9,15 +9,30 @@ yearType: existed
 
 The East Mongolian People’s Autonomous Government (东蒙古人民自治政府) was the eastern counterpart of the short-lived [Inner Mongolian People’s Republic](/entry/inner-mongolian-republican-provisional-government) proclaimed in Sünid Right Banner in September 1945. It was a separate body with its own leaders, based in the former Manchukuo Xing’an province around Wangyemiao (today Ulanhot), and it lasted from January to May 1946.
 
-Most of the detail below comes from the Chinese Wikipedia article on the government, which cites Husel Borjigin’s study of Communist and Nationalist policy toward Inner Mongolia, articles in Chinese journals and local histories (Chinese Wikipedia). It is a tertiary source and the atlas has not checked its citations, so its facts are attributed to it throughout. Two contemporary American sources, a State Department memorandum and a CIA field report, give an outside view.
+Most of the detail below comes from the Chinese Wikipedia article on the government, which cites Husel Borjigin’s study of Communist and Nationalist policy toward Inner Mongolia, articles in Chinese journals and local histories (Chinese Wikipedia). It is a tertiary source and the atlas has not checked its citations, so its facts are attributed to it throughout. Khökhbaatar’s 2015 study of August 1945, which uses the movement’s own Mongolian-language newspapers, adds the eastern leaders’ statements of the time. Two contemporary American sources, a State Department memorandum and a CIA field report, give an outside view.
 
 ## From union to autonomy, 1945
 
 On 18 August 1945, after Manchukuo collapsed, Mongol revolutionaries, young intellectuals, officials of the Xing’an provincial administration and officers of the Xing’an Army who had turned against the Japanese met at Wangyemiao. They revived the Inner Mongolian People’s Revolutionary Party with an eastern branch, and formed an Inner Mongolian People’s Liberation Committee, which declared for the merger of Inner Mongolia with the Mongolian People’s Republic. Boyanmandu, a former Manchukuo provincial governor, was chosen as its representative (Chinese Wikipedia).
 
-In October 1945 a delegation under Boyanmandu and [Khafungga](/entry/khafungga) went to Ulaanbaatar to ask for the merger and was refused (Chinese Wikipedia). Nakami Tatsuo records the same appeal from Khafungga’s side: Choibalsan rejected it, and Khafungga’s aim turned to autonomy for Inner Mongolia alone (Nakami, cited in the Khafungga entry). A separate delegation from Hulunbuir was also turned away. A US memorandum of 1947 confirms the sequence from outside: “These Mongols had earlier moved for complete independence from China and union with Outer Mongolia” (Sprouse).
+Khökhbaatar dates the committee four days earlier. On 14 August, he writes, [Khafungga](/entry/khafungga), Boyanmandu and other former Manchukuo officials organised the Inner Mongolian People’s Liberation Committee with Boyanmandu as chairman, and on 18 August the executive committee of the revived party’s East Mongolian headquarters issued the “Declaration of the Liberation of the Inner Mongolian People” (Khökhbaatar, citing Husel Borjigin). The declaration said that Inner Mongolia would complete its liberation by becoming part of the Mongolian People’s Republic, under Soviet and Mongolian guidance. Sending a copy to Choibalsan and the party secretary Tsedenbal the same day, the headquarters wrote that the “two million compatriots” of Inner Mongolia strongly wished to unite with the Mongolian People’s Republic. The movement’s Mongolian-language newspapers called the Mongolian People’s Republic “our motherland,” wrote of China as a foreign country, and printed the slogan “All Mongols, unite!” until the middle of February 1946 (Khökhbaatar).
 
-In November 1945 a delegation under Wulitu (乌力图) attended a Northeast People’s Congress in Shenyang, where the Communist official Lin Feng told them that Inner and Outer Mongolia could not merge and advised them to work with Yunze (Ulanhu) for autonomy within China. A preparatory meeting at Wangyemiao on 9 December 1945 began planning a government (Chinese Wikipedia).
+In October 1945 a delegation under Boyanmandu and [Khafungga](/entry/khafungga) went to Ulaanbaatar to ask for the merger and was refused (Chinese Wikipedia). Nakami Tatsuo records the same appeal from Khafungga’s side: Choibalsan rejected it, and Khafungga’s aim turned to autonomy for Inner Mongolia alone (Nakami, cited in the Khafungga entry). A separate delegation from Hulunbuir was also turned away.
+
+Khökhbaatar dates the eastern delegation’s departure to 20 October and gives the report Khafungga, by then secretary-general of the party’s East Mongolian headquarters, made on his return (Khökhbaatar):
+
+1. The international situation ruled out union for the time being.
+2. The course taken would not breach the Sino-Soviet treaty.
+3. Han Chinese made up four-fifths of Inner Mongolia’s population, so a vote could not succeed.
+4. Ignoring the Sino-Soviet treaty would earn them the label of imperialists.
+5. For now, an East Mongolian autonomous government would be formed.
+6. After two years, East and West Mongolia would be united.
+7. All Mongolia would be united as the international situation allowed.
+8. The imperialist powers had been checked, and any state that started a war now would be a criminal before the world.
+9. The Soviet position was to be respected.
+10. So was the position of friendly states. A US memorandum of 1947 confirms the sequence from outside: “These Mongols had earlier moved for complete independence from China and union with Outer Mongolia” (Sprouse).
+
+In November 1945 a delegation under Wulitu (乌力图) attended a Northeast People’s Congress in Shenyang, where the Communist official Lin Feng told them that Inner and Outer Mongolia could not merge and advised them to work with Yunze (Ulanhu) for autonomy within China (Chinese Wikipedia). Khökhbaatar quotes Lin Feng differently, from the report of the eastern delegate Dawaosor printed in a Cultural Revolution collection of documents: union of Inner and Outer Mongolia was “inevitable,” the Communists would help the Inner Mongols to the end, autonomy was best for the present, and if the Mongolian People’s Republic and the Soviet Union recognised Inner Mongolian independence, the Communists would firmly support it. Dawaosor’s own published memoir leaves this out (Khökhbaatar). A preparatory meeting at Wangyemiao on 9 December 1945 began planning a government (Chinese Wikipedia).
 
 ## The government, January–May 1946
 
@@ -49,7 +64,7 @@ Three Mongol representatives who met American officials in Nanjing on 10 August 
 
 ## On the Timeline Map
 
-The government is drawn on the 1946 map as a hatched claim, although it was dissolved before 1 July. The outline is the banner lands of the Jirim, Juu Uda and Josotu leagues as a 1930s English map of the banners draws them, with Hulunbuir on its 1912 outline. Nawen Muren, around Zalantun, has no outline in hand and is not drawn. Hulunbuir also had its own autonomous provincial government in 1945–1946, which is not drawn separately.
+The government is drawn on the 1946 map as a hatched claim, although it was dissolved before 1 July. The outline is the banner lands of the Jirim, Juu Uda and Josotu leagues as a 1930s English map of the banners draws them, with Hulunbuir on its 1912 outline. Nawen Muren, around Zalantun, has no outline in hand and is not drawn. Hulunbuir also had its own government, which is not drawn separately. Khökhbaatar dates the Hulunbuir Autonomous Provincial Government to October 1945, with Erkhembat, governor of Manchukuo’s Xing’an North Province, as chairman; it became the Hulunbuir Provisional Local Autonomous Government in March 1946 and passed under the Communist-led movement’s East Mongolian branch after the Chengde meeting. From September 1945 about two thousand Hulunbuir households moved to the Mongolian People’s Republic, of whom about a thousand had to return (Khökhbaatar).
 
 See also [Ulanhu](/entry/ulanhu), who pressured it into accepting Communist leadership in 1946.
 
@@ -59,4 +74,5 @@ See also [Ulanhu](/entry/ulanhu), who pressured it into accepting Communist lead
 - Memorandum by Philip D. Sprouse to General Wedemeyer, “Mongols in Western Manchuria; Mongols in Nanking,” Nanking, 30 July 1947, *Foreign Relations of the United States, 1947*, vol. VII, *The Far East: China*, doc. 568, cited above as “Sprouse.” It summarises the US consulate at Changchun’s dispatch no. 75 of 11 July 1947, which FRUS does not print.
 - Memorandum by Philip D. Sprouse to General Wedemeyer, Nanking, 18 August 1947, *FRUS 1947*, vol. VII, doc. 584, cited above as “Sprouse, August 1947.”
 - Source E: “History of the Inner Mongolian Republican Temporary Government,” CIA CREST document CIA-RDP82-00457R000500670006-1, 6 May 1947. A US field-intelligence report (public domain); unevaluated informant reporting.
+- Khökhbaatar (フフバートル), 「内モンゴルにとっての1945年8月：特殊な政治的環境における独自の終戦史」 (“August 1945 for Inner Mongolia”), 『学苑』 (Gakuen, Shōwa Women’s University) no. 898 (August 2015), pp. 22–40, cited above as “Khökhbaatar.” Uses the eastern movement’s Mongolian-language newspapers of 1945–46 (*Aradun am*, *Orluge*, *Erkeciluge*, in Khökhbaatar’s romanisation) and the documents in Yang Haiying’s collection of Cultural Revolution materials on the Inner Mongolian People’s Revolutionary Party (2010).
 - Nakami Tatsuo, chapter in *Imperial Japan and National Identities in Asia, 1895–1945*, ed. Li Narangoa and Robert Cribb (RoutledgeCurzon, 2003), as cited in the [Khafungga](/entry/khafungga) entry.
