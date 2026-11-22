@@ -8,7 +8,7 @@ From the early 1930s Japan courted the Mongols as a people who might be drawn aw
 
 ## Merse’s early warning
 
-Before the Mengjiang years the Daur nationalist [Merse](/entry/merse) warned in his own writings that Japanese “pan-Asianism” hid designs on Mongolia. As evidence he pointed to the Japanese dealings of Babujab, the Mongol commander of the 1910s, and of Grigorii Semenov, the White Russian ataman whose Japanese-backed pan-Mongol movement in Transbaikalia is treated in the [Chinggis Khan worship / imagery](/entry/chinggis-khan-worship-imagery) entry [1]. His warning came years before the Kwantung Army began to court [Demchugdongrub](/entry/demchugdongrub).
+Before the Mengjiang years the Daur nationalist [Merse](/entry/merse) warned in his own writings that Japanese “pan-Asianism” hid designs on Mongolia. As evidence he pointed to the Japanese dealings of [Babujab](/entry/babujab), the Mongol commander of the 1910s, and of Grigorii Semenov, the White Russian ataman whose Japanese-backed pan-Mongol movement in Transbaikalia is treated in the [Chinggis Khan worship / imagery](/entry/chinggis-khan-worship-imagery) entry [1]. His warning came years before the Kwantung Army began to court [Demchugdongrub](/entry/demchugdongrub).
 
 ## Army policy and the Zenrin Kyōkai (1933–1934)
 
