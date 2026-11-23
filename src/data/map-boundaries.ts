@@ -170,9 +170,11 @@ export interface Area {
 	/**
 	 * A different look for an overlay that is not a state: 'zone' is a light,
 	 * see-through fill with a dashed edge (the land beneath stays visible);
-	 * 'blocks' is a cross-hatch with a solid edge, for small areas inside a zone.
+	 * 'blocks' is a cross-hatch with a solid edge, for small areas inside a zone;
+	 * 'outline' is a dashed edge with no fill, for a state founded later in the
+	 * year than 1 July, drawn over the state it followed without hiding it.
 	 */
-	look?: 'zone' | 'blocks';
+	look?: 'zone' | 'blocks' | 'outline';
 	/** Name in the legend, when several areas share one (e.g. the MPR's yearly outlines). */
 	legendName?: string;
 	/** Name in the panel's list of other states, when it differs from the legend name; '' leaves the area out of that list. */
@@ -1225,10 +1227,11 @@ export const areas: Area[] = [
 		kind: 'claimed',
 		start: 1945,
 		end: 1945,
-		note: 'The Provisional Government of the Inner Mongolian People’s Republic, proclaimed at a congress at the Öndör monastery in Sünid Right Banner that opened on 9 September 1945, after Mongolia refused to unite with Inner Mongolia; it was renamed the Mongolian Autonomous Government under Yunze (Ulanhu) in October and dissolved itself in late October (Inner Mongolia gazetteer; see the entry). It is drawn on the 1945 map although it was founded after 1 July, like the campaigns of the year. Its claimed territory is not known from a source in hand: the declaration and constitution (published by Tabuchi Yōko, 2008) have not been seen. Drawn instead are the leagues represented at its congress: delegates came from the Shilingol banners, seven Chahar banners (all but Plain Blue and Taipusi Left) and the Dörben Keüked banner of Ulanchab. Outline: the Shilingol and Chahar leagues as the Nakamura (1941) map draws them, so it includes the two Chahar banners that were not represented and leaves out Dörben Keüked, which cannot be separated at league scale.',
+		note: 'The Provisional Government of the Inner Mongolian People’s Republic, proclaimed at a congress at the Öndör monastery in Sünid Right Banner that opened on 9 September 1945, after Mongolia refused to unite with Inner Mongolia; it was renamed the Mongolian Autonomous Government under Yunze (Ulanhu) in October and dissolved itself in late October (Inner Mongolia gazetteer; see the entry). It is drawn on the 1945 map although it was founded after 1 July, like the campaigns of the year, as an outline only, so that Mengjiang, which held the land on 1 July, stays visible beneath it. Its claimed territory is not known from a source in hand: the declaration and constitution (published by Tabuchi Yōko, 2008) have not been seen. Drawn instead are the leagues represented at its congress: delegates came from the Shilingol banners, seven Chahar banners (all but Plain Blue and Taipusi Left) and the Dörben Keüked banner of Ulanchab. Outline: the Shilingol and Chahar leagues as the Nakamura (1941) map draws them, so it includes the two Chahar banners that were not represented and leaves out Dörben Keüked, which cannot be separated at league scale.',
 		source: 'nakamura1941',
 		coordinates: ring('impr1945'),
-		label: [113.6, 43.6],
+		look: 'outline',
+		label: [116.3, 44.7],
 		color: C.impr,
 		legendName: 'Inner Mongolian People’s Republic (leagues at its congress, Sept–Oct 1945)',
 	},	{

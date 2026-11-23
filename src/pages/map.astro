@@ -418,7 +418,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 								data-area
 								data-start={a.start}
 								data-end={a.end}
-								style={colorStyle(a.color, a.kind) + (a.kind === 'claimed' || a.kind === 'occupied' || a.look === 'blocks' ? `fill:url(#${hatchId(a.color)});` : '') + (activeIn(a, START_YEAR) ? '' : 'display:none')}
+								style={colorStyle(a.color, a.kind) + ((a.kind === 'claimed' || a.kind === 'occupied' || a.look === 'blocks') && a.look !== 'outline' ? `fill:url(#${hatchId(a.color)});` : '') + (activeIn(a, START_YEAR) ? '' : 'display:none')}
 							></path>
 						))}
 					</g>
@@ -466,6 +466,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 						data-start={a.start}
 						data-end={a.end}
 						data-area-label
+						data-centre={a.look === 'outline' ? '' : undefined}
 						hidden={!activeIn(a, START_YEAR)}
 						style={`left:${pct(a.pos.left)};top:${pct(a.pos.top)};${colorStyle(a.color)}`}
 						aria-hidden="true"
@@ -728,7 +729,7 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 					else el.classList.add('name-crowded');
 				});
 
-			pick('.state-label:not(.state-context)').forEach((el) => place(el, placed, base, 6, true));
+			pick('.state-label:not(.state-context)').forEach((el) => place(el, placed, base, 6, true, el.dataset.centre !== undefined));
 
 			towns.forEach((t) => {
 				const name = t.querySelector<HTMLElement>('.town-name')!;
@@ -1057,6 +1058,14 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 		stroke-dasharray: 7 4;
 	}
 
+	/* A state founded after 1 July, drawn over its predecessor: edge only. */
+	.area.area-look-outline {
+		fill: transparent;
+		stroke: var(--cd);
+		stroke-width: 2.2;
+		stroke-dasharray: 7 4;
+	}
+
 	.area.area-look-blocks {
 		stroke: var(--cd);
 		stroke-width: 1.1;
@@ -1144,6 +1153,11 @@ const PRECISION_LABEL = { approximate: 'Approximate', uncertain: 'Uncertain', di
 	.swatch-area-key.key-look-zone {
 		background: color-mix(in srgb, var(--c) 18%, transparent);
 		border: 1.5px dashed var(--cd);
+	}
+
+	.swatch-area-key.key-look-outline {
+		background: transparent;
+		border: 2px dashed var(--cd);
 	}
 
 	.swatch-area-key.key-look-blocks {
