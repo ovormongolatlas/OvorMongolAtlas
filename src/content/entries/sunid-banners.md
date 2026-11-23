@@ -79,11 +79,14 @@ The Staatsbibliothek zu Berlin holds seven maps of the Sünid banners, drawn for
 | [827](https://iiif.crossasia.org/s/mongolische-karten/manifests/860378) | Hs. or. 258 | Right Banner of the Sünid | undated | Mongolian and Chinese | 124.5 × 73.0 cm |  |
 | [828](https://iiif.crossasia.org/s/mongolische-karten/manifests/860379) | Hs. or. 255 | Right Banner of the Sünid | undated | Mongolian | 55.6 × 31.8 cm |  |
 
+The maps also carry Chinese slips pasted over the Mongol labels. A typed library note on the 1889 map (cat. 822) explains them: Chinese translations of the place names were added to show how the Lifanyuan, the Qing board for Mongol affairs, processed each banner’s map [5]. On that map each slip gives a feature’s direction and distance in *li* from the seat of the Left or the Right Banner. One of them marks a mountain as the seat of the Right Banner’s prince, and another places the spring Jurgatu (珠爾噶圖泉) 80 *li* north of the Left Banner [5]. The 1907 map of Sünid Left (cat. 824) is drawn on a grid. Its slips name the banner’s ruling prince, Mani…rjab (part of the name is illegible), and mark the prince’s pasture beside Bayan mountain, temples, lakes, a main road and a telegraph line [5]. That telegraph line was probably the one Russia ran from Kyakhta to Kalgan from 1897 [2]. A slip on the diagonal north-eastern edge of the 1907 map reads “pasture cut from Dariganga and granted in Qianlong 4,” that is, in 1739 [5]. The sources consulted do not otherwise record this grant.
+
 Charleux notes that on the maps of Sünid Left, nine mountains are called *oboγa* (ovoo) [4, n. 35], and reproduces details of the 1901 Right Banner map showing a mountain ovoo beside a mountain that marks the boundary, and boundary ovoos linked by a boundary line [4, figs 5d and 12c]. Most Inner Mongolian banner maps ignore the Qing rule that maps be drawn on a measuring grid; the 1889 map of both Sünid banners (cat. 822) is one of eight Shilingol maps that follow it [4, n. 26]. The [Shilingol League](/entry/shilingol-league) entry describes the collection as a whole.
 
 ## Open questions
 
 - **Submission dates.** 1637 (Atwood [2]) or 1638–1642 banner by banner (Jagchid [1]).
+- **The 1739 grant from Dariganga.** Known so far only from the slip on cat. 824 [5].
 - **Reading the maps.** The place names are in Mongol script, Manchu and Chinese. Haltod’s *Mongolische Ortsnamen aus mongolischen Manuskriptkarten* (1966) lists them and would let the banner seat, temples and ovoos be placed on the atlas map.
 
 ### Sources
@@ -91,6 +94,7 @@ Charleux notes that on the maps of Sünid Left, nine mountains are called *oboγ
 Numbers in square brackets in the text refer to this list.
 
 1. Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Bellingham: Center for East Asian Studies, Western Washington University, 1999), pp. 1–6, 62, 174 and 331.
-2. Christopher P. Atwood, *Encyclopedia of Mongolia and the Mongol Empire* (New York: Facts on File, 2004), “Shiliin Gol” (pp. 500–501) and “Gobi Desert.”
+2. Christopher P. Atwood, *Encyclopedia of Mongolia and the Mongol Empire* (New York: Facts on File, 2004), “Shiliin Gol” (pp. 500–501), “Gobi Desert” and “Russia and Mongolia” (p. 482).
 3. Tachibana Makoto (橘誠), 「ボグド＝ハーン政権の内モンゴル統合の試み：シリーンゴル盟を事例として」, 『東洋学報』 87, no. 3 (2005): 351–382, at p. 374.
 4. Isabelle Charleux, “Ovoos on Late Qing Dynasty Mongol Banner Maps (Late 19th–Early 20th Centuries),” *Études mongoles et sibériennes, centrasiatiques et tibétaines* 52 (2021), doi:10.4000/emscat.5237; cited from the author’s file, HAL halshs-03500061, by note and figure number. Catalogue details of the maps are from the library’s IIIF records.
+5. The maps themselves: Staatsbibliothek zu Berlin, Hs. or. 693 (cat. 822, 1889) and Hs. or. 132 (cat. 824, 1907), read from the library’s online scans. Readings of the Chinese slips, with confidence grades, are in the atlas’s research file `research/banner-maps/sunid-map-readings.md`.
