@@ -17,7 +17,7 @@ images:
     license: "CC BY 4.0"
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     source: "CrossAsia IIIF viewer, https://iiif.crossasia.org/s/mongolische-karten/manifests/860363"
-    note: "Mongolian and Manchu; 139.5 × 59.0 cm; drawn on a measuring grid (Charleux 2021, n. 26). Scaled to 1,200 pixels wide by the library’s image server; otherwise unaltered."
+    note: "Mongolian and Manchu; 139.5 × 59.0 cm; listed by Charleux (2021, n. 26) among the Shilingol maps drawn on a grid. Scaled to 1,200 pixels wide by the library’s image server; otherwise unaltered."
   - src: "https://iiif-content.crossasia.org/xasia/mongolische-karten+814+1/full/1200,/0/default.jpg"
     alt: "Hand-drawn Qing-era banner map of the Right Banner of the Khuuchid, dated 1901."
     caption: "Map of the Right Banner of the Khuuchid"
@@ -28,7 +28,7 @@ images:
     license: "CC BY 4.0"
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     source: "CrossAsia IIIF viewer, https://iiif.crossasia.org/s/mongolische-karten/manifests/860365"
-    note: "Mongolian and Manchu; 97.5 × 73.5 cm; drawn on a measuring grid (Charleux 2021, n. 26). Scaled to 1,200 pixels wide by the library’s image server; otherwise unaltered."
+    note: "Mongolian and Manchu; 97.5 × 73.5 cm; listed by Charleux (2021, n. 26) among the Shilingol maps drawn on a grid. Scaled to 1,200 pixels wide by the library’s image server; otherwise unaltered."
 ---
 
 The Khuuchid (Khauchid, Qaγučid; Chinese Haoqi) were one of the five Mongol tribes of Shilingol League, organized under the Qing as the Khuuchid Left and Khuuchid Right Banners [1, 2]. Their princes, like those of the Sünid and Üjümüchin, descended from Torubolod, eldest son of Dayan Khan [1]. After 1945 the two banners were merged into Üjümüchin [2].
@@ -49,14 +49,14 @@ In 1933 the Khuuchid rulers, Sangdagdorji of Khuuchid Right and Sungjingwangchug
 
 The Staatsbibliothek zu Berlin holds four maps of the Khuuchid banners. The library publishes them under a CC BY 4.0 licence; the catalogue numbers link to its viewer.
 
-| Cat. | Shelfmark | Banner | Year | Languages | Size | Grid |
+| Cat. | Shelfmark | Banner | Year | Languages | Size | Grid (Charleux list) |
 |---|---|---|---|---|---|---|
 | [812](https://iiif.crossasia.org/s/mongolische-karten/manifests/860363) | Hs. or. 129 | Left Banner of the Khuuchid | 1901 | Mongolian and Manchu | 139.5 × 59.0 cm | yes |
 | [813](https://iiif.crossasia.org/s/mongolische-karten/manifests/860364) | Hs. or. 254 | Left Banner of the Khuuchid | undated | Mongolian and Chinese | 111.0 × 62.3 cm | yes |
 | [814](https://iiif.crossasia.org/s/mongolische-karten/manifests/860365) | Hs. or. 128 | Right Banner of the Khuuchid | 1901 | Mongolian and Manchu | 97.5 × 73.5 cm | yes |
 | [815](https://iiif.crossasia.org/s/mongolische-karten/manifests/860366) | Hs. or. 127 | Right Banner of the Khuuchid | 1907 | Mongolian, Chinese and Manchu | 186.5 × 57.5 cm |  |
 
-Three of the four (cats. 812–814) are drawn on a measuring grid, which few Inner Mongolian banner maps use [4, n. 26]. The 1901 map of Khuuchid Left (cat. 812) names a flat-topped “Dösi aγula,” “anvil mountain”; such mountains, Charleux notes, were said to have been flattened when Chinggis Khan or another giant hero forged weapons on them [4, n. 119]. The 1901 map of Khuuchid Right (cat. 814) names a Čaγan oboγa, “white ovoo” [4, n. 35], and crowns its mountains with different kinds of ovoo, a mound with a tuft and pole beside a simple cairn [4]. The [Shilingol League](/entry/shilingol-league) entry describes the collection.
+Charleux lists three of the four (cats. 812–814) among the few Inner Mongolian banner maps drawn on a grid [4, n. 26]. The 1901 map of Khuuchid Left (cat. 812) names a flat-topped “Dösi aγula,” “anvil mountain”; such mountains, Charleux notes, were said to have been flattened when Chinggis Khan or another giant hero forged weapons on them [4, n. 119]. The 1901 map of Khuuchid Right (cat. 814) names a Čaγan oboγa, “white ovoo” [4, n. 35], and crowns its mountains with different kinds of ovoo, a mound with a tuft and pole beside a simple cairn [4]. The [Shilingol League](/entry/shilingol-league) entry describes the collection.
 
 ## Open questions
 

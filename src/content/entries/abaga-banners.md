@@ -17,7 +17,7 @@ images:
     license: "CC BY 4.0"
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     source: "CrossAsia IIIF viewer, https://iiif.crossasia.org/s/mongolische-karten/manifests/860371"
-    note: "Mongolian and Manchu; 153.5 × 74.5 cm; drawn on a measuring grid (Charleux 2021, n. 26). Scaled to 1,200 pixels wide by the library’s image server; otherwise unaltered."
+    note: "Mongolian and Manchu; 153.5 × 74.5 cm; listed by Charleux (2021, n. 26) among the Shilingol maps drawn on a grid. Scaled to 1,200 pixels wide by the library’s image server; otherwise unaltered."
   - src: "https://iiif-content.crossasia.org/xasia/mongolische-karten+816+1/full/1200,/0/default.jpg"
     alt: "Hand-drawn Qing-era banner map of the Left Banner of the Abaga and Left Banner of the Abaganar, dated 1901."
     caption: "Map of the Left Banner of the Abaga and Left Banner of the Abaganar"
@@ -57,14 +57,14 @@ When the Soviet and Mongolian armies entered Shilingol in August 1945, Budabala,
 
 The Staatsbibliothek zu Berlin holds four maps covering the Abaga banners, two of them shared with Abaganar Left. The library publishes them under a CC BY 4.0 licence; the catalogue numbers link to its viewer.
 
-| Cat. | Shelfmark | Banner | Year | Languages | Size | Grid |
+| Cat. | Shelfmark | Banner | Year | Languages | Size | Grid (Charleux list) |
 |---|---|---|---|---|---|---|
 | [816](https://iiif.crossasia.org/s/mongolische-karten/manifests/860367) | Hs. or. 52 | Left Banner of the Abaga and Left Banner of the Abaganar | 1901 | Mongolian and Manchu | 152.0 × 62.5 cm |  |
 | [817](https://iiif.crossasia.org/s/mongolische-karten/manifests/860368) | Hs. or. 53 | Left Banner of the Abaga and Left Banner of the Abaganar | 1907 | Mongolian, Chinese and Manchu | 152.5 × 81.0 cm |  |
 | [820](https://iiif.crossasia.org/s/mongolische-karten/manifests/860371) | Hs. or. 130 | Right Banner of the Abaga | 1901 | Mongolian and Manchu | 153.5 × 74.5 cm | yes |
 | [821](https://iiif.crossasia.org/s/mongolische-karten/manifests/860372) | Hs. or. 116 | Right Banner of the Abaga | 1907 | Mongolian, Chinese and Manchu | 157.0 × 37.7 cm |  |
 
-The 1901 Abaga Right map (cat. 820) is one of the eight Shilingol maps drawn on a measuring grid [4, n. 26], and Charleux reproduces from it the flat-topped “Boγda ula,” a mountain crowned with an ovoo [4, fig. 18a]. On the 1901 map of Abaga Left and Abaganar Left (cat. 816), twenty-one of about seventy mountains have an ovoo drawn on the summit [4, n. 121], and one is named Modon oboγa, “wooden ovoo” [4, fig. 4a]. The [Shilingol League](/entry/shilingol-league) entry describes the collection.
+The 1901 Abaga Right map (cat. 820) is among the eight Shilingol maps that Charleux lists as drawn on a grid [4, n. 26], and Charleux reproduces from it the flat-topped “Boγda ula,” a mountain crowned with an ovoo [4, fig. 18a]. On the 1901 map of Abaga Left and Abaganar Left (cat. 816), twenty-one of about seventy mountains have an ovoo drawn on the summit [4, n. 121], and one is named Modon oboγa, “wooden ovoo” [4, fig. 4a]. The [Shilingol League](/entry/shilingol-league) entry describes the collection.
 
 ## Open questions
 

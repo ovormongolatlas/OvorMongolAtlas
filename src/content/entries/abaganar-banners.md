@@ -47,7 +47,7 @@ In 1933, when [Demchugdongrub](/entry/demchugdongrub) launched the autonomy move
 
 The Staatsbibliothek zu Berlin holds four maps covering the Abaganar banners: two of Abaganar Right and two shared with Abaga Left. The library publishes them under a CC BY 4.0 licence; the catalogue numbers link to its viewer.
 
-| Cat. | Shelfmark | Banner | Year | Languages | Size | Grid |
+| Cat. | Shelfmark | Banner | Year | Languages | Size | Grid (Charleux list) |
 |---|---|---|---|---|---|---|
 | [816](https://iiif.crossasia.org/s/mongolische-karten/manifests/860367) | Hs. or. 52 | Left Banner of the Abaga and Left Banner of the Abaganar | 1901 | Mongolian and Manchu | 152.0 × 62.5 cm |  |
 | [817](https://iiif.crossasia.org/s/mongolische-karten/manifests/860368) | Hs. or. 53 | Left Banner of the Abaga and Left Banner of the Abaganar | 1907 | Mongolian, Chinese and Manchu | 152.5 × 81.0 cm |  |
