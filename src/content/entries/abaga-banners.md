@@ -3,7 +3,7 @@ title: "Abaga banners"
 type: group
 summary: "The two Abaga banners, Left and Right, in central Shilingol League, ruled by descendants of Chinggis Khan’s brother Belgütei; their prince Yangsang headed the league from 1895 to 1924, and the Japanese ran Shilingol from the ‘Abaga Special Service Office’ at Beizimiao."
 startYear: 1637
-endYear: 1949
+endYear: 1956
 yearType: existed
 images:
   - src: "https://iiif-content.crossasia.org/xasia/mongolische-karten+820+1/full/1200,/0/default.jpg"
@@ -53,6 +53,10 @@ The Kwantung Army set up a Special Service Office at Pandita Gegeen Keid, a well
 
 When the Soviet and Mongolian armies entered Shilingol in August 1945, Budabala, by then deputy head of the league, was at home in Abaga Left. The Soviets looted his house, and he and his father, then eighty, hid in the desert with their family. Abaga Right was occupied and Shonnudongrob was captured and tortured until the Mongolian People’s Revolutionary Army arrived. The Mongolian intelligence chief Duingkhorjab then gave Shonnudongrob and Urgungge, a senior official of Abaga Left, secret identity papers and told them to carry out tasks he would assign [1].
 
+## Under the Communists (1946–1956)
+
+In the account of the Xilingol Party history office, the Communist work team sent into Shilingol in 1946 by Ulanhu was told to win over the league head Sungjingwangchug and to isolate Budabala, whom the account calls pro-Nationalist. The team stopped at Budabala’s yurt-shaped palace near the Yangdu temple and was received with ceremony. Budabala was nonetheless named a member of the Xilingol–Chahar Administrative Committee set up at Beizimiao on 25 November 1946, with Sungjingwangchug as a vice-chairman [5]. In 1950 the Abaga and Abaganar banners were among those merged into new “united banners”; the Western United Banner, which absorbed the Central United Banner in 1952, was renamed Abag Banner in 1956 [5]. Which old banners went into which united banner is not stated in the sources consulted.
+
 ## The Berlin banner maps
 
 The Staatsbibliothek zu Berlin holds four maps covering the Abaga banners, two of them shared with Abaganar Left. The library publishes them under a CC BY 4.0 licence; the catalogue numbers link to its viewer.
@@ -79,3 +83,4 @@ Numbers in square brackets in the text refer to this list.
 2. Christopher P. Atwood, *Encyclopedia of Mongolia and the Mongol Empire* (New York: Facts on File, 2004), “Shiliin Gol” (pp. 500–501).
 3. Tachibana Makoto (橘誠), 「ボグド＝ハーン政権の内モンゴル統合の試み：シリーンゴル盟を事例として」, 『東洋学報』 87, no. 3 (2005): 351–382.
 4. Isabelle Charleux, “Ovoos on Late Qing Dynasty Mongol Banner Maps (Late 19th–Early 20th Centuries),” *Études mongoles et sibériennes, centrasiatiques et tibétaines* 52 (2021), doi:10.4000/emscat.5237; cited from the author’s file, HAL halshs-03500061, by note and figure number. Catalogue details of the maps are from the library’s IIIF records.
+5. Xilingol League Party History and Gazetteer Office (锡林郭勒盟党史地方志研究室), essays on its website xmdq.nmgqq.com.cn: “草原记忆（三）: 云世英在锡察草原” (Temuqile, 2024), a retelling of the memoir of Yun Shiying, member of the Communist work team; “草原记忆（六）: 贝子庙会议重要决策” (Lu Yahui, 2024); “草原记忆（八）: 锡察盟的抗美援朝运动” (Gao Jiandi, 2025). Party-history publicity pieces; their framing is the Party’s, and some dates in them are careless.

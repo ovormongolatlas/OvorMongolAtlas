@@ -3,7 +3,7 @@ title: "Khuuchid banners"
 type: group
 summary: "The two Khuuchid (Khauchid, Haoqi) banners, Left and Right, in Shilingol League; submitted to the Qing in 1651, the first to declare for the Bogd Khan in 1912, loyal followers of the Üjümüchin prince in the 1930s, and merged into Üjümüchin after 1945."
 startYear: 1651
-endYear: 1945
+endYear: 1949
 yearType: existed
 images:
   - src: "https://iiif-content.crossasia.org/xasia/mongolische-karten+812+1/full/1200,/0/default.jpg"
@@ -45,6 +45,10 @@ In October 1912, when Urga’s troops seized the league head Yangsang, the two K
 
 In 1933 the Khuuchid rulers, Sangdagdorji of Khuuchid Right and Sungjingwangchug of Khuuchid Left, were faithful followers of the league head, Sodnamrabdan of [Üjümüchin](/entry/ujumuchin) Right rather than of [Demchugdongrub](/entry/demchugdongrub), whose autonomy movement had few backers in the league [1]. Both attended the Üjümüchin conference of April 1936 [1]. By the Second Mongolian Congress at Hohhot in October 1937 Sungjingwangchug was deputy head of the league [1], and in August 1945 he was its head, at home in Khuuchid Left Banner when the Soviet army crossed the border [1].
 
+## After 1945
+
+Sungjingwangchug kept a place under the new order. According to the Xilingol Party history office, Ulanhu instructed the Communist work team sent into Shilingol in 1946 to win him over, describing him as one of De Wang’s men; in September 1946 Ulanhu appointed him head of Shilingol League at a congress at Beizimiao, and on 25 November 1946 he became a vice-chairman of the Xilingol–Chahar Administrative Committee [5]. The same account has the league congress vote to take the Eji Nuur salt lake from East Üjümüchin under league control to fund the league government [5]. Atwood dates the merger of the Khuuchid banners into Üjümüchin to 1949 [2]; in 1950 the area formed the Eastern United Banner, which was split into East and West Üjümüchin in 1956 [5].
+
 ## The Berlin banner maps
 
 The Staatsbibliothek zu Berlin holds four maps of the Khuuchid banners. The library publishes them under a CC BY 4.0 licence; the catalogue numbers link to its viewer.
@@ -60,7 +64,7 @@ Charleux lists three of the four (cats. 812–814) among the few Inner Mongolian
 
 ## Open questions
 
-- **The merger with Üjümüchin.** Atwood says only “after 1945” [2].
+- **The merger with Üjümüchin.** 1949 in Atwood’s Üjümüchin entry [2]; the Party history office describes an Eastern United Banner in 1950 without listing its parts [5].
 
 ### Sources
 
@@ -70,3 +74,4 @@ Numbers in square brackets in the text refer to this list.
 2. Christopher P. Atwood, *Encyclopedia of Mongolia and the Mongol Empire* (New York: Facts on File, 2004), “Shiliin Gol” (pp. 500–501).
 3. Tachibana Makoto (橘誠), 「ボグド＝ハーン政権の内モンゴル統合の試み：シリーンゴル盟を事例として」, 『東洋学報』 87, no. 3 (2005): 351–382.
 4. Isabelle Charleux, “Ovoos on Late Qing Dynasty Mongol Banner Maps (Late 19th–Early 20th Centuries),” *Études mongoles et sibériennes, centrasiatiques et tibétaines* 52 (2021), doi:10.4000/emscat.5237; cited from the author’s file, HAL halshs-03500061, by note and figure number. Catalogue details of the maps are from the library’s IIIF records.
+5. Xilingol League Party History and Gazetteer Office (锡林郭勒盟党史地方志研究室), essays on its website xmdq.nmgqq.com.cn: “草原记忆（三）: 云世英在锡察草原” (Temuqile, 2024), a retelling of the memoir of Yun Shiying, member of the Communist work team; “草原记忆（六）: 贝子庙会议重要决策” (Lu Yahui, 2024); “草原记忆（八）: 锡察盟的抗美援朝运动” (Gao Jiandi, 2025). Party-history publicity pieces; their framing is the Party’s, and some dates in them are careless.

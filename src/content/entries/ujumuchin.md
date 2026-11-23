@@ -67,7 +67,7 @@ Jagchid describes a crisis in Üjümüchin Left Banner around 1938. Its young ja
 
 After the Soviet–Mongolian invasion of August 1945, Atwood writes, the young jasag of Üjümüchin Left Banner, Minjurdorji, led 1,785 Üjümüchins to migrate to Mongolia (Atwood, *Encyclopedia*, p. 565). Whether he is the Dorji of Jagchid’s account is likely but not stated by either source. Khökhbaatar counts the herders of Üjümüchin Left and Khuuchid Right banners among the largest group migrations of 1945, and notes that Chinese Communist reports of the time described part of the movement as people “driven off” by Outer Mongolian troops (Khökhbaatar). In 1989 the Üjümüchin of Mongolia numbered 2,100 and lived in Sergelen sum of Eastern Province (Atwood, *Encyclopedia*, p. 565).
 
-In 1949 the Üjümüchin and Khuuchid banners were merged; in 1956 the combined territory was divided again into two Üjümüchin banners, East and West Ujimqin, which had a combined population of 127,700 in 1990, 83,700 of them Mongols (Atwood, *Encyclopedia*, p. 565).
+In 1949 the Üjümüchin and Khuuchid banners were merged; the Xilingol Party history office calls the result, in 1950, the Eastern United Banner (东部联合旗) (Xilingol Party history office, “草原记忆（八）”); in 1956 the combined territory was divided again into two Üjümüchin banners, East and West Ujimqin, which had a combined population of 127,700 in 1990, 83,700 of them Mongols (Atwood, *Encyclopedia*, p. 565).
 
 ## The Berlin banner maps
 
@@ -97,3 +97,4 @@ The map draws the Üjümüchin banners inside Shilingol League in every year, re
 - For the map: Nakamura Shin 中村信, 『蒙疆の経済』 (Tokyo: Yūkosha, 1941), as redrawn by Harald Krähe; US Department of State, *International Boundary Study* No. 173, “China – Mongolia Boundary.”
 - Isabelle Charleux, “Ovoos on Late Qing Dynasty Mongol Banner Maps (Late 19th–Early 20th Centuries),” *Études mongoles et sibériennes, centrasiatiques et tibétaines* 52 (2021), doi:10.4000/emscat.5237, cited from the author’s file (HAL halshs-03500061) by note and figure number as “Charleux 2021.”
 - Caroline Humphrey, “Mongolian Map-Making as Practice,” *Interdisciplinary Science Reviews* 46, no. 3 (2021), doi:10.1080/03080188.2021.1880238 (open access). Cited as “Humphrey 2021.” Catalogue details of the maps are from the library’s IIIF records.
+- Xilingol League Party History and Gazetteer Office (锡林郭勒盟党史地方志研究室), essays on its website xmdq.nmgqq.com.cn: “草原记忆（八）: 锡察盟的抗美援朝运动” (Gao Jiandi, 2025), note on the 1950–1956 banners. A Party-history publicity piece.
