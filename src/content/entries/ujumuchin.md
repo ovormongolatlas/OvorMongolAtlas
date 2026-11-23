@@ -6,6 +6,30 @@ startYear: 1637
 altStartYear: 1641
 endYear: 1949
 yearType: contested
+images:
+  - src: "https://iiif-content.crossasia.org/xasia/mongolische-karten+810+1/full/1200,/0/default.jpg"
+    portrait: true
+    alt: "Hand-drawn Qing-era banner map of the Right Banner of the Üjümüchin, dated 1890."
+    caption: "Map of the Right Banner of the Üjümüchin"
+    date: "1890"
+    collection: "Mongolische Landkarten (maps collected by Walther Heissig and Hermann Consten), catalogue no. 810"
+    institution: "Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, Orientabteilung"
+    shelfmark: "Hs. or. 135"
+    license: "CC BY 4.0"
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
+    source: "CrossAsia IIIF viewer, https://iiif.crossasia.org/s/mongolische-karten/manifests/860361"
+    note: "Mongolian and Manchu; 142.5 × 102.5 cm; drawn on a measuring grid (Charleux 2021, n. 26). Scaled to 1,200 pixels wide by the library’s image server; otherwise unaltered."
+  - src: "https://iiif-content.crossasia.org/xasia/mongolische-karten+807+1/full/1200,/0/default.jpg"
+    alt: "Hand-drawn Qing-era banner map of the Left Banner of the Üjümüchin, dated 1901."
+    caption: "Map of the Left Banner of the Üjümüchin"
+    date: "1901"
+    collection: "Mongolische Landkarten (maps collected by Walther Heissig and Hermann Consten), catalogue no. 807"
+    institution: "Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, Orientabteilung"
+    shelfmark: "Hs. or. 55"
+    license: "CC BY 4.0"
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
+    source: "CrossAsia IIIF viewer, https://iiif.crossasia.org/s/mongolische-karten/manifests/860358"
+    note: "Mongolian and Manchu; 112.0 × 124.5 cm; drawn on a measuring grid (Charleux 2021, n. 26). Scaled to 1,200 pixels wide by the library’s image server; otherwise unaltered."
 ---
 
 The Üjümüchin (Ujimqin, Wuzhumuqin) are a Mongol people of Shilingol (Xilingol) League, and until 1949 they formed two banners, Üjümüchin Left and Üjümüchin Right, in the league’s north-east corner, where Shilingol meets Outer Mongolia and Hulunbuir. Jagchid calls Shilingol the league with the best pastures, with Üjümüchin in the east and Sünid in the west “especially famous for their excellent horses” (Jagchid, p. 2). Atwood describes the Üjümüchin as known for the embroidered hems of their robes (Atwood, *Encyclopedia*, “Üjümüchin,” p. 565).
@@ -45,6 +69,20 @@ After the Soviet–Mongolian invasion of August 1945, Atwood writes, the young j
 
 In 1949 the Üjümüchin and Khuuchid banners were merged; in 1956 the combined territory was divided again into two Üjümüchin banners, East and West Ujimqin, which had a combined population of 127,700 in 1990, 83,700 of them Mongols (Atwood, *Encyclopedia*, p. 565).
 
+## The Berlin banner maps
+
+The Staatsbibliothek zu Berlin holds five maps of the Üjümüchin banners, drawn for the Qing administration and collected by Walther Heissig and Hermann Consten; the library publishes them under a CC BY 4.0 licence, and the catalogue numbers link to its viewer (Charleux 2021).
+
+| Cat. | Shelfmark | Banner | Year | Languages | Size | Grid |
+|---|---|---|---|---|---|---|
+| [807](https://iiif.crossasia.org/s/mongolische-karten/manifests/860358) | Hs. or. 55 | Left Banner of the Üjümüchin | 1901 | Mongolian and Manchu | 112.0 × 124.5 cm | yes |
+| [808](https://iiif.crossasia.org/s/mongolische-karten/manifests/860360) | Hs. or. 257 | Left Banner of the Üjümüchin | undated | Mongolian and Chinese | 110.2 × 98.2 cm |  |
+| [809](https://iiif.crossasia.org/s/mongolische-karten/manifests/860359) | Hs. or. 86 | Left Banner of the Üjümüchin | 1907 | Mongolian, Chinese and Manchu | 140.5 × 154.0 cm | yes |
+| [810](https://iiif.crossasia.org/s/mongolische-karten/manifests/860361) | Hs. or. 135 | Right Banner of the Üjümüchin | 1890 | Mongolian and Manchu | 142.5 × 102.5 cm | yes |
+| [811](https://iiif.crossasia.org/s/mongolische-karten/manifests/860362) | Hs. or. 134 | Right Banner of the Üjümüchin | 1907 | Mongolian, Chinese and Manchu | 164.0 × 120.0 cm |  |
+
+Three of them (cats. 807, 809 and 810) are drawn on a measuring grid, which few Inner Mongolian banner maps use (Charleux 2021, n. 26). On the 1901 map of the Left Banner (cat. 807) the banner’s eastern corner appears as a great forested mountain, Soyolji; Charleux shows that this was an imperial hunting ground outside the banner, ringed by twelve red circles marked *obo* and eight marked *qaraγul*, guard post, and sets it beside the same corner on the 1907 map (cat. 809) (Charleux 2021, fig. 17). The 1907 Left Banner map shows about eighteen mountains with a tuft on top, the other two far fewer, and on the maps of the Right Banner eleven mountains are called *oboγa* (Charleux 2021, nn. 35 and 123). The [Shilingol League](/entry/shilingol-league) entry describes the collection.
+
 ## On the Timeline Map
 
 The map draws the Üjümüchin banners inside Shilingol League in every year, reaching north-east to the corner where Shilingol, Outer Mongolia and Hulunbuir meet. Their frontier with Outer Mongolia follows the Nakamura map of 1941, which agrees within about 10–30 km with Atwood’s map of the Qing leagues (borders as in 1820) and with the 1962 Sino-Mongolian treaty line. A 1930s English map of the banners, used for the frontier elsewhere, runs the line 30–80 km further south and would put northern Üjümüchin in Mongolia; the atlas does not follow it here. The same three maps put the whole of Üjümüchin outside Manchukuo, so the map does too, against the Narangoa and Cribb atlas, which puts a band of eastern Shilingol in Manchukuo. The banners’ seats are not yet placed.
@@ -57,3 +95,4 @@ The map draws the Üjümüchin banners inside Shilingol League in every year, re
 - Khökhbaatar (フフバートル), 「内モンゴルにとっての1945年8月：特殊な政治的環境における独自の終戦史」 (“August 1945 for Inner Mongolia”), 『学苑』 (Gakuen, Shōwa Women’s University) no. 898 (August 2015), pp. 22–40, cited above as “Khökhbaatar.”
 - Sechin Jagchid, *The Last Mongol Prince: The Life and Times of Demchugdongrob, 1902–1966* (Bellingham: Center for East Asian Studies, Western Washington University, 1999), cited above as “Jagchid.” A participant’s account; his father was a friend of Sodnamrabdan and the broker of the 1924 compromise. See the [Sechin Jagchid](/entry/sechin-jagchid) entry for the atlas’s caveat on weighing it.
 - For the map: Nakamura Shin 中村信, 『蒙疆の経済』 (Tokyo: Yūkosha, 1941), as redrawn by Harald Krähe; US Department of State, *International Boundary Study* No. 173, “China – Mongolia Boundary.”
+- Isabelle Charleux, “Ovoos on Late Qing Dynasty Mongol Banner Maps (Late 19th–Early 20th Centuries),” *Études mongoles et sibériennes, centrasiatiques et tibétaines* 52 (2021), doi:10.4000/emscat.5237, cited from the author’s file (HAL halshs-03500061) by note and figure number as “Charleux 2021.” Catalogue details of the maps are from the library’s IIIF records.

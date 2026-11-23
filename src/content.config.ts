@@ -54,7 +54,9 @@ const entries = defineCollection({
 		// need their provenance stated. Do not crop, recolor, or otherwise alter any
 		// image whose license/attribution block is recorded here without updating that
 		// block to match, since some licenses (e.g. ND) forbid derivative alteration
-		// outright. `src` is a path under /public (e.g. "/images/foo.jpg"); every other
+		// outright. `src` is a path under /public (e.g. "/images/foo.jpg"), or a IIIF
+		// image URL from an institution whose licence allows reuse (the Berlin banner
+		// maps are loaded this way from the Staatsbibliothek's server); every other
 		// field is free text so each institution's own cataloguing language can be used
 		// as given rather than forced into a fixed vocabulary.
 		// A short role line for the page header (e.g. "Mongol prince"). Falls back to
